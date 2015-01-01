@@ -3,12 +3,32 @@
     <head>
         <title>{% block title %}Home{% endblock %} | Enactus Waterloo</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href='{% static "base.css" %}'>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
-
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
+
+    	<header>
+    		<div class="container-fluid">
+    			<div class="logo">
+    				<img src="" alt="logo">
+    			</div>
+
+    			<nav class="pull-right">
+    				<ul>
+    					<li class="active">Home</li>
+    					<li>About Us</li>
+    					<li>Projects</li>
+    				</ul>
+    			</nav>
+    		</div>
+    	</header>
+
+    	{% block content %}
+    	{% endblock %}
         
     </body>
 </html>
