@@ -10,7 +10,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^$', main.views.index, name="home"),
+    url(r'^$', index, name="home"),
 
-    url(r'^$', main.views.about_us, name="about_us"),
+    url(r'^$', about_us, name="about_us"),
 )
