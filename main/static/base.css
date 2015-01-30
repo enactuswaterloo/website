@@ -3,3 +3,8 @@
     width: 192px;
     height: 128px;
 }
+
+footer li {
+	list-style-type: none;
+	text-align: center;
+}
