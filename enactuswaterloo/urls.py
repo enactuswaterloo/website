@@ -12,5 +12,5 @@ urlpatterns = patterns('',
 
     url(r'^$', index, name="home"),
 
-    url(r'^$', about_us, name="about_us"),
+    url(r'^about/$', about_us, name="about_us"),
 )

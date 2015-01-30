@@ -10,4 +10,4 @@ def index(request):
 def about_us(request):
     execs = Exec.objects.all()
 
-    return render(request, "main/about_us.html")
+    return render(request, "main/about_us.html", {"execs": execs})
