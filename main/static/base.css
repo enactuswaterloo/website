@@ -7,4 +7,7 @@
 footer li {
 	list-style-type: none;
 	text-align: center;
+	background-color:#222;
+	color:#CCC;
+	font-family: "Arial";
 }
