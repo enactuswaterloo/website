@@ -4,10 +4,10 @@
     height: 128px;
 }
 
-footer div {
-	background-color:#222;
-	color:#CCC;
-
+footer {
+	padding: 20px 0px;
+	background-color:#444;
+	color:#ccc;
 }
 
 footer li {
