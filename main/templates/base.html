@@ -36,12 +36,13 @@
 	        <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h1>Nav</h1>
+                        <h1>Explore</h1>
                         <nav>
                             <ul>
-                                <li class="active">Home</li>
-                                <li>About Us</li>
-                                <li>Projects</li>
+                                <li><a href="{% url 'home' %}"><div class="footerButton">Home</div></a></li>
+                                <li><a href="{% url 'about_us' %}"><div class="footerButton">About Us</div></a></li>
+                                <li><a href="{% url 'projects' %}"><div class="footerButton">Projects</div></a></li>
+                                <li><a href="{% url 'blog' %}"><div class="footerButton">Blog</div></a></li>
                             </ul>
                         </nav>
                     </div>
