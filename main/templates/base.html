@@ -24,9 +24,10 @@
 
     			<nav class="pull-right">
     				<ul>
-    					<li class="active">Home</li>
-    					<li>About Us</li>
-    					<li>Projects</li>
+    					<li class="active"><a href="{% url 'home' %}">Home</a></li>
+    					<li><a href="{% url 'about_us' %}">About us</a></li>
+    					<li><a href="{% url 'projects' %}">Projects</a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a></li>
     				</ul>
     			</nav>
     		</div>
@@ -39,8 +40,8 @@
 	        <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h1>Nav</h1>
-                        <nav class="pull-left">
+                        <h3>Nav</h3>
+                        <nav>
                             <ul>
                                 <li class="active">Home</li>
                                 <li>About Us</li>
@@ -50,12 +51,12 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <h1>Nav</h1>
-                        <nav class="pull-left">
+                        <h3>Contact Us</h3>
+                        <nav>
                             <ul>
-                                <li class="active">Home</li>
-                                <li>About Us</li>
-                                <li>Projects</li>
+                                <li><a href="http://www.facebook.com/EnactusWaterloo">Facebook</a></li>
+                                <li><a href="mailto:info@enactuswaterloo.ca">Email</a></li>
+                                <li><a href="https://twitter.com/enactuswaterloo">Twitter</a></li>
                             </ul>
                         </nav>
                     </div>
