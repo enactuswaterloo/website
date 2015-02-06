@@ -50,3 +50,27 @@ footer li {
 	list-style-type: none;
 	font-family: "Arial";
 }
+
+.footerButton {
+	background: #383838;
+	cursor: pointer;
+	height: 25px;
+    width: 100px;
+    line-height: 25px;
+	transition-property: background;
+	transition-duration: 0.2s;
+	transition-timing-function: linear;
+}
+.footerButton:hover {
+	background: #404040;
+}
+
+.carousel-inner > .item > img {
+	width: 100%;
+}
+
+section {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+}
