@@ -28,3 +28,13 @@ footer li {
 .footerButton:hover {
 	background: #404040;
 }
+
+.carousel-inner > .item > img {
+	width: 100%;
+}
+
+section {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+}

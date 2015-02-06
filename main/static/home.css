@@ -1,0 +1,13 @@
+
+#carousel-container {
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+}
+
+section#section-whatis-enactus {
+	background: url("/static/what_is_enactus.png") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	color: white;
+	text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+}

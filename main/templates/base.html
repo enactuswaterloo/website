@@ -7,8 +7,12 @@
         <link rel="stylesheet" href='{% static "base.css" %}'>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
         
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+        {% block head %} {% endblock %}
     </head>
     <body>
 
@@ -48,12 +52,12 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <h1>Nav</h1>
+                        <h3>Contact Us</h3>
                         <nav>
                             <ul>
-                                <li class="active">Home</li>
-                                <li>About Us</li>
-                                <li>Projects</li>
+                                <li><a href="http://www.facebook.com/EnactusWaterloo">Facebook</a></li>
+                                <li><a href="mailto:info@enactuswaterloo.ca">Email</a></li>
+                                <li><a href="https://twitter.com/enactuswaterloo">Twitter</a></li>
                             </ul>
                         </nav>
                     </div>
