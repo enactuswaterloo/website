@@ -2,6 +2,13 @@
 
 {% block title %}Projects{% endblock %}
 
+{% block nav %}
+	<li><a href="{% url 'home' %}">Home</a></li>
+	<li><a href="{% url 'about_us' %}">About us</a></li>
+	<li class="active"><a href="{% url 'projects' %}">Projects</a></li>
+    <li><a href="{% url 'blog' %}">Blog</a></li>
+{% endblock %}
+
 {% block content %}
     <h3>Projects</h3>
 
