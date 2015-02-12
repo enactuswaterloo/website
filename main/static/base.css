@@ -32,15 +32,9 @@ footer li {
 	font-family: "Arial";
 }
 
-.footerButton {
+a.footerButton, a.footerButton:hover {
 	text-decoration: none;
-	transition-property: background;
-	transition-duration: 0.2s;
-	transition-timing-function: linear;
-}
-.footerButton:hover {
-	background: #404040;
-	text-decoration: none;
+	color: #E6E6E6;
 }
 
 .carousel-inner > .item > img {
