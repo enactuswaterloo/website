@@ -33,17 +33,14 @@ footer li {
 }
 
 .footerButton {
-	background: #383838;
-	cursor: pointer;
-	height: 25px;
-    width: 100px;
-    line-height: 25px;
+	text-decoration: none;
 	transition-property: background;
 	transition-duration: 0.2s;
 	transition-timing-function: linear;
 }
 .footerButton:hover {
 	background: #404040;
+	text-decoration: none;
 }
 
 .carousel-inner > .item > img {
