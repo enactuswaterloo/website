@@ -3,10 +3,11 @@ body {
 	background-color: #EFEFEF;
 }
 
-
 nav.navbar-custom {
 	background-color: white;
 	height: 128px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 nav.navbar-custom .navbar-nav {
@@ -57,10 +58,17 @@ section {
 	text-align: center;
 }
 
+.subpage-title-bar {
+	background-color: #444;
+	color: #eeeeee;
+
+	font-weight: 300;
+	min-height: 72px;
+}
+
 .members {
 	padding-top: 30px;
 	padding-bottom: 30px;
-	background-color: gray;
 }
 
 div.member {
