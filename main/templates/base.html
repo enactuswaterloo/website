@@ -17,17 +17,22 @@
     <body>
 
     	<header>
-    		<div class="container-fluid main-navbar">
-    			<div class="logo">
-    				<img src="{% static 'logo.jpg' %}" alt="logo">
-    			</div>
+    		<nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                      <a class="navbar-brand" href="#">
+                        <img src="{% static 'logo.jpg' %}" alt="logo">
+                      </a>
+                    </div>
 
-    			<nav>
-    				<ul>
-                        {% block nav %}{% endblock %}
-    				</ul>
-    			</nav>
-    		</div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about_us' %}">About us</a></li>
+                        <li><a href="{% url 'projects' %}">Projects</a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                    </ul>
+                </div>
+            </nav>
     	</header>
 
     	{% block content %}
