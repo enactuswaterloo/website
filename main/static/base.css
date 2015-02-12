@@ -33,9 +33,13 @@ footer li {
 	font-family: "Arial";
 }
 
-a.footerButton, a.footerButton:hover {
+a.footerButton {
 	text-decoration: none;
 	color: #E6E6E6;
+}
+
+a.footerButton:hover {
+	color: #ffff00;
 }
 
 .carousel-inner > .item > img {
