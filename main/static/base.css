@@ -5,13 +5,13 @@ body {
 
 nav.navbar-custom {
 	background-color: white;
-	height: 128px;
+	height: 100px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
 
 nav.navbar-custom .navbar-nav {
-	padding-top: 40px;
+	padding-top: 30px;
 }
 
 nav.navbar-custom .navbar-nav a:hover {
@@ -19,7 +19,7 @@ nav.navbar-custom .navbar-nav a:hover {
 }
 
 nav.navbar-custom .navbar-brand img {
-	height: 100px;
+	height: 80px;
 }
 
 footer {
@@ -81,4 +81,9 @@ img.member_pic {
 	border: 1px solid black;
 	border-radius: 10px;
 	display: inline;
+}
+
+div.members div.container-fluid {
+	margin-left: 35px;
+	margin-right: 35px;
 }
