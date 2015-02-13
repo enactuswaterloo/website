@@ -61,6 +61,12 @@ section {
 	min-height: 72px;
 }
 
+#copyrightMessage {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #888;
+}
+
 .members {
 	padding-top: 30px;
 	padding-bottom: 30px;
