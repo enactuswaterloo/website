@@ -1,9 +1,18 @@
 
 section#section-whatis-enactus {
-	background: url("/static/what_is_enactus.png") no-repeat;
+	/*background: url("/static/what_is_enactus.png") no-repeat;*/
 	background-size: cover;
 	background-attachment: fixed;
 
-	color: white;
-	text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+	text-align: left;
+
+}
+
+#section-whatis-enactus h1 {
+	background-color: #FEC222;
+	font-weight: 400;
+
+	display: inline;
+
+	font-size: 48pt;
 }
