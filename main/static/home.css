@@ -10,9 +10,15 @@ section#section-whatis-enactus {
 
 #section-whatis-enactus h1 {
 	background-color: #FEC222;
-	font-weight: 400;
 
 	display: inline;
 
-	font-size: 48pt;
+	font-size: 56pt;
+
+	padding: 0px 3px;
+}
+
+#section-whatis-enactus h1 #firsthalf{
+	font-weight: 300;
+	font-size: 36pt;
 }
