@@ -5,13 +5,13 @@ body {
 
 nav.navbar-custom {
 	background-color: white;
-	height: 128px;
+	height: 100px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
 
 nav.navbar-custom .navbar-nav {
-	padding-top: 40px;
+	padding-top: 30px;
 }
 
 nav.navbar-custom .navbar-nav a:hover {
@@ -19,7 +19,7 @@ nav.navbar-custom .navbar-nav a:hover {
 }
 
 nav.navbar-custom .navbar-brand img {
-	height: 100px;
+	height: 80px;
 }
 
 footer {
@@ -33,15 +33,13 @@ footer li {
 	font-family: "Arial";
 }
 
-.footerButton {
+a.footerButton {
 	text-decoration: none;
-	transition-property: background;
-	transition-duration: 0.2s;
-	transition-timing-function: linear;
+	color: #E6E6E6;
 }
-.footerButton:hover {
-	background: #404040;
-	text-decoration: none;
+
+a.footerButton:hover {
+	color: #ffff00;
 }
 
 .carousel-inner > .item > img {
@@ -69,6 +67,12 @@ section {
 	font-size: 24pt;
 }
 
+#copyrightMessage {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #888;
+}
+
 .members {
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -89,4 +93,9 @@ img.member_pic {
 	border: 1px solid black;
 	border-radius: 10px;
 	display: inline;
+}
+
+div.members div.container-fluid {
+	margin-left: 35px;
+	margin-right: 35px;
 }
