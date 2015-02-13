@@ -28,7 +28,8 @@ footer {
 	color:#ccc;
 }
 
-footer li {
+footer ul {
+	padding: 1px;
 	list-style-type: none;
 	font-family: "Arial";
 }
