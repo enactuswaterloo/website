@@ -28,7 +28,8 @@ footer {
 	color:#ccc;
 }
 
-footer li {
+footer ul {
+	padding: 1px;
 	list-style-type: none;
 	font-family: "Arial";
 }
@@ -98,4 +99,8 @@ img.member_pic {
 div.members div.container-fluid {
 	margin-left: 35px;
 	margin-right: 35px;
+}
+
+p.blog-post {
+	margin-left: 70px;
 }
