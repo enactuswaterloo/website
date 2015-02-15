@@ -101,6 +101,33 @@ div.members div.container-fluid {
 	margin-right: 35px;
 }
 
+div.projects {
+	margin-bottom: 20px;
+}
+
+div.project {
+	border: 2px solid black;
+	background-color: white;
+	margin: 0px;
+}
+
+p.project-title {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
+
+p.project-description {
+	font-size: 16px;
+}
+
 p.blog-post {
-	margin-left: 70px;
+	
+}
+
+div.right-border {
+	border-right: 2px solid black;
+	background-color: #FEC222;
+	color: white;
+	text-shadow: 0 0 4px black;
 }

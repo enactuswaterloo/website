@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from main.models import Exec, Coverpic
+from main.models import Exec, Coverpic, Project
 
 # Create your views here.
 
@@ -13,6 +13,8 @@ def about_us(request):
     return render(request, "main/about_us.html", {"execs": execs})
 
 def projects(request):
+	projects = Project.objects.all()
+
 	return render(request, "main/projects.html")
 
 def blog(request):
