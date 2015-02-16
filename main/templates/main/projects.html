@@ -6,15 +6,17 @@
 {% block subpageContent %}
     <div class="projects">
     	<div class="container">
-		    <div class="project">
-		    	<div class="col-sm-3 right-border">
-		    		<p class="project-title">Here is our first project</p>
-		    	</div>
-		    	<div class="col-sm-9">
-		    		<p class="project-description">This is the project description</p>
-		    	</div>
-		    	<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
-		    </div>
+    		{% for project in projects %}
+			    <div class="project">
+			    	<div class="col-sm-3 project-title-block">
+			    		<p class="project-title">{{project.title}}</p>
+			    	</div>
+			    	<div class="col-sm-9">
+			    		<p class="project-description">{{project.description}}</p>
+			    	</div>
+			    	<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+			    </div>
+			{% endfor %}
 		</div>
 	</div>
 
