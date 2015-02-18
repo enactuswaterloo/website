@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from main.models import Exec, Coverpic, Project
+from main.models import Person, Coverpic, Project
 
 # Create your views here.
 
@@ -8,9 +8,9 @@ def index(request):
     return render(request, "main/index.html")
 
 def about_us(request):
-    execs = Exec.objects.all()
+    people = Person.objects.all()
 
-    return render(request, "main/about_us.html", {"execs": execs})
+    return render(request, "main/about_us.html", {"people": people})
 
 def projects(request):
 	projects = Project.objects.all()

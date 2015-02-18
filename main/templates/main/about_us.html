@@ -6,13 +6,13 @@
 {% block subpageContent %}
     <div class="members">
     	<div class="container-fluid">
-    		{% for exec in execs %}
-			    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    		{% for person in people %}
+			    <div class="col-lg-3 col-md-4 col-sm-6">
 			    	<div class="member">
 				    	<img src="{% static 'smiley_face.jpg' %}" alt="Member picture" class="member_pic">
-				    	<h4>{{exec.name}}</h4>
+				    	<h4>{{person.name}}</h4>
 				    	<br>
-				    	<p>{{exec.program}}</p>
+				    	<p>{{person.program}}</p>
 			    	</div>
 			    </div>
 			{% endfor %}

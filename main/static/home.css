@@ -1,11 +1,40 @@
 
+.home-button {
+	border-radius: 3px;
+	border: 2px solid #555;
+
+	color: #555;
+
+	padding: 5px 10px;
+	margin: 10px;
+	text-align: left;
+
+	text-decoration: none;
+
+	font-size: 14pt;
+
+	transition-property: color, background-color;
+	transition-duration: 0.5s;
+}
+
+.home-button i.fa {
+	margin-right: 5px;
+}
+a.home-button:hover {
+	background-color: #333;
+	color: #eee;
+
+	text-decoration: none;
+}
+
 section#section-whatis-enactus {
-	/*background: url("/static/what_is_enactus.png") no-repeat;*/
+	/*background: url("/static/what_is_enactus.png") no-repeat;
 	background-size: cover;
-	background-attachment: fixed;
+	background-attachment: fixed;*/
 
 	text-align: left;
 
+	background-color: #FFF7E0;
 }
 
 #section-whatis-enactus h1 {
@@ -21,4 +50,81 @@ section#section-whatis-enactus {
 #section-whatis-enactus h1 #firsthalf{
 	font-weight: 300;
 	font-size: 36pt;
+}
+
+.section-text {
+	font-size: 14pt;
+}
+
+#section-stats {
+	text-align: center;
+	background-color: white;
+}
+
+#section-stats span.fa-stack {
+	font-size: 56pt;
+}
+
+#section-stats div.stat-number{
+	font-weight: 300;
+	font-size: 56pt;
+}
+
+#section-stats div.stat-type {
+	font-size: 24pt;
+	text-transform: uppercase;
+}
+
+#section-meeting .home-button {
+	color: #444;
+}
+
+#stat-1 {
+	color: #3D1255;
+}
+
+#stat-2 {
+	color: #004400;
+}
+
+#stat-3 {
+	color: #09093B;
+}
+
+#section-buttons {
+	background: url("/static/section_buttons.jpg") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#section-buttons .home-button {
+	font-size: 12pt;
+	padding:10px 20px;
+	text-transform: uppercase;
+	font-weight: 300;
+	border-radius: 5px;
+	margin: 0px 10px;
+}
+
+#section-join-us {
+	background-color: #6B0C70;
+	color: white;
+}
+
+#section-join-us .section-text {
+	font-size: 42pt;
+	font-weight: 300;
+}
+
+#section-join-us .home-button {
+	padding: 10px 20px;
+	color: white;
+	border: 2px solid white;
+}
+
+#section-join-us a.home-button:hover {
+	background-color: white;
+	color: #6B0C70;
+
+	text-decoration: none;
 }
