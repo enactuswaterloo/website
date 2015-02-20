@@ -16,6 +16,3 @@ def projects(request):
 	projects = Project.objects.all()
 
 	return render(request, "main/projects.html", {"projects": projects})
-
-def blog(request):
-	return render(request, "main/blog.html")

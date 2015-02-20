@@ -1,0 +1,21 @@
+
+#blog-list article {
+	margin: 20px;
+	padding: 15px;
+
+	background-color: white;
+	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);
+}
+
+#blog-list article .article-title {
+	font-size: 18pt;
+	font-style: bold;
+	text-transform: uppercase;
+	color: #077BE0;
+}
+
+#blog-list article .article-created {
+	font-size: 10pt;
+	color: #aaa;
+	font-style: italic;
+}

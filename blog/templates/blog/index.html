@@ -1,0 +1,41 @@
+{% extends "subpage.html" %}
+{% load staticfiles %}
+
+{% block title %}Blog{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'blog.css' %}">
+{% endblock %}
+
+{% block subpageContent %}
+
+<div id="blog-list" class="blog-main">
+	<div class="container">
+		{% for post in posts %}
+
+			<article>
+				<div class="article-title">
+					{% if not detail %}
+						<a href="{% url 'blog_detail' id=post.id %}">
+					{% endif %}
+
+					{{ post.title }}
+
+					{% if not detail %}
+						</a>
+					{% endif %}
+				</div>
+				<div class="article-created">
+					Posted by {{post.created_by.first_name}} at {{post.created_at}}
+				</div>
+				<br><br>
+				<div class="article-content">
+					{{ post.body | safe }}
+				</div>
+			</article>
+
+		{% endfor %}
+	</div>
+</div>
+	
+{% endblock %}
