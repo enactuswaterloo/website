@@ -1,0 +1,39 @@
+.project h1 {
+	border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+#projects {
+	background-color: white;
+
+}
+
+#projects .container {
+	position: relative;
+}
+
+#projects nav {
+	margin-top: 40px;
+}
+
+.affix {
+	position: fixed;
+	top: 10px;
+}
+
+#projectsNav .nav li {
+	border-left: 2px solid white;
+
+
+}
+
+#projectsNav .nav > li > a,
+#projectsNav .nav > li > a:hover {
+	background-color: transparent;
+	color: #777;
+}
+
+#projectsNav .nav li:hover,
+#projectsNav .nav li.active {
+	background-color: transparent;
+	border-left: 2px solid #FEC222;
+}

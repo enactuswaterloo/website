@@ -3,20 +3,42 @@
 
 {% block title %}Projects{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'projects.css' %}" />
+{% endblock %}
+
+{% block body-attrs %}data-spy="scroll" data-target="#projectsNav"{%endblock%}
+
 {% block subpageContent %}
-    <div class="projects">
+    <div id="projects">
     	<div class="container">
-    		{% for project in projects %}
-			    <div class="project">
-			    	<div class="col-sm-3 project-title-block">
-			    		<p class="project-title">{{project.title}}</p>
-			    	</div>
-			    	<div class="col-sm-9">
-			    		<p class="project-description">{{project.description}}</p>
-			    	</div>
-			    	<div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
-			    </div>
-			{% endfor %}
+    		<div class="row">
+	    		<div class="col-md-9">
+		    		{% for project in projects %}
+		    			<br><br>
+					    <div class="project" id="project-{{project.id}}">
+					    	<h1>{{project.title}}</h1>
+					    	<br>
+					    	<div class="project-content">{{project.description | safe }}</div>
+					    	<br><br><br>
+					    </div>
+					{% endfor %}
+				</div>
+
+				<nav class="col-md-3 hidden-xs hidden-sm">
+					<div data-spy="affix" data-offset-top="220" id="projectsNav">
+						<ul class="nav nav-stacked" role="tablist">
+							{% for project in projects %}
+								<li
+									{% if forloop.counter == 0 %}
+									class="active"
+									{% endif %}
+								><a href="#project-{{project.id}}">{{project.title}}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+				</nav>
+			</div>
 		</div>
 	</div>
 
