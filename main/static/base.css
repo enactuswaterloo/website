@@ -34,6 +34,10 @@ footer ul {
 	font-family: "Arial";
 }
 
+div.footer-box {
+	text-align: center;
+}
+
 a.footerButton {
 	text-decoration: none;
 	color: #E6E6E6;
