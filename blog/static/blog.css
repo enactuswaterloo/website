@@ -1,6 +1,10 @@
+.blog-main {
+	background-color: #FFF7E0;
+}
 
 #blog-list article {
-	margin: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	padding: 15px;
 
 	background-color: white;

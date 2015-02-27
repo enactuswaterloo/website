@@ -4,14 +4,15 @@ from django.db import models
 
 class Person(models.Model):
     picture = models.CharField(max_length=100, default="smiley_face.jpg")
-    name = models.CharField(max_length=100, default="N. Actus")
+    firstName = models.CharField(max_length=100, default="N.")
+    lastName = models.CharField(max_length=100, default="Actus")
     program = models.CharField(max_length=100, default="Currently failing")
     year = models.CharField(max_length=100, default="2019")
     position = models.CharField(max_length=100, default="Member")
     bio = models.TextField(default="No description provided.")
 
     def __str__(self):
-    	return "{}, {}".format(self.name, self.program)
+    	return "{} {}, {}".format(self.firstName, self.lastName, self.program)
 
 class Coverpic(models.Model):
     url = models.URLField(max_length=200)

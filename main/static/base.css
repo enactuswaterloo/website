@@ -77,6 +77,7 @@ section {
 .members {
 	padding-top: 30px;
 	padding-bottom: 30px;
+	background-color: #FFF7E0;
 }
 
 div.member {
@@ -91,40 +92,54 @@ div.member {
 div.member-profile {
 	display: inline-block;
 	width: 100%;
-	background-color: gray;
+	background-color: #334C4C;
 	border-bottom: 1px solid black;
 	border-right: 1px solid black;
 	padding: 5px;
-	padding-top: 1px;
 	box-shadow: 2px 2px 1px black;
 	position: relative;
 	bottom: 2px;
 	right: 2px;
 }
 
-h4.member-name {
+div.member-name {
 	display: inline-block;
-	font-size: 22px;
+	margin-top: 2px;
+	margin-left: 4px;
+}
+
+div.member-name h4 {
+	font-size: 28px;
 	color: white;
+	margin: 0px;
+}
+
+div.member-pic-box {
+	display: inline-block;
+	vertical-align: top;
 }
 
 img.member-pic {
-	width: 30px;
-	height: 30px;
+	width: 60px;
+	height: 60px;
 	border: 1px solid white;
-	border-radius: 15px;
-	display: inline;
+	border-radius: 30px;
+	margin: 2px;
 }
 
 div.member-program {
 	font-style: italic;
-	background-color: #B8B8B8;
+	background-color: #527A7A;
 	padding: 5px;
+	border-bottom: 1px solid #334C4C;
+	border-right: 1px solid #334C4C;
 }
 
 div.member-position {
-	background-color: #E6E6E6;
+	background-color: #A3C2C2;
 	padding: 5px;
+	border-bottom: 1px solid #66A3A3;
+	border-right: 1px solid #66A3A3;
 }
 
 div.member-bio {

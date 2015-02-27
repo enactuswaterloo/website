@@ -10,8 +10,13 @@
 			    <div class="col-lg-3 col-md-4 col-sm-6">
 			    	<div class="member">
 			    		<div class="member-profile">
-			    			<img src="{% static '{{person.picture}}' %}" alt="Member picture" class="member-pic">
-				    		<h4 class="member-name">{{person.name}}</h4>
+			    			<div class="member-pic-box">
+			    				<img src="{% static '{{person.picture}}' %}" alt="Member picture" class="member-pic">
+			    			</div>
+			    			<div class="member-name">
+					    		<h4>{{person.firstName}}</h4>
+					    		<h4>{{person.lastName}}</h4>
+			    			</div>
 			    		</div>
 			    		<div class="member-program">
 				    		<p>- {{person.program}}, {{person.year}}</p>
