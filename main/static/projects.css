@@ -1,25 +1,16 @@
-
 .project {
 	margin-top: 40px;
 	margin-bottom: 40px;
-	background-color: white;
-	padding: 10px;
-	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);
 }
 
 .project h1 {
-	border-bottom: 1px solid #669999;
-	margin-top: 0px;
-	margin-bottom: 15px;
-	padding: 0px;
-}
-
-div.project-content {
-	padding-bottom: 5px;
+	border-bottom: 1px solid rgb(238, 238, 238);
+	margin-bottom: 20px;
 }
 
 #projects {
-	background-color: #FFF7E0;
+	background-color: white;
+
 }
 
 #projects .container {
@@ -36,20 +27,19 @@ div.project-content {
 }
 
 #projectsNav .nav li {
-	border-left: 3px solid white;
-	border-bottom: 3px solid #669999;
-	margin-bottom: 4px;
+	border-left: 2px solid white;
+
 
 }
 
 #projectsNav .nav > li > a,
 #projectsNav .nav > li > a:hover {
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: transparent;
 	color: #777;
 }
 
 #projectsNav .nav li:hover,
 #projectsNav .nav li.active {
 	background-color: transparent;
-	border-left: 3px solid #FEC222;
+	border-left: 2px solid #FEC222;
 }
