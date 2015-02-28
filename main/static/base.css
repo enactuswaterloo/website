@@ -11,23 +11,23 @@ nav.navbar-custom {
 }
 
 nav.navbar-custom .navbar-nav {
-	margin-top: 18px;
-	padding-top: 5px;
+	margin-top: 15px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 	background-color: white;
 }
 
+nav.navbar-custom .navbar-nav a {
+	border-bottom: 2px solid white;
+	transition: border-bottom-color 0.15s;
+}
+
 nav.navbar-custom .navbar-nav a:hover {
-	border-bottom: 3px solid #FEC222;
+	border-bottom-color: #FEC222;
 }
 
 nav.navbar-custom .navbar-brand img {
 	height: 80px;
-}
-
-nav.navbar ul.nav li {
-	background-color: white;
-	text-align: center;
-	font-size: 20px;
 }
 
 div.navbar-header button {
