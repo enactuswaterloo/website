@@ -1,8 +1,7 @@
-.blog-main {
-	background-color: #FFF7E0;
+#blog-detail {
 }
 
-#blog-list article {
+#blog-detail article {
 	margin-top: 30px;
 	margin-bottom: 30px;
 	padding: 15px;
@@ -11,15 +10,28 @@
 	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);
 }
 
-#blog-list article .article-title {
+.article-title {
 	font-size: 18pt;
-	font-style: bold;
+	font-weight: 900;
 	text-transform: uppercase;
 	color: #077BE0;
 }
 
-#blog-list article .article-created {
+.article-created {
 	font-size: 10pt;
 	color: #aaa;
 	font-style: italic;
+}
+
+#blog-list {
+	background-color: white;
+}
+
+#blog-list .blog-article {
+	margin: 40px 15px;
+
+}
+
+#blog-list .blog-article .article-content {
+	margin: 15px 0px;
 }

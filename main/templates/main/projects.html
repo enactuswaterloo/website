@@ -27,7 +27,7 @@
 						<ul class="nav nav-stacked" role="tablist">
 							{% for project in projects %}
 								<li
-									{% if forloop.counter == 0 %}
+									{% if forloop.counter == 1 %}
 									class="active"
 									{% endif %}
 								><a href="#project-{{project.id}}">{{project.title}}</a></li>

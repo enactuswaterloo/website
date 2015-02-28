@@ -12,28 +12,19 @@
 <div id="blog-list" class="blog-main">
 	<div class="container">
 		{% for post in posts %}
-
-			<article>
+			<div class="blog-article">
 				<div class="article-title">
-					{% if not detail %}
-						<a href="{% url 'blog_detail' id=post.id %}">
-					{% endif %}
-
-					{{ post.title }}
-
-					{% if not detail %}
-						</a>
-					{% endif %}
+					<a href="{% url 'blog_detail' id=post.id %}">{{ post.title }}</a>
 				</div>
 				<div class="article-created">
 					Posted by {{post.created_by.first_name}} at {{post.created_at}}
 				</div>
-				<br><br>
 				<div class="article-content">
-					{{ post.body | safe }}
+					{{ post.body | truncatewords:100 }}
 				</div>
-			</article>
 
+				<a href="{% url 'blog_detail' id=post.id %}" class="btn btn-primary">Read more</a>
+			</div>
 		{% endfor %}
 	</div>
 </div>
