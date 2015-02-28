@@ -21,12 +21,16 @@
     		<nav class="navbar navbar-default navbar-custom navbar-static-top">
                 <div class="container">
                     <div class="navbar-header">
-                      <a class="navbar-brand" href="#">
-                        <img src="{% static 'logo.jpg' %}" alt="logo">
-                      </a>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="fa fa-chevron-down fa-lg"></i>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="{% static 'logo.jpg' %}" alt="logo">
+                        </a>
                     </div>
 
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul id="navbar" class="nav navbar-nav collapse navbar-collapse navbar-right">
                         <li><a href="{% url 'home' %}">Home</a></li>
                         <li><a href="{% url 'about_us' %}">About Us</a></li>
                         <li><a href="{% url 'projects' %}">Projects</a></li>
