@@ -1,9 +1,10 @@
 from django.db import models
+from PIL import Image
 
 # Create your models here.
 
 class Person(models.Model):
-    picture = models.CharField(max_length=100, default="smiley_face.jpg")
+    picture = models.ImageField(upload_to="member-pics/", default="member-pics/smiley_face.jpg")
     firstName = models.CharField(max_length=100, default="N.")
     lastName = models.CharField(max_length=100, default="Actus")
     program = models.CharField(max_length=100, default="Currently failing")

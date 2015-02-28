@@ -1,4 +1,6 @@
+from django.conf import settings
 from django.conf.urls import patterns, include, url
+from django.conf.urls.static import static
 from django.contrib import admin
 
 from main.views import index, about_us, projects
@@ -16,4 +18,4 @@ urlpatterns = patterns('',
 
     url(r'^blog/$', blog_index, name="blog_index"),
     url(r'^blog/(?P<id>.+)/$', blog_detail, name="blog_detail"),
-)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
