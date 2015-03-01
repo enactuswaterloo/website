@@ -3,44 +3,51 @@
 
 {% block title %}About Us{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{% static 'about.css' %}" />
+{% endblock %}
+
 {% block subpageContent %}
-    <div class="members">
-    	<div class="container-fluid">
-    		{% for person in people %}
-			    <div class="col-lg-3 col-md-4 col-sm-6">
-			    	<div class="member">
-			    		<div class="member-profile">
-			    			<div class="member-pic-box">
-			    				<img src="/media/{{person.picture}}" alt="Member picture" class="member-pic">
-			    			</div>
-			    			<div class="member-name">
-					    		<h4>{{person.firstName}}</h4>
-					    		<h4>{{person.lastName}}</h4>
-			    			</div>
-			    		</div>
-			    		<div class="member-program">
-				    		<p>- {{person.program}}, {{person.year}}</p>
-			    		</div>
-			    		<div class="member-position">
-				    		<p>- {{person.position}}</p>
-				    	</div>
-				    	<div class="member-bio">
-				    		<p>- {{person.bio}}</p>
-				    	</div>
-			    	</div>
-			    </div>
-			    {% if forloop.counter|divisibleby:2 %}
-			    	<div class="clearfix visible-sm-block"></div>
-			    {% endif %}
-			    {% if forloop.counter|divisibleby:3 %}
-			    	<div class="clearfix visible-md-block"></div>
-			    {% endif %}
-			    {% if forloop.counter|divisibleby:4 %}
-			    	<div class="clearfix visible-lg-block"></div>
-			    {% endif %}
-			{% endfor %}
+	<div class="members">
+		<div class="container">
+			<div class="text-center"><h1>Our awesome team</h1></div>
+			<br>
+			<div class="row">
+				{% for person in people %}
+					<div class="col-lg-3 col-md-4 col-sm-6">
+						<div class="member">
+							<div class="member-pic-box text-center">
+								{% if person.picture %}
+									<span class="helper"></span><img src="{{person.picture.url}}" alt="Member picture" class="member-pic">
+								{% else %}
+									<i class="fa fa-user"></i>
+								{% endif %}
+							</div>
+							<div class="member-info">
+								<div class="member-name">
+									{{person.first_name}}&nbsp;{{person.last_name}}<span class="member-position">, {{person.position}}</span>
+								</div>
+								<div class="member-program">
+									{{person.program}}, {{person.year}}
+								</div>
+								<div class="member-bio">
+									{{person.bio}}
+								</div>
+							</div>
+						</div>
+					</div>
+					{% if forloop.counter|divisibleby:2 %}
+						<div class="clearfix visible-sm-block"></div>
+					{% endif %}
+					{% if forloop.counter|divisibleby:3 %}
+						<div class="clearfix visible-md-block"></div>
+					{% endif %}
+					{% if forloop.counter|divisibleby:4 %}
+						<div class="clearfix visible-lg-block"></div>
+					{% endif %}
+				{% endfor %}
+			</div>
 		</div>
 	</div>
-	<div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
 
 {% endblock %}

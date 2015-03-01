@@ -8,7 +8,7 @@ def index(request):
     return render(request, "main/index.html")
 
 def about_us(request):
-    people = Person.objects.all()
+    people = Person.objects.filter(public=True)
 
     return render(request, "main/about_us.html", {"people": people})
 
