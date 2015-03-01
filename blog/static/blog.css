@@ -1,20 +1,24 @@
 #blog-detail {
+	background-color: white;
 }
 
 #blog-detail article {
-	margin-top: 30px;
 	margin-bottom: 30px;
 	padding: 15px;
 
 	background-color: white;
-	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);
+	/*box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.3);*/
 }
 
-.article-title {
+#blog-list .article-title, #blog-list .article-title a {
 	font-size: 18pt;
 	font-weight: 900;
 	text-transform: uppercase;
 	color: #077BE0;
+}
+
+#blog-detail .article-title {
+	border-bottom: 1px solid #ccc;
 }
 
 .article-created {
@@ -34,4 +38,18 @@
 
 #blog-list .blog-article .article-content {
 	margin: 15px 0px;
+}
+
+#blog-list img.blog-featured-pic {
+	height: 200px;
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+#blog-detail .blog-featured-pic {
+	height: 300px;
+	/* Background image is set in html */
+	background-attachment: fixed;
+	background-position: center;
+	min-height: 40px;
 }
