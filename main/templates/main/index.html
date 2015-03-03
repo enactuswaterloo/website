@@ -32,56 +32,53 @@
 
 <section id="section-stats">
 	<div class="container">
-		<h3>Enactus at the University of Waterloo</h3>
+		<h2>Enactus at the University of Waterloo</h2>
 		<div class="row">
 			<div class="col-md-4" id="stat-1">
-				<span class="fa-stack">
+				<div class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x"></i>
 				  <i class="fa fa-users fa-stack-1x fa-inverse"></i>
-				</span>
-				<br>
+				</div>
 
 				<div class="stat stat-number">35</div>
 				<div class="stat stat-type">Members</div>
 			</div>
 
 			<div class="col-md-4" id="stat-2">
-				<span class="fa-stack">
+				<div class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x"></i>
 				  <i class="fa fa-building fa-stack-1x fa-inverse"></i>
-				</span>
-				<br>
+				</div>
 
 				<div class="stat stat-number">4</div>
 				<div class="stat stat-type">Projects</div>
 			</div>
 
 			<div class="col-md-4" id="stat-3">
-				<span class="fa-stack">
+				<div class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x"></i>
 				  <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
-				</span>
-				<br>
+				</div>
 
-				<div class="stat stat-number">9000+</div>
-				<div class="stat stat-type">Awesomeness</div>
+				<div class="stat stat-type">Founded in</div>
+				<div class="stat stat-number">2014</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section id="section-buttons">
+<!--<section id="section-buttons">
 	<div class="container">
 			<a class="home-button" href="{% url 'projects' %}">View projects</a>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<a class="home-button" href="{% url 'about_us' %}">View members</a>
 		
 	</div>
-</section>
+</section>-->
 
 <section id="section-meeting">
 	<div class="container">
-		<h3>Our meetings</h3>
+		<h2>Our meetings</h2>
 		<div class="row">
 			<div class="col-md-6">
 				<div class="home-button">
@@ -111,7 +108,9 @@
 			Be a social entrepreneur.
 		</div>
 		<br>
-		<a class="home-button" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Join us</a><br><br>
+		<a class="home-button home-button-lg" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Join us</a><br>
+		<a class="home-button" href="{% url 'projects' %}">View projects</a>
+		<a class="home-button" href="{% url 'about_us' %}">View members</a>
 	</div>
 </section>
 
