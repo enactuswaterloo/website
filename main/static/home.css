@@ -96,6 +96,7 @@ section#section-whatis-enactus {
 	/*color: #444;*/
 	color: white;
 	border: 2px solid white;
+	display: block;
 }
 
 #stat-1 {
