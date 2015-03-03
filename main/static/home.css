@@ -1,9 +1,4 @@
 
-section div.home-header {
-	width: 100%;
-	background-color: #FEC222;
-}
-
 .home-button {
 	border-radius: 3px;
 	border: 2px solid #555;
@@ -43,8 +38,12 @@ section#section-whatis-enactus {
 }
 
 #section-whatis-enactus h1 {
+	background-color: #FEC222;
+
 	display: inline;
+
 	font-size: 56pt;
+
 	padding: 0px 3px;
 }
 
