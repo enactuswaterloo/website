@@ -1,8 +1,11 @@
 from django.db import models
 
+from django.contrib.auth.models import User
+
 # Create your models here.
 
 class Person(models.Model):
+    user = models.OneToOneField(User, null=True, blank=True, default=None)
 
     public = models.BooleanField(default=False)
     picture = models.ImageField(upload_to="member-pics/", default=None, null=True, blank=True)
