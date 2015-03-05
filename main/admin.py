@@ -1,7 +1,6 @@
 from django.contrib import admin
-from main.models import Person, Coverpic, Project
+from main.models import Coverpic, Project
 
 # Register your models here.
-admin.site.register(Person)
-admin.site.register(Coverpic)
 admin.site.register(Project)
+admin.site.register(Coverpic)
