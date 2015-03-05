@@ -41,6 +41,22 @@ section#section-whatis-enactus {
 
 	background-color: #FFF7E0;
 }
+#section-whatis-enactus .section-content {
+	margin: 10px 0px;
+}
+
+#section-whatis-enactus .section-text {
+	margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+	section#section-whatis-enactus h1 {
+		font-size: 42pt;
+	}
+	#section-whatis-enactus h1 #firsthalf{
+		font-size: 32pt;
+	}
+}
 
 #section-whatis-enactus h1 {
 	background-color: #FEC222;
@@ -139,7 +155,25 @@ section#section-whatis-enactus {
 #section-join-us .section-text {
 	font-size: 42pt;
 	font-weight: 300;
+	text-align: center;
 	margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+	section#section-join-us .section-text {
+		font-size: 18pt;
+	}
+
+	section#section-join-us .home-button {
+		font-size: 12pt;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding: 5px 10px;
+	}
+	section#section-join-us .home-button.home-button-lg {
+		font-size: 14pt;
+		padding: 10px 15px;
+	}
 }
 
 #section-join-us .home-button {
