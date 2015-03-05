@@ -19,4 +19,7 @@ urlpatterns = patterns('',
 
     url(r'^blog/$', blog_index, name="blog_index"),
     url(r'^blog/(?P<id>.+)/$', blog_detail, name="blog_detail"),
+
+    url(r'^login/$', 'django.contrib.auth.views.login'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name="logout"),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
