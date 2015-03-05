@@ -35,19 +35,24 @@
 					<li><a href="{% url 'about_us' %}">About Us</a></li>
 					<li><a href="{% url 'projects' %}">Projects</a></li>
 					<li><a href="{% url 'blog_index' %}">Blog</a></li>
+					{% if user.is_authenticated %}
+						<li><a href="{% url 'logout' %}">Logout</a></li>
+					{% else %}
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<form class="navbar-form navbar-left" role="search">
+							<form class="navbar-form navbar-left" role="search" method="post" action="{% url 'django.contrib.auth.views.login' %}">
+							{% csrf_token %}
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Email">
-									<input type="password" class="form-control" placeholder="Password">
+									<input type="text" class="form-control" placeholder="Email" name="username">
+									<input type="password" class="form-control" placeholder="Password" name="password">
 								</div>
 								<button type="submit" class="btn btn-default" >Sign In</button>
 								<button type="submit" class="btn btn-default pull-right" >Sign Up</button>
 							</form>
 						</ul>
 					</li>
+					{% endif %}
 				</ul>
 			</div>
 		</nav>
