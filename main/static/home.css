@@ -80,6 +80,7 @@ section#section-whatis-enactus {
 #section-stats {
 	text-align: center;
 	background-color: white;
+	padding-bottom: 0px;
 }
 
 #section-stats h2 {
@@ -117,14 +118,17 @@ section#section-whatis-enactus {
 
 #stat-1 {
 	color: #3D1255;
+	margin-bottom: 40px;
 }
 
 #stat-2 {
 	color: #004400;
+	margin-bottom: 40px;
 }
 
 #stat-3 {
 	color: #09093B;
+	margin-bottom: 40px;
 }
 
 #section-buttons {
