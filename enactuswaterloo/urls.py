@@ -3,8 +3,9 @@ from django.conf.urls import patterns, include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 
-from main.views import index, about_us, projects
+from main.views import index, projects
 from blog.views import index as blog_index, detail as blog_detail
+from about.views import index as about_us
 
 urlpatterns = patterns('',
     # Examples:
