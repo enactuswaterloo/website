@@ -1,0 +1,10 @@
+#login {
+	background-color: white;
+}
+
+#login form {
+	padding-bottom: 80px;
+	margin-top: 20px;
+	margin-bottom: 80px;
+	padding-right: 600px;
+}
