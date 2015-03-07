@@ -5,8 +5,7 @@ from django.contrib import admin
 
 from main.views import index, projects
 from blog.views import index as blog_index, detail as blog_detail
-from about.views import index as about_us
-from member.views import index as member_profile
+from about.views import index as about_us, member as member_profile
 
 urlpatterns = patterns('',
     # Examples:
@@ -23,6 +22,6 @@ urlpatterns = patterns('',
 
     url(r'^member/$', member_profile, name="member_profile"),
 
-    url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'member/login.html'}),
+    url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'main/login.html'}),
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name="logout"),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
