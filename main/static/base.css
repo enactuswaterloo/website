@@ -39,6 +39,17 @@ div.navbar-header button {
 	border: 1px solid;
 }
 
+a.join-button {
+	text-decoration: none;
+}
+
+a.join-button button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FEC222;
+}
+
 footer {
 	padding: 20px 0px;
 	background-color:#444;
