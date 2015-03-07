@@ -26,6 +26,10 @@ nav.navbar-custom .navbar-nav a:hover {
 	border-bottom-color: #FEC222;
 }
 
+nav.navbar-custom .navbar-nav a:focus {
+	border-bottom-color: #FEC222;
+}
+
 nav.navbar-custom .navbar-brand img {
 	height: 80px;
 }
