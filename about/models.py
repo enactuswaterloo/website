@@ -7,7 +7,9 @@ from django.contrib.auth.models import User
 class Person(models.Model):
     user = models.OneToOneField(User, null=True, blank=True, default=None)
 
+    priority = models.IntegerField(default=0)
     public = models.BooleanField(default=False)
+    approved = models.BooleanField(default=False)
     picture = models.ImageField(upload_to="member-pics/", default=None, null=True, blank=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
