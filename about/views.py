@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from about.models import Person, ProfileForm
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 def index(request):
@@ -11,7 +12,15 @@ def index(request):
 @login_required
 def profile(request):
 	if request.method != 'POST':
-		return render(request, "about/member.html")
+		profileForm = ProfileForm(initial={
+				'first_name': request.user.first_name,
+				'last_name': request.user.last_name,
+				'program': request.user.profile.program,
+				'year': request.user.profile.year,
+				'position': request.user.profile.position,
+				'bio':request.user.profile.bio
+			})
+		return render(request, "about/member.html", {"ProfileForm": profileForm})
 
 	# POST response to form
 	if 'password' in request.POST:
@@ -20,9 +29,27 @@ def profile(request):
 			request.user.set_password(request.POST['password'])
 		else:
 			return render(request, "about/member.html", {error: "Incorrect password"})
-	elif 'bio' in request.POST:
+	elif 'first_name' in request.POST:
+		profileForm = ProfileForm(request.POST, request.FILES)
+		if not profileForm.is_valid():
+			return render(request, "about/member.html", {error: "Invalid input"})
+
 		person = Person.objects.get(user=request.user)
 		if person == None:
 			person = Person(user=request.user)
 
-		# TODO: Complete
+		request.user.first_name = profileForm.cleaned_data["first_name"]
+		request.user.last_name = profileForm.cleaned_data["last_name"]
+		request.user.save()
+
+		person.program 	= profileForm.cleaned_data["program"]
+		person.year 	= profileForm.cleaned_data["year"]
+		person.position	= profileForm.cleaned_data["position"]
+		person.bio 		= profileForm.cleaned_data["bio"]
+
+		if "picture" in request.FILES:
+			person.picture = request.FILES["picture"]
+
+		person.save()
+
+	return HttpResponseRedirect("/about/")

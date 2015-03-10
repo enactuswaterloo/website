@@ -12,7 +12,7 @@ class ProfileForm(forms.Form):
 
     program = forms.CharField(max_length=150, label="Program", required=False)
     year = forms.CharField(max_length=100, label="Year of graduation", required=False)
-    picture = models.ImageField(required=False)
+    picture = forms.ImageField(required=False)
 
     position = forms.CharField(max_length=100, label="Team (eg. Operations)", required=True)
     bio = forms.TextField(max_length=400, required=False)
@@ -20,7 +20,7 @@ class ProfileForm(forms.Form):
 
 # Create your models here.
 class Person(models.Model):
-    user = models.OneToOneField(User, null=True, blank=True, default=None)
+    user = models.OneToOneField(User, null=True, blank=True, default=None, related_name="profile")
 
     priority = models.IntegerField(default=0)
     public = models.BooleanField(default=False)
