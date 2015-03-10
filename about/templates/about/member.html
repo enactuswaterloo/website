@@ -9,6 +9,19 @@
 
 {% block subpageContent %}
 
+<section>
+	<div class="container text-left">
 
+		<form action="" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+
+			{{profileForm.as_p}} <!-- TODO: Use bootstrap for this -->
+
+			<input type="submit" value="Submit" />
+		</form>
+
+	</div>
+
+</section>
 	
 {% endblock %}

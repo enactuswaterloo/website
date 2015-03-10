@@ -12,15 +12,23 @@ def index(request):
 @login_required
 def profile(request):
 	if request.method != 'POST':
-		profileForm = ProfileForm(initial={
+		initialDict = {
 				'first_name': request.user.first_name,
-				'last_name': request.user.last_name,
+				'last_name': request.user.last_name
+			}
+		try:
+			initialDict += {
 				'program': request.user.profile.program,
 				'year': request.user.profile.year,
 				'position': request.user.profile.position,
 				'bio':request.user.profile.bio
-			})
-		return render(request, "about/member.html", {"ProfileForm": profileForm})
+			}
+		except:
+			pass
+
+
+		profileForm = ProfileForm(initial=initialDict)
+		return render(request, "about/member.html", {"profileForm": profileForm})
 
 	# POST response to form
 	if 'password' in request.POST:
@@ -31,25 +39,25 @@ def profile(request):
 			return render(request, "about/member.html", {error: "Incorrect password"})
 	elif 'first_name' in request.POST:
 		profileForm = ProfileForm(request.POST, request.FILES)
-		if not profileForm.is_valid():
+		if profileForm.is_valid():
+
+			person = Person.objects.get_or_create(user=request.user)
+
+			request.user.first_name = profileForm.cleaned_data["first_name"]
+			request.user.last_name = profileForm.cleaned_data["last_name"]
+			request.user.save()
+
+			person.program 	= profileForm.cleaned_data["program"]
+			person.public 	= profileForm.cleaned_data["public"]
+			person.year 	= profileForm.cleaned_data["year"]
+			person.position	= profileForm.cleaned_data["position"]
+			person.bio 		= profileForm.cleaned_data["bio"]
+
+			if "picture" in request.FILES:
+				person.picture = request.FILES["picture"]
+
+			person.save()
+		else:
 			return render(request, "about/member.html", {error: "Invalid input"})
-
-		person = Person.objects.get(user=request.user)
-		if person == None:
-			person = Person(user=request.user)
-
-		request.user.first_name = profileForm.cleaned_data["first_name"]
-		request.user.last_name = profileForm.cleaned_data["last_name"]
-		request.user.save()
-
-		person.program 	= profileForm.cleaned_data["program"]
-		person.year 	= profileForm.cleaned_data["year"]
-		person.position	= profileForm.cleaned_data["position"]
-		person.bio 		= profileForm.cleaned_data["bio"]
-
-		if "picture" in request.FILES:
-			person.picture = request.FILES["picture"]
-
-		person.save()
 
 	return HttpResponseRedirect("/about/")

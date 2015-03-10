@@ -14,8 +14,16 @@ class ProfileForm(forms.Form):
     year = forms.CharField(max_length=100, label="Year of graduation", required=False)
     picture = forms.ImageField(required=False)
 
-    position = forms.CharField(max_length=100, label="Team (eg. Operations)", required=True)
-    bio = forms.TextField(max_length=400, required=False)
+    position = forms.ChoiceField(label="Team", required=True, choices=(
+            ("Operations team", "Operations"),
+            ("Finance team", "Finance"),
+            ("Corporate relations", "Corporate relations"),
+            ("Communications team", "Communications"),
+            ("IT Team", "IT"),
+            ("Environment team", "Environment"),
+            ("Marketing team", "Marketing")
+        ))
+    bio = forms.CharField(widget=forms.Textarea, required=False)
 
 
 # Create your models here.
