@@ -5,6 +5,16 @@
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'member.css' %}">
+
+<script type="text/javascript">
+	function showForm(currentElement, formName) {
+		$("#forms > .col-md-9 > div").addClass("hidden-md hidden-lg");
+		$("#" + formName).removeClass("hidden-md hidden-lg");
+
+		$("#forms .list-group .list-group-item").removeClass("active");
+		$(currentElement).addClass("active");
+	}
+</script>
 {% endblock %}
 
 {% block subpageContent %}
@@ -12,14 +22,36 @@
 <section>
 	<div class="container text-left">
 
-		<form action="" method="post" enctype="multipart/form-data">
-			{% csrf_token %}
+		<div class="row" id="forms">
 
-			{{profileForm.as_p}} <!-- TODO: Use bootstrap for this -->
+			<div class="col-md-3 hidden-sm hidden-xs">
+				<ul class="list-group">
+					<li class="list-group-item active" onclick="showForm(this, 'passwordForm');">Password/Email</li>
+					<li class="list-group-item" onclick="showForm(this, 'profileForm');">Profile</li>
+				</ul>
+			</div>
 
-			<input type="submit" value="Submit" />
-		</form>
+			<div class="col-md-9">
+				<div id="passwordForm">
 
+				</div>
+
+				<div id="profileForm" class="hidden-md hidden-lg">
+					<div>
+						<h3>Profile</h3>
+					</div>
+					
+					<form action="" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+
+						{{profileForm.as_p}} <!-- TODO: Use bootstrap for this -->
+
+						<input type="submit" value="Submit" />
+					</form>
+				</div>
+			</div>
+
+		</div>
 	</div>
 
 </section>
