@@ -42,4 +42,4 @@ class Person(models.Model):
     bio = models.TextField(blank=True, max_length=400) # Max lengths are unenforced for TextFields; that's intentional.
 
     def __str__(self):
-    	return "%s %s" % (self.first_name, self.last_name)
+    	return "%s %s" % (self.user.first_name, self.user.last_name)

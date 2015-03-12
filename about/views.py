@@ -11,6 +11,7 @@ def index(request):
 
 @login_required
 def profile(request):
+
 	if request.method != 'POST':
 		initialDict = {
 				'first_name': request.user.first_name,
@@ -41,13 +42,13 @@ def profile(request):
 		profileForm = ProfileForm(request.POST, request.FILES)
 		if profileForm.is_valid():
 
-			person = Person.objects.get_or_create(user=request.user)
+			person, created = Person.objects.get_or_create(user=request.user)
 
 			request.user.first_name = profileForm.cleaned_data["first_name"]
 			request.user.last_name = profileForm.cleaned_data["last_name"]
 			request.user.save()
 
-			person.program 	= profileForm.cleaned_data["program"]
+			person.program 	= profileForm.cleaned_data['program']
 			person.public 	= profileForm.cleaned_data["public"]
 			person.year 	= profileForm.cleaned_data["year"]
 			person.position	= profileForm.cleaned_data["position"]
@@ -58,6 +59,6 @@ def profile(request):
 
 			person.save()
 		else:
-			return render(request, "about/member.html", {error: "Invalid input"})
+			return render(request, "about/member.html", {"error": "Invalid input"})
 
 	return HttpResponseRedirect("/about/")
