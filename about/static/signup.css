@@ -1,0 +1,29 @@
+#signup {
+	background-color: white;
+	width: 100%;
+}
+
+#signup form {
+	padding-bottom: 80px;
+	margin-top: 20px;
+	margin-bottom: 80px;
+	width: 100%;
+}
+
+form div.form-group label {
+	padding: 0px;
+	margin: 0px;
+	display: block;
+	font-size: 16px;
+}
+
+form div.form-group input {
+	padding: 10px;
+	margin: 0px;
+}
+
+.form-group {
+	display: block;
+	margin-bottom: 25px;
+	padding: 0px;
+}
