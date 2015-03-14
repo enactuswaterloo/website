@@ -1,10 +1,32 @@
 #login {
 	background-color: white;
+	width: 100%;
 }
 
 #login form {
 	padding-bottom: 80px;
 	margin-top: 20px;
 	margin-bottom: 80px;
-	padding-right: 600px;
+	width: 100%;
+}
+
+form div.form-group label {
+	padding: 0px;
+	margin: 0px;
+	display: block;
+}
+
+form div.form-group input {
+	padding: 10px;
+	margin: 0px;
+}
+
+.form-group {
+	display: block;
+	margin-bottom: 20px;
+	padding: 0px;
+}
+
+form div.checkbox {
+	margin-bottom: 20px;
 }
