@@ -44,6 +44,14 @@
 	height: 200px;
 	max-width: 100%;
 	border-radius: 5px;
+	background-repeat: no-repeat;
+	background-size: 80% auto;
+	background-color: #ddd;
+}
+
+article .article-social-media-buttons {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #blog-detail .blog-featured-pic {
