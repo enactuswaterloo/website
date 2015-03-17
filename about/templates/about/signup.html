@@ -14,7 +14,7 @@
 		<h3>Sign-ups for existing members</h3>
 		<div>If you are not a member of Enactus Waterloo already, come to the first meeting of the next term.</div>
 
-		<form method="post" action="{% url 'signup' %}">
+		<form method="post">
 			{% csrf_token %}
 
 			{% if form.errors %}

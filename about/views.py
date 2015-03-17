@@ -90,4 +90,4 @@ def signup(request):
 	else:
 		return render(request, "about/signup.html", {"error": "Invalid input", "signupForm": signupForm})
 
-	return HttpResponseRedirect("/about/profile/edit")
+	return HttpResponseRedirect("/profile/edit")
