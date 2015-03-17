@@ -69,7 +69,7 @@ def signup(request):
 
 	if request.method != 'POST':
 		signupForm = SignupForm()
-		return render(request, "about/signup.html", {"signupForm": signupForm})
+		return render(request, "about/signup.html", {"form": signupForm})
 
 	# POST response to form
 	signupForm = SignupForm(request.POST)
@@ -84,7 +84,7 @@ def signup(request):
 		user.last_name = signupForm.cleaned_data["last_name"]
 		user.save()
 
-		person, created = Person.objects.get_or_create(user=user)
+		person = Person(user=user)
 		person.position	= signupForm.cleaned_data["position"]
 		person.save()
 	else:

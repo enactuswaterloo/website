@@ -27,11 +27,11 @@ class ProfileForm(forms.Form):
 
 
 class SignupForm(forms.Form):
-    username = forms.CharField(label='Username', max_length=100, required=True, initial='Username')
+    username = forms.CharField(label='Username', max_length=100, required=True)
     email = forms.EmailField(label='Email', max_length=100, required=True, initial='john_doe@email.com')
     password = forms.CharField(label='Password', max_length=100, required=True, widget=forms.PasswordInput)
-    first_name = forms.CharField(label='Preferred first name', max_length=100, required=True, initial='First Name')
-    last_name = forms.CharField(label='Preferred last name', max_length=100, required=True, initial='Last Name')
+    first_name = forms.CharField(label='Preferred first name', max_length=100, required=True)
+    last_name = forms.CharField(label='Preferred last name', max_length=100, required=True)
 
     position = forms.ChoiceField(label="Team", required=True, choices=(
             ("Operations team", "Operations"),

@@ -11,6 +11,9 @@
 
 <div id ="signup">
 	<div class="container">
+		<h3>Sign-ups for existing members</h3>
+		<div>If you are not a member of Enactus Waterloo already, come to the first meeting of the next term.</div>
+
 		<form method="post" action="{% url 'signup' %}">
 			{% csrf_token %}
 
@@ -18,26 +21,13 @@
 				<div class="alert alert-danger" role="alert">Invalid username and/or password</div>
 			{% endif %}
 
-			<div class="form-group">
-				{{signupForm.email.label_tag}}
-				{{signupForm.email}}
-			</div>
-			<div class="form-group">
-				{{signupForm.password.label_tag}}
-				{{signupForm.password}}
-			</div>
-			<div class="form-group">
-				{{signupForm.first_name.label_tag}}
-				{{signupForm.first_name}}
-			</div>
-			<div class="form-group">
-				{{signupForm.last_name.label_tag}}
-				{{signupForm.last_name}}
-			</div>
-			<div class="form-group">
-				{{signupForm.position.label_tag}}
-				{{signupForm.position}}
-			</div>
+			{% for field in form %}
+				<div class="form-group">
+					{{field.label_tag}}
+					{{field}}
+				</div>
+			{% endfor %}
+
 			<button type="submit" class="btn btn-default">Sign Up</button>
 		</form>
 	</div>

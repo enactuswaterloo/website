@@ -21,6 +21,12 @@
 	border-bottom: 1px solid #ccc;
 }
 
+#blog-detail .article-content {
+	color: #666;
+	font-size: 13pt;
+	line-height: 2;
+}
+
 .article-created {
 	font-size: 10pt;
 	color: #aaa;
