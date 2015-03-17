@@ -18,16 +18,16 @@ nav.navbar-custom .navbar-nav {
 	background-color: white;
 }
 
-nav.navbar-custom .navbar-nav a {
+nav.navbar-custom .navbar-nav li > a {
 	border-bottom: 2px solid white;
 	transition: border-bottom-color 0.15s;
 }
 
-nav.navbar-custom .navbar-nav a:hover {
+nav.navbar-custom .navbar-nav li > a:hover {
 	border-bottom-color: #FEC222;
 }
 
-nav.navbar-custom .navbar-nav a:focus {
+nav.navbar-custom .navbar-nav li > a:focus {
 	border-bottom-color: #FEC222;
 }
 
@@ -105,5 +105,13 @@ section {
 
 p {
 	margin-bottom: 0px;
+}
+
+.dropdown-menu .form-group {
+	margin: 3px 0px;
+}
+
+.form-elements {
+	margin: 10px 0px;
 }
 
