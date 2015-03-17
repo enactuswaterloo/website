@@ -5,7 +5,7 @@ from django.contrib import admin
 
 from main.views import index, projects
 from blog.views import index as blog_index, detail as blog_detail
-from about.views import index as about_us, profile
+from about.views import index as about_us, profile, signup
 
 urlpatterns = patterns('',
     # Examples:
@@ -21,6 +21,7 @@ urlpatterns = patterns('',
     url(r'^blog/(?P<id>.+)/$', blog_detail, name="blog_detail"),
 
     url(r'^profile/edit$', profile, name="profile"),
+    url(r'^signup/$', signup, name="signup"),
 
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'main/login.html'}),
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name="logout"),

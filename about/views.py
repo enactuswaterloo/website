@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from about.models import Person, ProfileForm
+from about.models import Person, ProfileForm, SignupForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 
 # Create your views here.
@@ -62,3 +63,31 @@ def profile(request):
 			return render(request, "about/member.html", {"error": "Invalid input"})
 
 	return HttpResponseRedirect("/about/")
+
+
+def signup(request):
+
+	if request.method != 'POST':
+		signupForm = SignupForm()
+		return render(request, "about/signup.html", {"signupForm": signupForm})
+
+	# POST response to form
+	signupForm = SignupForm(request.POST)
+	if signupForm.is_valid():
+
+		username = signupForm.cleaned_data["username"]
+		email = signupForm.cleaned_data["email"]
+		password = signupForm.cleaned_data["password"]
+		user = User.objects.create_user(username, email, password)
+
+		user.first_name = signupForm.cleaned_data["first_name"]
+		user.last_name = signupForm.cleaned_data["last_name"]
+		user.save()
+
+		person, created = Person.objects.get_or_create(user=user)
+		person.position	= signupForm.cleaned_data["position"]
+		person.save()
+	else:
+		return render(request, "about/signup.html", {"error": "Invalid input", "signupForm": signupForm})
+
+	return HttpResponseRedirect("/about/profile/edit")

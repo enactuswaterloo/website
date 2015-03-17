@@ -26,6 +26,24 @@ class ProfileForm(forms.Form):
     bio = forms.CharField(widget=forms.Textarea, required=False)
 
 
+class SignupForm(forms.Form):
+    username = forms.CharField(label='Username', max_length=100, required=True, initial='Username')
+    email = forms.EmailField(label='Email', max_length=100, required=True, initial='john_doe@email.com')
+    password = forms.CharField(label='Password', max_length=100, required=True, widget=forms.PasswordInput)
+    first_name = forms.CharField(label='Preferred first name', max_length=100, required=True, initial='First Name')
+    last_name = forms.CharField(label='Preferred last name', max_length=100, required=True, initial='Last Name')
+
+    position = forms.ChoiceField(label="Team", required=True, choices=(
+            ("Operations team", "Operations"),
+            ("Finance team", "Finance"),
+            ("Corporate relations", "Corporate relations"),
+            ("Communications team", "Communications"),
+            ("IT Team", "IT"),
+            ("Environment team", "Environment"),
+            ("Marketing team", "Marketing")
+        ))
+
+
 # Create your models here.
 class Person(models.Model):
     user = models.OneToOneField(User, null=True, blank=True, default=None, related_name="profile")
