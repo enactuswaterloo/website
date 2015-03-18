@@ -1,5 +1,6 @@
 {% extends "subpage.html" %}
 {% load staticfiles %}
+{% load bootstrap3 %}
 
 {% block title %}Profile{% endblock %}
 
@@ -7,11 +8,11 @@
 <link rel="stylesheet" href="{% static 'member.css' %}">
 
 <script type="text/javascript">
-	function showprofileForm(currentElement, profileFormName) {
-		$("#profileForms > .col-md-9 > div").addClass("hidden-md hidden-lg");
-		$("#" + profileFormName).removeClass("hidden-md hidden-lg");
+	function showForm(currentElement, formName) {
+		$("#forms > .col-md-9 > div").addClass("hidden-md hidden-lg");
+		$("#" + formName).removeClass("hidden-md hidden-lg");
 
-		$("#profileForms .list-group .list-group-item").removeClass("active");
+		$("#forms .list-group .list-group-item").removeClass("active");
 		$(currentElement).addClass("active");
 	}
 </script>
@@ -22,72 +23,32 @@
 <section>
 	<div class="container text-left">
 
-		<div class="row" id="profileForms">
+		<div class="row" id="forms">
 
 			<div class="col-md-3 hidden-sm hidden-xs">
 				<ul class="list-group">
-					<li class="list-group-item active" onclick="showprofileForm(this, 'passwordprofileForm');">Password/Email</li>
-					<li class="list-group-item" onclick="showprofileForm(this, 'profileprofileForm');">Profile</li>
+					<li class="list-group-item active" onclick="showForm(this, 'passwordForm');">Password/Email</li>
+					<li class="list-group-item" onclick="showForm(this, 'profileForm');">Profile</li>
 				</ul>
 			</div>
 
 			<div class="col-md-9">
-				<div id="passwordprofileForm">
+				<div id="passwordForm">
 
 				</div>
 
-				<div id="profileprofileForm" class="hidden-md hidden-lg">
+				<div id="profileForm" class="hidden-md hidden-lg">
 					<div>
 						<h2>Profile</h2>
 					</div>
 					
-					<profileForm action="" method="post" enctype="multipart/profileForm-data">
+					<form method="post" enctype="multipart/form-data">
 						{% csrf_token %}
 
-						<div class="form-group">
-							{{profileForm.first_name.label_tag}} 
-							{{profileForm.first_name}}
-						</div>
+						{% bootstrap_form profileForm %}
 
-						<div class="form-group">
-							{{profileForm.last_name.label_tag}}
-							{{profileForm.last_name}}
-						</div>
-
-						<div class="form-group">
-							{{profileForm.program.label_tag}}
-							{{profileForm.program}}
-						</div>
-
-						<div class="form-group">
-							{{profileForm.year.label_tag}}
-							{{profileForm.year}}
-						</div>
-
-						<div class="form-group">
-							{{profileForm.position.label_tag}}
-							{{profileForm.position}}
-						</div>
-
-						<div class="form-group">
-							{{profileForm.bio.label_tag}}
-							{{profileForm.bio}}
-						</div>
-
-						<div class="form-group">
-							{{profileForm.picture.label_tag}}
-							{{profileForm.picture}}
-						</div>
-
-						<div class="form-group">
-							{{profileForm.public.label_tag}}
-							{{profileForm.public}}
-						</div>
-
-						<!-- TODO: Use bootstrap for this -->
-
-						<input type="submit" value="Submit" />
-					</profileForm>
+						<input type="submit" class="btn btn-default" value="Submit" />
+					</form>
 				</div>
 			</div>
 

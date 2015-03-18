@@ -19,12 +19,13 @@ def profile(request):
 				'last_name': request.user.last_name
 			}
 		try:
-			initialDict += {
+			initialDict.update({
 				'program': request.user.profile.program,
 				'year': request.user.profile.year,
 				'position': request.user.profile.position,
-				'bio':request.user.profile.bio
-			}
+				'bio':request.user.profile.bio,
+				'public':request.user.profile.public
+			})
 		except:
 			pass
 
