@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
 	title = models.CharField(max_length=250)
-	featured_image = models.ImageField(upload_to='blog/images/', default=None, null=True)
+	featured_image = models.ImageField(upload_to='blog/images/', default=None,blank=True, null=True)
 	body = models.TextField()
 
 	created_by = models.ForeignKey(User)
