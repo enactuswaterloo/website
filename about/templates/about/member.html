@@ -34,7 +34,15 @@
 
 			<div class="col-md-9">
 				<div id="passwordForm">
+					<div>
+						<h2>Password/Email</h2>
+					</div>
 
+					<form action="" method="post">
+						{% csrf_token %}
+
+						<input type="submit" value="Submit" />
+					</form>
 				</div>
 
 				<div id="profileForm" class="hidden-md hidden-lg">
