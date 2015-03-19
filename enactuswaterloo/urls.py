@@ -26,6 +26,6 @@ urlpatterns = patterns('',
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'main/login.html'}),
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}, name="logout"),
 
-    url(r'^change-password/$', 'django.contrib.auth.views.password_change', {'post_change_redirect' : '/done_changing_password/'}), #'template_name': 'about/password_change.html'
-    url(r'^done_changing_password/$', 'django.contrib.auth.views.password_change_done'), #, {'template_name': 'about/password_change_done.html'}
+    url(r'^change-password/$', 'django.contrib.auth.views.password_change', {'post_change_redirect' : '/done_changing_password/', 'template_name': 'about/password_change.html'}),
+    url(r'^done_changing_password/$', 'django.contrib.auth.views.password_change_done', {'template_name': 'about/password_change_done.html'}),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
