@@ -6,16 +6,6 @@
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'member.css' %}">
-
-<script type="text/javascript">
-	function showForm(currentElement, formName) {
-		$("#forms > .col-md-9 > div").addClass("hidden-md hidden-lg");
-		$("#" + formName).removeClass("hidden-md hidden-lg");
-
-		$("#forms .list-group .list-group-item").removeClass("active");
-		$(currentElement).addClass("active");
-	}
-</script>
 {% endblock %}
 
 {% block subpageContent %}
@@ -23,39 +13,15 @@
 <section>
 	<div class="container text-left">
 
-		<div class="row" id="forms">
+		<div id="profileForm">
+			
+			<form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
 
-			<div class="col-md-3 hidden-sm hidden-xs">
-				<ul class="list-group">
-					<li class="list-group-item active" onclick="showForm(this, 'passwordForm');">Password/Email</li>
-					<li class="list-group-item" onclick="showForm(this, 'profileForm');">Profile</li>
-				</ul>
-			</div>
+				{% bootstrap_form profileForm %}
 
-			<div class="col-md-9">
-				<div id="passwordForm">
-					<div>
-						<h2>Password Change</h2>
-					</div>
-
-					<a href="{% url 'django.contrib.auth.views.password_change' %}">To change password click here.</a>
-				</div>
-
-				<div id="profileForm" class="hidden-md hidden-lg">
-					<div>
-						<h2>Profile</h2>
-					</div>
-					
-					<form method="post" enctype="multipart/form-data">
-						{% csrf_token %}
-
-						{% bootstrap_form profileForm %}
-
-						<input type="submit" class="btn btn-default" value="Submit" />
-					</form>
-				</div>
-			</div>
-
+				<input type="submit" class="btn btn-default" value="Submit" />
+			</form>
 		</div>
 	</div>
 
