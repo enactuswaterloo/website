@@ -8,7 +8,7 @@ class ProfileForm(forms.Form):
     first_name = forms.CharField(label='Preferred first name', max_length=100, required=True)
     last_name = forms.CharField(label='Preferred last name', max_length=100, required=True)
 
-    public = forms.BooleanField(initial=False, label="Display profile publicly?")
+    public = forms.BooleanField(initial=False, label="Display profile publicly?", required=False)
 
     program = forms.CharField(max_length=150, label="Program", required=False)
     year = forms.CharField(max_length=100, label="Year of graduation", required=False)
