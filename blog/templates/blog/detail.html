@@ -1,7 +1,7 @@
 {% extends "subpage.html" %}
 {% load staticfiles %}
 
-{% block title %}Blog{% endblock %}
+{% block title %}{{post.title}}{% endblock %}
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'blog.css' %}">

@@ -10,4 +10,4 @@ def index(request):
 def detail(request, id):
 	post = get_object_or_404(Post, id=id)
 	return render(request, "blog/detail.html",
-		{'post': post})
+		{'post': post, 'subpageTitle': "Blog"})
