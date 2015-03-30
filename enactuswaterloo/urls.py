@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.views.generic.base import RedirectView
 
 from main.views import index, projects
 from blog.views import index as blog_index, detail as blog_detail
@@ -28,4 +29,6 @@ urlpatterns = patterns('',
 
     url(r'^profile/password$', 'django.contrib.auth.views.password_change', {'post_change_redirect' : '/profile/password/successful', 'template_name': 'about/password_change.html'}),
     url(r'^profile/password/successful$', 'django.contrib.auth.views.password_change_done', {'template_name': 'about/password_change.html'}),
+
+    url(r'^apply/$', RedirectView.as_view(url="http://goo.gl/forms/Qy4AhS9aqp")),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
