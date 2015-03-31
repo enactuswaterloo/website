@@ -31,4 +31,5 @@ urlpatterns = patterns('',
     url(r'^profile/password/successful$', 'django.contrib.auth.views.password_change_done', {'template_name': 'about/password_change.html'}),
 
     url(r'^apply/$', RedirectView.as_view(url="http://goo.gl/forms/Qy4AhS9aqp")),
+    url(r'^survey/$', RedirectView.as_view(url="http://goo.gl/forms/mesV11nJuQ")),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
