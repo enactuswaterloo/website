@@ -15,13 +15,14 @@ class ProfileForm(forms.Form):
     picture = forms.ImageField(required=False)
 
     position = forms.ChoiceField(label="Team", required=True, choices=(
-            ("Operations team", "Operations"),
-            ("Finance team", "Finance"),
+            ("Communications Team", "Communications"),
             ("Corporate relations", "Corporate relations"),
-            ("Communications team", "Communications"),
-            ("IT Team", "IT"),
-            ("Environment team", "Environment"),
-            ("Marketing team", "Marketing")
+            ("Webmasters", "Webmasters"),
+            ("Finance team", "Finance"),
+            ("Marketing team", "Marketing"),
+            ("Iko Eco", "Iko Eco"),
+            ("Project Cricket", "Project Cricket"),
+            ("WebDev + Branding project", "WebDev + Branding")
         ))
     bio = forms.CharField(widget=forms.Textarea, required=False)
 
@@ -34,13 +35,14 @@ class SignupForm(forms.Form):
     last_name = forms.CharField(label='Preferred last name', max_length=100, required=True)
 
     position = forms.ChoiceField(label="Team", required=True, choices=(
-            ("Operations team", "Operations"),
-            ("Finance team", "Finance"),
+            ("Communications Team", "Communications"),
             ("Corporate relations", "Corporate relations"),
-            ("Communications team", "Communications"),
-            ("IT Team", "IT"),
-            ("Environment team", "Environment"),
-            ("Marketing team", "Marketing")
+            ("Webmasters", "Webmasters"),
+            ("Finance team", "Finance"),
+            ("Marketing team", "Marketing"),
+            ("Iko Eco", "Iko Eco"),
+            ("Project Cricket", "Project Cricket"),
+            ("WebDev + Branding project", "WebDev + Branding")
         ))
 
 
