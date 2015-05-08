@@ -32,4 +32,6 @@ urlpatterns = patterns('',
 
     url(r'^apply/$', RedirectView.as_view(url="http://goo.gl/forms/Qy4AhS9aqp")),
     url(r'^survey/$', RedirectView.as_view(url="http://goo.gl/forms/mesV11nJuQ")),
+
+    (r'^tinymce/', include('tinymce.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
