@@ -33,6 +33,7 @@ urlpatterns = patterns('',
     url(r'^apply/$', RedirectView.as_view(url="http://goo.gl/forms/Qy4AhS9aqp")),
     url(r'^survey/$', RedirectView.as_view(url="http://goo.gl/forms/mesV11nJuQ")),
     url(r'^profile/$', RedirectView.as_view(url="https://goo.gl/YlXAYc")),
+    url(r'^hangout/$'. RedirectView.as_view(url="https://plus.google.com/hangouts/_/g6444lvbqoxaizvslva55uzj5ya")),
 
     (r'^tinymce/', include('tinymce.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
