@@ -24,7 +24,7 @@ class ProfileForm(forms.Form):
             ("Project Cricket", "Project Cricket"),
             ("WebDev + Branding project", "WebDev + Branding")
         ))
-    bio = forms.CharField(widget=forms.Textarea, required=False)
+    bio = forms.CharField(widget=forms.Textarea, required=False, max_length=200)
 
 
 class SignupForm(forms.Form):
