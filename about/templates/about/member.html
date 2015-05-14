@@ -12,6 +12,11 @@
 
 <section>
 	<div class="container text-left">
+		{% if error %}
+			<div class="alert alert-danger">
+				<strong>Error:</strong> Invalid input
+			</div>
+		{% endif %}
 
 		<div id="profileForm">
 			

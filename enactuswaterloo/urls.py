@@ -34,6 +34,7 @@ urlpatterns = patterns('',
     url(r'^survey/$', RedirectView.as_view(url="http://goo.gl/forms/mesV11nJuQ")),
     url(r'^profile/$', RedirectView.as_view(url="https://goo.gl/YlXAYc")),
     url(r'^cricketchirps/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/gu6xvzw4qzxjtljtmwwl2fgnvia")),
+    url(r'^hangout/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/g6444lvbqoxaizvslva55uzj5ya")),
 
     (r'^tinymce/', include('tinymce.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
