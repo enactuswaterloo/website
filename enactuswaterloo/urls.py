@@ -33,8 +33,13 @@ urlpatterns = patterns('',
     url(r'^apply/$', RedirectView.as_view(url="http://goo.gl/forms/Qy4AhS9aqp")),
     url(r'^survey/$', RedirectView.as_view(url="http://goo.gl/forms/mesV11nJuQ")),
     url(r'^profile/$', RedirectView.as_view(url="https://goo.gl/YlXAYc")),
-    url(r'^cricketchirps/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/gu6xvzw4qzxjtljtmwwl2fgnvia")),
+    url(r'^cricketmeeting/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/gu6xvzw4qzxjtljtmwwl2fgnvia")),
     url(r'^hangout/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/g6444lvbqoxaizvslva55uzj5ya")),
+
+    url(r'^communicationsmeeting/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/gzx36h4puv4ibbvihcjo6rq75ya")),
+    url(r'^sponsorshipmeeting/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/g4wqvu2vybndq4dnuqqsedzo6ea")),
+    url(r'^financemeeting/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/gvz5nbllnbdaoq7svcjuuk62d4a")),
+    url(r'^ikoecomeeting/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/g3jeboljhk4ey72b3sbj3heu2ya")),
 
     (r'^tinymce/', include('tinymce.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
