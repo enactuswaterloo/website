@@ -40,6 +40,7 @@ urlpatterns = patterns('',
     url(r'^sponsorshipmeeting/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/g4wqvu2vybndq4dnuqqsedzo6ea")),
     url(r'^financemeeting/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/gvz5nbllnbdaoq7svcjuuk62d4a")),
     url(r'^ikoecomeeting/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/g3jeboljhk4ey72b3sbj3heu2ya")),
+    url(r'^googledrive/$', RedirectView.as_view(url="https://drive.google.com/folderview?id=0B89FOEzS9BZefndHWXEwcXFzRGdlTjNvUm9rYWwzLUFKMXZEaWp2SGx6cV9nZjkySm9fVk0&usp=sharing")),
 
     (r'^tinymce/', include('tinymce.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
