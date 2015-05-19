@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     url(r'^projects/$', projects, name="projects"),
 
     url(r'^blog/$', blog_index, name="blog_index"),
-    url(r'^blog/(?P<id>.+)/$', blog_detail, name="blog_detail"),
+    url(r'^blog/(?P<title>.+)/$', blog_detail, name="blog_detail"),
 
     url(r'^profile/edit$', profile, name="profile"),
     url(r'^signup/$', signup, name="signup"),

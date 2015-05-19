@@ -38,8 +38,9 @@
 }
 
 #blog-list .blog-article {
-	margin: 40px 15px;
-
+	margin: 40px 15px 0px;
+	border-bottom: 2px solid gray;
+	padding-bottom: 40px;
 }
 
 #blog-list .blog-article .article-content {
@@ -67,4 +68,5 @@ article .article-social-media-buttons {
 	background-attachment: fixed;
 	background-position: center;
 	min-height: 40px;
+	width: 100%;
 }
