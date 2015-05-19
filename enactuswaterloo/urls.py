@@ -6,7 +6,7 @@ from django.views.generic.base import RedirectView
 
 from main.views import index, projects
 from blog.views import index as blog_index, detail as blog_detail
-from about.views import index as about_us, profile, signup
+from about.views import index as our_team, profile, signup
 
 urlpatterns = patterns('',
     # Examples:
@@ -15,7 +15,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', index, name="home"),
-    url(r'^about/$', about_us, name="about_us"),
+    url(r'^team/$', our_team, name="our_team"),
     url(r'^projects/$', projects, name="projects"),
 
     url(r'^blog/$', blog_index, name="blog_index"),

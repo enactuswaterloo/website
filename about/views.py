@@ -63,7 +63,7 @@ def profile(request):
 		else:
 			return render(request, "about/member.html", {"error": "Invalid input"})
 
-	return HttpResponseRedirect("/about/")
+	return HttpResponseRedirect("/team/")
 
 
 def signup(request):
