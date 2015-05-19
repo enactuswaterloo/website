@@ -22,7 +22,7 @@ class ProfileForm(forms.Form):
             ("Marketing team", "Marketing"),
             ("Iko Eco", "Iko Eco"),
             ("Project Cricket", "Project Cricket"),
-            ("WebDev + Branding project", "WebDev + Branding")
+            ("Project Spider", "Project Spider")
         ))
     bio = forms.CharField(widget=forms.Textarea, required=False, max_length=200)
 
@@ -42,7 +42,7 @@ class SignupForm(forms.Form):
             ("Marketing team", "Marketing"),
             ("Iko Eco", "Iko Eco"),
             ("Project Cricket", "Project Cricket"),
-            ("WebDev + Branding project", "WebDev + Branding")
+            ("Project Spider", "Project Spider")
         ))
 
 
