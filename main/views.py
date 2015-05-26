@@ -11,3 +11,9 @@ def projects(request):
 	projects = Project.objects.all()
 
 	return render(request, "main/projects.html", {"projects": projects})
+
+def sponsors(request):
+    return render(request, "main/sponsors.html")
+
+def contact(request):
+    return render(request, "main/contact.html")
