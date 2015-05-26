@@ -57,4 +57,17 @@
 		</div>
 	</div>
 
+<script>
+if (document.width >= 768) {
+	$( document ).ready(function() {
+	    var heights = $(".member").map(function() {
+	        return $(this).height();
+	    }).get(),
+	
+	    maxHeight = Math.max.apply(null, heights);
+	
+	    $(".member").height(maxHeight);
+	});	
+}
+</script>
 {% endblock %}
