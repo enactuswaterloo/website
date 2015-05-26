@@ -9,28 +9,6 @@
 
 {% block subpageContent %}
 
-<!-- Load Facebook SDK -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '348851051967188',
-      xfbml      : true,
-      version    : 'v2.2'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<!-- Using social media tools from www.addthis.com -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5563b1896b357a35" async="async"></script>
-
 <div id="blog-detail" class="blog-main">
     {% if post.featured_image %}
         <div class="blog-featured-pic" style="background-image: url('{{post.featured_image.url}}');background-repeat: no-repeat;background-size: auto;background-color: #ddd;">
@@ -49,16 +27,6 @@
               </div>
               <div class="article-social-media-buttons">
                   <div class="addthis_sharing_toolbox"></div>
-                
-                  <!-- Old methods -->
-                  <!-- Twitter button -->
-                  <!--
-                  <a href="https://twitter.com/share" class="twitter-share-button" data-via="enactuswaterloo">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                  -->
-                  <!-- Facebook button -->
-                  <!--
-                  <div class="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
-                  -->
               </div>
               
               <div class="article-content">
@@ -69,5 +37,8 @@
       </div>
     </div>
 </div>
+
+<!-- Using social media tools from www.addthis.com -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5563b1896b357a35" async="async"></script>
     
 {% endblock %}
