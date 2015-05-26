@@ -14,6 +14,8 @@ class ProfileForm(forms.Form):
     year = forms.CharField(max_length=100, label="Year of graduation", required=False)
     picture = forms.ImageField(required=False)
 
+    link = forms.URLField(max_length=150, label="Personal link", required=False)
+
     position = forms.ChoiceField(label="Team", required=True, choices=(
             ("Communications Team", "Communications"),
             ("Corporate relations", "Corporate relations"),
@@ -54,6 +56,8 @@ class Person(models.Model):
     public = models.BooleanField(default=False)
     approved = models.BooleanField(default=False)
     picture = models.ImageField(upload_to="member-pics/", default=None, null=True, blank=True)
+
+    link = models.URLField(max_length=150, default=None, null=True, blank=True)
 
     program = models.CharField(max_length=150, default="Accounting and Financial Management")
     year = models.CharField(max_length=100, default="2019")
