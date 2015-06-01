@@ -101,6 +101,8 @@ section#section-whatis-enactus {
 
 	border: 1px solid #bbb;
 	transition: box-shadow 0.5s;
+	overflow: hidden;
+	position: relative;
 }
 
 #section-projects a {
@@ -108,44 +110,47 @@ section#section-whatis-enactus {
 
 	color: #555;
 }
+#section-projects .row {
+	margin: 50px 10px;
+}
 
 #section-projects .project-card:hover {
 	box-shadow: 0px 0px 10px 0px #999;
 }
 
-.project-card .project-pic {
-	position: relative;
-	margin: 0px;
-	padding: 0px;
-
+.project-card {
+	margin: 5px;
 }
 
-.project-card .project-pic img {
-	height: 250px;
-	width: 100%;
-	
-}
-
-.project-pic .carat-holder {
-	position: absolute;
+.project-card img.project-pic {
+	height: 300px;
+	min-width: 100%;
 	text-align: center;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-}
 
+ 	position: absolute;
+ 	left: 50%;
+ 	top: 0px;
+ 	-webkit-transform: translateX(-50%);
+ 	transform: translateX(-50%);
+ 	/*box-shadow: 0px 0px 5px 0px #444;*/
+}
 .project-card .project-text {
-
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 90px;
 }
 
-.carat {
-	width: 0; 
-	height: 0; 
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	
-	border-bottom: 5px solid black;
+.project-card .project-text .project-title {
+	font-size: 20pt;
+	font-weight: 300;
+}
 
+.project-card .project-text .project-short-desc {
+	margin: 7px 10px;
+	max-height: 150px;
+	font-size: 12pt;
 }
 
 #section-meeting {

@@ -68,19 +68,16 @@
     <div class="row">
     {% for project in projects %}
       <a href="{% url 'project_details' project.id %}">
-        <div class="project-card col-sm-4">
-          <div class="project-pic">
+        <div class="col-sm-4">
+          <div class="project-card">
             <img src="{{project.image.url}}" alt="{{project.title}}" class="project-pic">
-            <div class="carat-holder">
-              <i class="carat"></i>
-            </div>
-          </div>
-          <div class="project-text">
-            <div class="project-title">
-              {{project.title}}
-            </div>
-            <div class="project-short-desc">
-              {{project.shortDesc}}
+            <div class="project-text">
+              <div class="project-title">
+                {{project.title}}
+              </div>
+              <div class="project-short-desc">
+                {{project.shortDesc}}
+              </div>
             </div>
           </div>
         </div>
