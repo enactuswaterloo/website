@@ -1,9 +1,9 @@
 
 .home-button {
 	border-radius: 3px;
-	border: 2px solid #555;
+	border: 2px solid #666;
 
-	color: #555;
+	color: #666;
 	display: inline-block;
 
 	padding: 5px 10px;
@@ -14,7 +14,7 @@
 
 	font-size: 14pt;
 
-	transition-property: color, background-color;
+	transition-property: color border-color box-shadow;
 	transition-duration: 0.25s;
 }
 .home-button-lg {
@@ -26,51 +26,39 @@
 	margin-right: 5px;
 }
 a.home-button:hover {
-	background-color: #333;
-	color: #eee;
+	color: black !important;
+	border-color: black;
+	box-shadow: 0px 0px 5px 0px #444;
 
 	text-decoration: none;
 }
 
+#section-coverpics {
+	margin: 0px;
+	padding: 0px;
+}
+
+#section-coverpics #carousel-main {
+	width: 100%;
+}
+#carousel-main .item {
+	width: 100%;
+	height: 500px;
+	text-align: center;
+}
+
 section#section-whatis-enactus {
-	/*background: url("/static/what_is_enactus.png") no-repeat;
-	background-size: cover;
-	background-attachment: fixed;*/
-
-	text-align: left;
-
-	background-color: #FFF7E0;
+	background-color: #FFEBB3;
 }
 #section-whatis-enactus .section-content {
 	margin: 10px 0px;
 }
 
 #section-whatis-enactus .section-text {
-	margin-top: 10px;
-}
+	margin: 20px;
+	line-height: 1.5;
+	font-size: 14pt;
 
-@media (max-width: 768px) {
-	section#section-whatis-enactus h1 {
-		font-size: 42pt;
-	}
-	#section-whatis-enactus h1 #firsthalf{
-		font-size: 32pt;
-	}
-}
-
-#section-whatis-enactus h1 {
-	background-color: #FEC222;
-
-	display: inline;
-
-	font-size: 56pt;
-
-	padding: 0px 3px;
-}
-
-#section-whatis-enactus h1 #firsthalf{
-	font-weight: 300;
-	font-size: 36pt;
 }
 
 .section-text {
@@ -102,6 +90,62 @@ section#section-whatis-enactus {
 	font-size: 24pt;
 	text-transform: uppercase;
 	margin-top: 10px;
+}
+
+#section-projects .project-card {
+	padding:0px;
+	margin:0px;
+	height: 400px;
+
+	text-align: center;
+
+	border: 1px solid #bbb;
+	transition: box-shadow 0.5s;
+}
+
+#section-projects a {
+	text-decoration: none;
+
+	color: #555;
+}
+
+#section-projects .project-card:hover {
+	box-shadow: 0px 0px 10px 0px #999;
+}
+
+.project-card .project-pic {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+.project-card .project-pic img {
+	height: 250px;
+	width: 100%;
+	
+}
+
+.project-pic .carat-holder {
+	position: absolute;
+	text-align: center;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.project-card .project-text {
+
+}
+
+.carat {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	
+	border-bottom: 5px solid black;
+
 }
 
 #section-meeting {
@@ -188,7 +232,6 @@ section#section-whatis-enactus {
 
 #section-join-us a.home-button:hover {
 	background-color: white;
-	color: #6B0C70;
 
 	text-decoration: none;
 }
