@@ -40,7 +40,7 @@ def profile(request):
 		if request.user.check_password(request.POST['oldpassword']):
 			request.user.set_password(request.POST['password'])
 		else:
-			return render(request, "about/member.html", {error: "Incorrect password"})
+			return render(request, "about/member.html", {"error": "Incorrect password"})
 	elif 'first_name' in request.POST:
 		profileForm = ProfileForm(request.POST, request.FILES)
 		if profileForm.is_valid():
