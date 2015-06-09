@@ -11,12 +11,12 @@
 
 <section id="section-coverpics">
   <div id="carousel-main" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
+    <!-- Indicators 
     <ol class="carousel-indicators">
       {% for coverpic in coverpics %}
         <li data-target="#carousel-main" data-slide-to="{{forloop.counter0}}" class="{% if forloop.counter == 1 %}active{% endif %}"></li>
       {% endfor %}
-    </ol>
+    </ol>-->
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
@@ -25,9 +25,11 @@
           <a href="{{coverpic.url}}" style="height: 100%; display: block;">
             <img src="{{coverpic.image.url}}" alt="coverpic-{{forloop.counter}}">
             <div class="carousel-caption">
-              <div class="carousel-caption-title">{{coverpic.title}}</div>
+              <div class="carousel-caption-title">
+                <span class="carousel-title-rect">{{coverpic.title}}</span>
+              </div>
               <div class="carousel-caption-subtitle">
-                {{coverpic.subtitle}}
+                <span class="carousel-subtitle-rect">{{coverpic.subtitle}}</span>
               </div>
             </div>
           </a>
