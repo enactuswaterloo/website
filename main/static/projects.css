@@ -1,16 +1,31 @@
-.project {
+#projects .project {
 	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid rgb(238, 238, 238);
 }
 
-.project h1 {
-	border-bottom: 1px solid rgb(238, 238, 238);
-	margin-bottom: 20px;
+#projects .project h1 {
+	margin-bottom: 10px;
+}
+
+#projects .project .project-subtitle {
+	color: #999;
+	font-style: italic;
+	margin-bottom: 15px;
 }
 
 #projects {
 	background-color: white;
 
+}
+
+#project-view .project {
+	padding: 40px 0px;
+}
+
+#project-view .project .project-content {
+	font-size: 12pt;
+	line-height: 1.5;
 }
 
 #projects .container {
