@@ -1,9 +1,9 @@
 
 .home-button {
 	border-radius: 3px;
-	border: 2px solid #555;
+	border: 2px solid #666;
 
-	color: #555;
+	color: #666;
 	display: inline-block;
 
 	padding: 5px 10px;
@@ -14,7 +14,7 @@
 
 	font-size: 14pt;
 
-	transition-property: color, background-color;
+	transition-property: color border-color box-shadow;
 	transition-duration: 0.25s;
 }
 .home-button-lg {
@@ -25,52 +25,96 @@
 .home-button i.fa {
 	margin-right: 5px;
 }
-a.home-button:hover {
-	background-color: #333;
-	color: #eee;
+a.home-button:hover, #section-projects a.home-button:hover {
+	color: black;
+	border-color: black;
+	box-shadow: 0px 0px 5px 0px #444;
 
 	text-decoration: none;
 }
 
-section#section-whatis-enactus {
-	/*background: url("/static/what_is_enactus.png") no-repeat;
-	background-size: cover;
-	background-attachment: fixed;*/
+#section-coverpics {
+	margin: 0px;
+	padding: 0px;
+}
 
+#section-coverpics #carousel-main {
+	width: 100%;
+}
+#carousel-main .item {
+	width: 100%;
+	height: 650px;
+	text-align: center;
+	overflow: hidden;
+}
+
+#carousel-main .carousel-control {
+	color: #222;
+	background: transparent;
+}
+
+#carousel-main .carousel-caption .carousel-caption-title {
+	font-size: 26pt;
+	color: #222;
+}
+
+#carousel-main .carousel-title-rect {
+	background-color: #FEC222;
+	display: inline-block;
+	padding: 5px 10px;
+}
+
+#carousel-main .carousel-subtitle-rect {
+	background-color: #333;
+	color: #eee;
+	font-size: 16pt;
+	display: inline-block;
+	padding: 5px 10px;
+}
+.carousel-title-rect,.carousel-subtitle-rect {
+	box-shadow: 0px 0px 5px #888;
+	text-shadow: none;
+}
+
+#carousel-main .carousel-caption {
 	text-align: left;
+}
 
-	background-color: #FFF7E0;
+@media (max-width: 768px) { /* phones */
+	#carousel-main .item {
+		height: 250px;
+	}
+}
+
+#carousel-main .item img {
+	width: 100%;
+	height: auto;
+
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.item .frame {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+section#section-whatis-enactus {
+	background-color: #FFEBB3;
 }
 #section-whatis-enactus .section-content {
 	margin: 10px 0px;
 }
 
 #section-whatis-enactus .section-text {
-	margin-top: 10px;
-}
+	margin: 20px;
+	line-height: 1.5;
+	font-size: 14pt;
 
-@media (max-width: 768px) {
-	section#section-whatis-enactus h1 {
-		font-size: 42pt;
-	}
-	#section-whatis-enactus h1 #firsthalf{
-		font-size: 32pt;
-	}
-}
-
-#section-whatis-enactus h1 {
-	background-color: #FEC222;
-
-	display: inline;
-
-	font-size: 56pt;
-
-	padding: 0px 3px;
-}
-
-#section-whatis-enactus h1 #firsthalf{
-	font-weight: 300;
-	font-size: 36pt;
 }
 
 .section-text {
@@ -102,6 +146,67 @@ section#section-whatis-enactus {
 	font-size: 24pt;
 	text-transform: uppercase;
 	margin-top: 10px;
+}
+
+#section-projects .project-card {
+	padding:0px;
+	margin:0px;
+	height: 400px;
+
+	text-align: center;
+
+	border: 1px solid #bbb;
+	transition: box-shadow 0.5s;
+	overflow: hidden;
+	position: relative;
+}
+
+#section-projects a {
+	text-decoration: none;
+
+	color: #555;
+}
+#section-projects .row {
+	margin: 50px 10px;
+}
+
+#section-projects .project-card:hover {
+	box-shadow: 0px 0px 10px 0px #999;
+}
+
+.project-card {
+	margin: 5px;
+}
+
+.project-card img.project-pic {
+	height: 300px;
+	min-width: 100%;
+	text-align: center;
+
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	/*box-shadow: 0px 0px 5px 0px #444;*/
+}
+.project-card .project-text {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 90px;
+}
+
+.project-card .project-text .project-title {
+	font-size: 20pt;
+	font-weight: 300;
+}
+
+.project-card .project-text .project-short-desc {
+	margin: 7px 10px;
+	max-height: 150px;
+	font-size: 12pt;
 }
 
 #section-meeting {
@@ -149,9 +254,9 @@ section#section-whatis-enactus {
 #section-join-us {
 	/*background-color: #6B0C70;*/
 	background: linear-gradient(
-      rgba(0, 0, 0, 0.4), 
-      rgba(0, 0, 0, 0.4)
-    ), url('/static/join_us_background.jpg') fixed center bottom;
+			rgba(0, 0, 0, 0.4), 
+			rgba(0, 0, 0, 0.4)
+		), url('/static/join_us_background.jpg') fixed center bottom;
 	color: white;
 	padding: 80px;
 }
@@ -188,7 +293,6 @@ section#section-whatis-enactus {
 
 #section-join-us a.home-button:hover {
 	background-color: white;
-	color: #6B0C70;
-
+	color: black;
 	text-decoration: none;
 }

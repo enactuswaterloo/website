@@ -9,118 +9,97 @@
 
 {% block content %}
 
+<section id="section-coverpics">
+  <div id="carousel-main" class="carousel slide" data-ride="carousel">
+    <!-- Indicators 
+    <ol class="carousel-indicators">
+      {% for coverpic in coverpics %}
+        <li data-target="#carousel-main" data-slide-to="{{forloop.counter0}}" class="{% if forloop.counter == 1 %}active{% endif %}"></li>
+      {% endfor %}
+    </ol>-->
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      {% for coverpic in coverpics %}
+        <div class="item {% if forloop.counter == 1 %}active{% endif %} text-center">
+          <a href="{{coverpic.url}}" style="height: 100%; display: block;">
+            <img src="{{coverpic.image.url}}" alt="coverpic-{{forloop.counter}}">
+            <div class="carousel-caption">
+              <div class="carousel-caption-title">
+                <span class="carousel-title-rect">{{coverpic.title}}</span>
+              </div>
+              <div class="carousel-caption-subtitle">
+                <span class="carousel-subtitle-rect">{{coverpic.subtitle}}</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-main" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-main" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
+
 <section id="section-whatis-enactus">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="hidden-xs hidden-sm embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FZjmF0-cdD0"allowfullscreen></iframe>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="section-content">
-					<div class="section-title"><h1><span id="firsthalf">&nbsp;What is&nbsp;</span><br>&nbsp;Enactus?&nbsp;</h1></div>
-					<br>
-					<div class="visible-xs visible-sm embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FZjmF0-cdD0"allowfullscreen></iframe>
-					</div>
-					<div class="section-text">
-						<strong>ENtrepreneurial</strong> – Having the perspective to see an opportunity and the talent to create value from that opportunity
-						<br><br>
-						<strong>ACtion</strong> – the willingness to do something and the commitment to see it through even when the outcome is not guaranteed
-						<br><br>
-						<strong>US</strong> – A group of people who see themselves connected in some important way; individuals that are part of a greater whole
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <h2>Who we are</h2>
+    <div class="section-text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer molestie nulla velit, a elementum nulla suscipit quis. Suspendisse lobortis nibh ex, lobortis pulvinar sem semper non. Nunc nec eros consequat, eleifend odio vel, molestie felis. Integer eget dolor nec sem bibendum condimentum. Ut pretium dapibus turpis id rhoncus. Nunc faucibus, risus vel tristique malesuada, diam nunc feugiat mauris, eu convallis velit ligula id justo. Mauris in feugiat eros. Vivamus accumsan eget ipsum id mollis. Aenean vitae rhoncus orci, id mattis justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+      <p> Fusce volutpat massa vel nisl rutrum, at suscipit augue blandit. Suspendisse pretium iaculis libero, ut fermentum mi euismod eget. Aenean ipsum diam, euismod sit amet rhoncus ut, mollis a ligula. Donec vel dui nec purus aliquet tempor. Vestibulum malesuada sit amet eros non aliquet. Aenean euismod tellus quis pharetra elementum. Vestibulum at nunc vitae orci fermentum ullamcorper a nec turpis. Vestibulum faucibus dolor non augue gravida scelerisque pulvinar a ipsum. Donec blandit non turpis in luctus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel enim ut sapien tempor tempor non non ligula. Vestibulum accumsan mi ut semper pulvinar. Suspendisse imperdiet est id purus viverra, vitae dignissim odio auctor.</p>
+
+      <p>Curabitur at nisl mollis, sagittis elit et, molestie ligula. Maecenas sollicitudin ipsum aliquam, scelerisque turpis at, pretium mauris. Nulla dictum tincidunt quam, ut pulvinar turpis vehicula ultricies. Sed vestibulum convallis ex eu mattis. Maecenas congue posuere euismod. Sed id nulla enim. Curabitur vel lectus pellentesque, congue quam sed, ultricies nisi. Vestibulum id risus hendrerit, imperdiet enim vitae, ultrices est. Pellentesque faucibus ultricies est, id volutpat tellus tincidunt venenatis. Suspendisse vitae consectetur arcu, at laoreet lacus. Sed tristique posuere urna, ut iaculis metus vestibulum id. In laoreet neque ac diam posuere, ut sagittis nunc porta. Aliquam erat volutpat. Donec sit amet quam nec risus pharetra convallis.</p>
+    </div>
+
+  </div>
+  <a class="home-button" href="{% url 'our_team' %}">Our team</a>
 </section>
 
-<section id="section-stats">
-	<div class="container">
-		<h2>Enactus at the University of Waterloo</h2>
-		<div class="row">
-			<div class="col-md-4" id="stat-1">
-				<div class="fa-stack">
-				  <i class="fa fa-circle fa-stack-2x"></i>
-				  <i class="fa fa-users fa-stack-1x fa-inverse"></i>
-				</div>
-
-				<div class="stat stat-number">35</div>
-				<div class="stat stat-type">Members</div>
-			</div>
-
-			<div class="col-md-4" id="stat-2">
-				<div class="fa-stack">
-				  <i class="fa fa-circle fa-stack-2x"></i>
-				  <i class="fa fa-building fa-stack-1x fa-inverse"></i>
-				</div>
-
-				<div class="stat stat-number">4</div>
-				<div class="stat stat-type">Projects</div>
-			</div>
-
-			<div class="col-md-4" id="stat-3">
-				<div class="fa-stack">
-				  <i class="fa fa-circle fa-stack-2x"></i>
-				  <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
-				</div>
-
-				<div class="stat stat-type">Founded in</div>
-				<div class="stat stat-number">2014</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!--<section id="section-buttons">
-	<div class="container">
-			<a class="home-button" href="{% url 'projects' %}">View projects</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<a class="home-button" href="{% url 'our_team' %}">View members</a>
-		
-	</div>
-</section>-->
-
-<section id="section-meeting">
-	<div class="container">
-		<h2>Our meetings</h2>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="home-button">
-					<i class="fa fa-calendar fa-fw"></i>
-					Every Tuesday
-				</div>
-				<div class="home-button">
-					<i class="fa fa-clock-o fa-fw"></i>
-					6:00 PM - 6:30 PM
-				</div>
-
-				<div class="home-button">
-					<i class="fa fa-map-marker fa-fw"></i>
-					MC 4042
-				</div>
-			</div>
-			<div class="col-md-6">
-				<div class="embed-responsive embed-responsive-4by3">
-					<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d723.8631673720687!2d-80.54398360716775!3d43.47202271829367!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf6aa0a3f9659%3A0x713ea568814697ba!2sMathematics+and+Computer%2C+University+of+Waterloo%2C+200+University+Ave+W%2C+Waterloo%2C+ON+N2L+3G1!5e0!3m2!1sen!2sca!4v1424233496870" width="600" height="450" style="border:0"></iframe>
-				</div>
-			</div>
-		</div>
-	</div>
+<section id="section-projects">
+  <div class="container">
+    <h2>Our Projects</h2>
+    <div class="row">
+    {% for project in projects %}
+      <div class="col-sm-4">
+        <a href="{% url 'project_details' project.id %}">
+          <div class="project-card">
+            <img src="{{project.image.url}}" alt="{{project.title}}" class="project-pic">
+            <div class="project-text">
+              <div class="project-title">
+                {{project.title}}
+              </div>
+              <div class="project-short-desc">
+                {{project.shortDesc}}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+    </div>
+    <a href="{% url 'projects' %}" class="home-button">See more</a>
+  </div>
 </section>
 
 <section id="section-join-us">
-	<div class="container">
-		<div class="section-text">
-			Be a social entrepreneur.
-		</div>
-		<br>
-		<a class="home-button home-button-lg" href="/apply">Join us</a><br>
-		<a class="home-button" href="{% url 'projects' %}">View projects</a>
-		<a class="home-button" href="{% url 'our_team' %}">View members</a>
-	</div>
+  <div class="container">
+    <div class="section-text">
+      Follow us!
+    </div>
+    <br>
+    <!--<a class="home-button home-button-lg" href="/apply">Join us</a><br>-->
+    <a class="home-button" href="https://www.facebook.com/EnactusWaterloo"><i class="fa fa-facebook-square"></i>Facebook</a>
+    <a class="home-button" href="https://twitter.com/enactuswaterloo"><i class="fa fa-twitter-square"></i>Twitter</a>
+  </div>
 </section>
 
 {% endblock %}

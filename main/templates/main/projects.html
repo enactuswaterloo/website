@@ -7,22 +7,20 @@
 <link rel="stylesheet" href="{% static 'projects.css' %}" />
 {% endblock %}
 
-{% block body-attrs %}data-spy="scroll" data-target="#projectsNav"{%endblock%}
-
 {% block subpageContent %}
-    <div id="projects">
-    	<div class="container">
-    		<div class="row">
-	    		<div class="col-md-9">
-		    		{% for project in projects %}
-					    <div class="project" id="project-{{project.id}}">
-					    	<h1>{{project.title}}</h1>
-					    	<div class="project-content">{{project.description | safe }}</div>
-					    </div>
-					{% endfor %}
-				</div>
+	<div id="projects">
+		<div class="container">
+					
+			{% for project in projects %}
+				<a href="{% url 'project_details' project_id=project.id %}">
+					<div class="project" id="project-{{project.id}}">
+						<h1>{{project.title}}</h1>
+						<div class="project-subtitle">{{ project.shortDesc }}</div>
+					</div>
+				</a>
+			{% endfor %}
 
-				<nav class="col-md-3 hidden-xs hidden-sm">
+				<!--<nav class="col-md-3 hidden-xs hidden-sm">
 					<div data-spy="affix" data-offset-top="220" id="projectsNav">
 						<ul class="nav nav-stacked" role="tablist">
 							{% for project in projects %}
@@ -34,8 +32,7 @@
 							{% endfor %}
 						</ul>
 					</div>
-				</nav>
-			</div>
+				</nav>-->
 		</div>
 	</div>
 

@@ -1,0 +1,19 @@
+{% extends "subpage.html" %}
+{% load staticfiles %}
+
+{% block title %}{{project.title}}{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'projects.css' %}" />
+{% endblock %}
+
+{% block subpageContent %}
+  <div id="project-view">
+    <div class="container">
+      <div class="project" id="project-{{project.id}}">
+        <div class="project-content">{{ project.description | safe }}</div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
