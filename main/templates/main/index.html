@@ -69,8 +69,8 @@
     <h2>Our Projects</h2>
     <div class="row">
     {% for project in projects %}
-      <a href="{% url 'project_details' project.id %}">
-        <div class="col-sm-4">
+      <div class="col-sm-4">
+        <a href="{% url 'project_details' project.id %}">
           <div class="project-card">
             <img src="{{project.image.url}}" alt="{{project.title}}" class="project-pic">
             <div class="project-text">
@@ -82,8 +82,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     {% endfor %}
     </div>
     <a href="{% url 'projects' %}" class="home-button">See more</a>

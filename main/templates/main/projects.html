@@ -8,16 +8,16 @@
 {% endblock %}
 
 {% block subpageContent %}
-  <div id="projects">
-   	<div class="container">
-	    		
-  		{% for project in projects %}
-  			<a href="{% url 'project_details' project_id=project.id %}">
-			    <div class="project" id="project-{{project.id}}">
-			    	<h1>{{project.title}}</h1>
-			    	<div class="project-subtitle">{{ project.shortDesc }}</div>
-			    </div>
-		    </a>
+	<div id="projects">
+		<div class="container">
+					
+			{% for project in projects %}
+				<a href="{% url 'project_details' project_id=project.id %}">
+					<div class="project" id="project-{{project.id}}">
+						<h1>{{project.title}}</h1>
+						<div class="project-subtitle">{{ project.shortDesc }}</div>
+					</div>
+				</a>
 			{% endfor %}
 
 				<!--<nav class="col-md-3 hidden-xs hidden-sm">
