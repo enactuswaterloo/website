@@ -33,6 +33,7 @@ nav.navbar-custom .navbar-nav li > a:focus {
 
 nav.navbar-custom .navbar-brand img {
 	height: 80px;
+	margin-left: -25px;
 }
 
 div.navbar-header button {

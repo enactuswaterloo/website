@@ -24,7 +24,8 @@ def profile(request):
 				'year': request.user.profile.year,
 				'position': request.user.profile.position,
 				'bio':request.user.profile.bio,
-				'public':request.user.profile.public
+				'public':request.user.profile.public,
+				'link':request.user.profile.link
 			})
 		except:
 			pass
@@ -39,7 +40,7 @@ def profile(request):
 		if request.user.check_password(request.POST['oldpassword']):
 			request.user.set_password(request.POST['password'])
 		else:
-			return render(request, "about/member.html", {error: "Incorrect password"})
+			return render(request, "about/member.html", {"error": "Incorrect password"})
 	elif 'first_name' in request.POST:
 		profileForm = ProfileForm(request.POST, request.FILES)
 		if profileForm.is_valid():
@@ -55,6 +56,7 @@ def profile(request):
 			person.year 	= profileForm.cleaned_data["year"]
 			person.position	= profileForm.cleaned_data["position"]
 			person.bio 		= profileForm.cleaned_data["bio"]
+			person.link 	= profileForm.cleaned_data["link"]
 
 			if "picture" in request.FILES:
 				person.picture = request.FILES["picture"]

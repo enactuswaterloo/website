@@ -1,0 +1,33 @@
+form.contact-form {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	background-color: #E0E0E0;
+	border-radius: 15px;
+	box-shadow: 0px 0px 1px gray;
+}
+
+.personalInfo input {
+	width: 48%;
+	display: inline;
+}
+
+input.move-right {
+	float: right;
+}
+
+textarea {
+	width: 100%;
+	max-width: 100%;
+}
+
+form div.form-elements button.contact-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p {
+	font-size: 18px;
+}

@@ -4,7 +4,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic.base import RedirectView
 
-from main.views import index, projects
+from main.views import index, projects, sponsors, contact
 from blog.views import index as blog_index, detail as blog_detail
 from about.views import index as our_team, profile, signup
 
@@ -16,7 +16,9 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', index, name="home"),
     url(r'^team/$', our_team, name="our_team"),
-    url(r'^projects/$', projects, name="projects"),
+    url(r'^projects/$', projects, name="projects"),  
+    url(r'^sponsors/$', sponsors, name="sponsors"),
+    url(r'^contact/$', contact, name="contact"),
 
     url(r'^blog/$', blog_index, name="blog_index"),
     url(r'^blog/(?P<title>.+)/$', blog_detail, name="blog_detail"),

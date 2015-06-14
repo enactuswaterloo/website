@@ -15,26 +15,33 @@
 			<div class="row">
 				{% for person in people %}
 					<div class="col-lg-3 col-md-4 col-sm-6">
-						<div class="member">
-							<div class="member-pic-box text-center">
-								{% if person.picture %}
-									<span class="helper"></span><img src="{{person.picture.url}}" alt="Member picture" class="member-pic">
-								{% else %}
-									<i class="fa fa-user"></i>
-								{% endif %}
-							</div>
-							<div class="member-info">
-								<div class="member-name">
-									{{person.user.first_name}}&nbsp;{{person.user.last_name}}<span class="member-position">, {{person.position}}</span>
+						{% if person.link %}
+							<a href="{{person.link}}" class="personal-link">
+						{% endif %}
+								<div class="member">
+									<div class="member-pic-box text-center">
+										{% if person.picture %}
+											<span class="helper"></span><img src="{{person.picture.url}}" alt="Member picture" class="member-pic">
+										{% else %}
+											<i class="fa fa-user"></i>
+										{% endif %}
+									</div>
+									<div class="member-info">
+										<div class="member-name">
+											{{person.user.first_name}}&nbsp;{{person.user.last_name}}<span class="member-position">, {{person.position}}</span>
+										</div>
+										<div class="member-program">
+											{{person.program}}, {{person.year}}
+										</div>
+										<div class="member-bio">
+											{{person.bio}}
+										</div>
+									</div>
+									<span class="overlay"></span>
 								</div>
-								<div class="member-program">
-									{{person.program}}, {{person.year}}
-								</div>
-								<div class="member-bio">
-									{{person.bio}}
-								</div>
-							</div>
-						</div>
+						{% if person.link %}
+							</a>
+						{% endif %}
 					</div>
 					{% if forloop.counter|divisibleby:2 %}
 						<div class="clearfix visible-sm-block"></div>
@@ -50,4 +57,17 @@
 		</div>
 	</div>
 
+<script>
+if (document.width >= 768) {
+	$( document ).ready(function() {
+	    var heights = $(".member").map(function() {
+	        return $(this).height();
+	    }).get(),
+	
+	    maxHeight = Math.max.apply(null, heights);
+	
+	    $(".member").height(maxHeight);
+	});	
+}
+</script>
 {% endblock %}
