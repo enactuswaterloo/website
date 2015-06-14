@@ -21,14 +21,16 @@
 				<strong>Success:</strong> Your message was successfully sent.
 			</div>
 		{% endif %}
-		<h4>Want to get in touch with us? Fill out the form. We'd love to hear from you! Alternatively, you can email <a href="mailto:enactuswaterloo@gmail.com">Enactus Waterloo</a> or our President <a href="mailto:bo@gmail.com">Bo</a>, or <a href="https://www.facebook.com/EnactusWaterloo/timeline">check us out on Facebook</a>.</h4>
+		<div id="contact-header">
+			Want to get in touch with us? Fill out the form below, or e-mail us at <a href="mailto:enactuswaterloo@gmail.com">enactuswaterloo@gmail.com</a>.
+		</div>
 		<div class="row">
 			<div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
 				<form role="search" class="contact-form" method="post" action="{% url 'contact' %}">
 					{% csrf_token %}
 					<div class="form-group personalInfo">
 						<input type="text" class="form-control" name="name" placeholder="Name" autofocus="">
-						<input type="email" class="form-control move-right" name="email" placeholder="Email">
+						<input type="email" class="form-control pull-right" name="email" placeholder="Email">
 					</div>
 					<div class="form-group">
 						<textarea class="form-control" name="message" placeholder="Message" rows="6"></textarea>
