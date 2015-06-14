@@ -119,6 +119,10 @@ section#section-whatis-enactus {
 
 .section-text {
 	font-size: 14pt;
+	text-align: left;
+}
+.section-text p {
+	margin: 15px 0px;
 }
 
 #section-stats {
