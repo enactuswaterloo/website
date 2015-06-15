@@ -25,7 +25,8 @@ def profile(request):
 				'position': request.user.profile.position,
 				'bio':request.user.profile.bio,
 				'public':request.user.profile.public,
-				'link':request.user.profile.link
+				'link':request.user.profile.link,
+				'link_type': request.user.profile.link_type
 			})
 		except:
 			pass
@@ -57,6 +58,7 @@ def profile(request):
 			person.position	= profileForm.cleaned_data["position"]
 			person.bio 		= profileForm.cleaned_data["bio"]
 			person.link 	= profileForm.cleaned_data["link"]
+			person.link_type = profileForm.cleaned_data["link_type"]
 
 			if "picture" in request.FILES:
 				person.picture = request.FILES["picture"]

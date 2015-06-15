@@ -15,6 +15,14 @@ class ProfileForm(forms.Form):
     picture = forms.ImageField(required=False)
 
     link = forms.URLField(max_length=150, label="Personal link", required=False)
+    link_type = forms.ChoiceField(label="Link type", required=False, choices=(
+            ("Facebook", "Facebook"),
+            ("Twitter", "Twitter"),
+            ("Github", "Github"),
+            ("LinkedIn", "LinkedIn"),
+            ("Website", "Website"),
+            ("Blog", "Blog"),
+        ))
 
     position = forms.ChoiceField(label="Team", required=True, choices=(
             ("Communications Team", "Communications"),
@@ -57,6 +65,7 @@ class Person(models.Model):
     approved = models.BooleanField(default=False)
     picture = models.ImageField(upload_to="member-pics/", default=None, null=True, blank=True)
 
+    link_type = models.CharField(max_length=50, default=None, null=True, blank=True)
     link = models.URLField(max_length=150, default=None, null=True, blank=True)
 
     program = models.CharField(max_length=150, default="Accounting and Financial Management")
