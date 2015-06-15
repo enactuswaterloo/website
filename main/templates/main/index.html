@@ -9,6 +9,7 @@
 
 {% block content %}
 
+{% if coverpics and coverpics|length %}
 <section id="section-coverpics">
   <div id="carousel-main" class="carousel slide" data-ride="carousel">
     <!-- Indicators 
@@ -48,6 +49,7 @@
     </a>
   </div>
 </section>
+{% endif %}
 
 <section id="section-whatis-enactus">
   <div class="container">
