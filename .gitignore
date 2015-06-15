@@ -3,5 +3,5 @@
 env/
 db.sqlite3
 media/
-
+.DS_Store
 enactuswaterloo/local_settings.py
