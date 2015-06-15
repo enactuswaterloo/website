@@ -70,7 +70,9 @@
       <div class="col-sm-4">
         <a href="{% url 'project_details' project.id %}">
           <div class="project-card">
-            <img src="{{project.image.url}}" alt="{{project.title}}" class="project-pic">
+            {% if project.image %}
+              <img src="{{project.image.url}}" alt="{{project.title}}" class="project-pic">
+            {% endif %}
             <div class="project-text">
               <div class="project-title">
                 {{project.title}}
