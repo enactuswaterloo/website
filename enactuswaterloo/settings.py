@@ -30,6 +30,7 @@ INSTALLED_APPS = (
     'main',
     'blog',
     'about',
+    'ckeditor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,6 +69,16 @@ LOGIN_URL="/login/"
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
+
+CKEDITOR_UPLOAD_PATH = "ckeditor_uploads/"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 500,
+        'width': 800,
+    },
+}
 
 from local_settings import *
 

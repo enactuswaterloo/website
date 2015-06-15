@@ -48,4 +48,5 @@ urlpatterns = patterns('',
     url(r'^googledrive/$', RedirectView.as_view(url="https://drive.google.com/folderview?id=0B89FOEzS9BZefndHWXEwcXFzRGdlTjNvUm9rYWwzLUFKMXZEaWp2SGx6cV9nZjkySm9fVk0&usp=sharing")),
 
     (r'^tinymce/', include('tinymce.urls')),
+    (r'^ckeditor/', include('ckeditor.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

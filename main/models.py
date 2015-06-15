@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -14,7 +15,7 @@ class Coverpic(models.Model):
 
 class Project(models.Model):
   title = models.CharField(max_length=200)
-  description = models.TextField()
+  description = RichTextField()
   shortDesc = models.CharField(max_length=200, default=None, null=True)
   image = models.ImageField(upload_to='projects/images/', default=None,blank=True, null=True)
 
