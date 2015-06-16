@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.core.mail import send_mail
 
 from main.models import Coverpic, Project
 
@@ -33,7 +34,11 @@ def contact(request):
                 return render(request, "main/contact.html", {"error": "Invalid email entered."})
             else:
                 # Send email
-                print "Sent email"
+                send_mail(
+                    request.POST['subject'],
+                    request.POST['message'],
+                    "%s <%s>" % (request.POST['name'], request.POST['email']),
+                    ["me@itsbilal.com"])
                 return render(request, "main/contact.html", {"success": "success"})
         else:
             return render(request, "main/contact.html", {"error": "Not all fields have been filled out."})
