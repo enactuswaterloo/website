@@ -38,7 +38,7 @@ def contact(request):
                     request.POST['subject'],
                     request.POST['message'],
                     "%s <%s>" % (request.POST['name'], request.POST['email']),
-                    ["me@itsbilal.com"])
+                    ["enactuswaterloo@gmail.com"])
                 return render(request, "main/contact.html", {"success": "success"})
         else:
             return render(request, "main/contact.html", {"error": "Not all fields have been filled out."})
