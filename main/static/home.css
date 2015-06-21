@@ -1,18 +1,19 @@
 
 .home-button {
 	border-radius: 3px;
-	border: 2px solid #666;
+	border: 3px solid #333;
 
-	color: #666;
+	color: #333;
 	display: inline-block;
 
-	padding: 5px 10px;
+	padding: 10px 10px;
 	margin: 10px;
+	margin-bottom: 20px;
 	text-align: left;
 
 	text-decoration: none;
 
-	font-size: 14pt;
+	font-size: 2rem;
 
 	transition-property: color border-color box-shadow;
 	transition-duration: 0.25s;
@@ -173,7 +174,7 @@ section#section-whatis-enactus {
 	color: #555;
 }
 #section-projects .row {
-	margin: 50px 10px;
+	margin: 25px 10px;
 }
 
 #section-projects .project-card:hover {

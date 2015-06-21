@@ -55,8 +55,8 @@ a.join-button button {
 }
 
 footer {
-	padding: 20px 0px;
-	background-color:#444;
+	padding: 10px 0px;
+	background-color:#4c4c4c;
 	color:#ccc;
 }
 
@@ -81,8 +81,8 @@ a.footerButton:hover {
 
 section {
 	margin: 0px;
-	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	text-align: center;
 }
 
@@ -101,9 +101,8 @@ section {
 }
 
 #copyrightMessage {
-	font-size: 12px;
-	text-transform: uppercase;
-	color: #888;
+	font-size: 14px;
+	color: white;
 }
 
 p {
