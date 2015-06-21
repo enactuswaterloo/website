@@ -262,7 +262,7 @@ section#section-whatis-enactus {
 	background: linear-gradient(
 			rgba(0, 0, 0, 0.4),
 			rgba(0, 0, 0, 0.4)
-		), url('/static/join_us_background.jpg') fixed center bottom;
+		), url('/static/teamcover.jpg') fixed center top;
 	color: white;
 	padding: 80px;
 }
