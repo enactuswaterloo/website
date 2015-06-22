@@ -85,7 +85,7 @@ a.home-button:hover, #section-projects a.home-button:hover {
 	text-align: left;
 	width: 80%;
 	margin-bottom: 50px;
-	margin-left: -50px;
+	margin-left: -30px;
 }
 
 #carousel-main .item img {
@@ -112,7 +112,7 @@ a.home-button:hover, #section-projects a.home-button:hover {
 
 @media (max-width: 1024px) { /* tablets */
 	#carousel-main .item {
-		height: 500px;
+		height: 450px;
 	}
 	#carousel-main .carousel-caption .carousel-caption-title {
 		font-size: 5rem;
@@ -129,24 +129,37 @@ a.home-button:hover, #section-projects a.home-button:hover {
 
 @media (max-width: 768px) { /* phones */
 	#carousel-main .item {
-		height: 250px;
+		height: 280px;
 	}
 	#carousel-main .carousel-caption .carousel-caption-title {
 		font-size: 3rem;
 	}
 	#carousel-main .home-button {
 		font-size: 1.5rem;
-		margin-bottom: 0;
 	}
 	#carousel-main .carousel-title-rect {
-		padding: 0;
 		line-height: 3.5rem;
 	}
 	#carousel-main .carousel-caption {
 		margin-bottom: 0;
 	}
-
 }
+
+@media (max-width: 480px){
+	#carousel-main .item {
+		height: 170px;
+	}
+	#carousel-main .carousel-caption .carousel-caption-title {
+		font-size: 1.5rem;
+	}
+	#carousel-main .home-button {
+		font-size: 0.8rem;
+	}
+	#carousel-main .carousel-title-rect {
+		line-height: 2rem;
+	}
+}
+
 
 
 .item .frame {
@@ -245,7 +258,7 @@ section#section-whatis-enactus {
 	top: 0px;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
-	/*box-shadow: 0px 0px 5px 0px #444;*/
+	box-shadow: 0px 0px 5px 0px #444;
 }
 .project-card .project-text {
 	position: absolute;
