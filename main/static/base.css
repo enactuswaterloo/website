@@ -6,19 +6,24 @@ body {
 
 nav.navbar-custom {
 	background-color: white;
-	height: 77px;
+	height: 60px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
 
 nav.navbar-custom .navbar-nav {
-	margin-top: 10px;
+	margin-top: 0px;
 	padding-top: 10px;
-	padding-bottom: 5px;
+	/*padding-bottom: 5px;*/
 	background-color: white;
 }
 
+nav.navbar-custom .navbar-toggle {
+	margin-top: 10px;
+}
+
 nav.navbar-custom .navbar-nav li > a {
+	padding-top: 10px;
 	border-bottom: 2px solid white;
 	transition: border-bottom-color 0.15s;
 	color: #4c4c4c;
@@ -34,10 +39,11 @@ nav.navbar-custom .navbar-nav li > a:hover {
 nav.navbar-custom .navbar-nav li > a:focus {
 	border-bottom-color: #FEC222;
 }
-
+nav.navbar-custom .navbar-brand {
+	padding-top: 7px;
+}
 nav.navbar-custom .navbar-brand img {
 	height: 44px;
-	margin-left: 120px;
 }
 
 div.navbar-header button {

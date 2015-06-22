@@ -4,10 +4,11 @@
 }
 
 #signup form {
-	padding-bottom: 80px;
 	margin: 0 auto;
+	padding-bottom: 80px;
 	margin-top: 20px;
 	width: 20%;
+
 }
 
 form div.form-group label {

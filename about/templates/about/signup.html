@@ -9,14 +9,15 @@
 
 {% block subpageContent %}
 
+
 <div id ="signup">
 	<div class="container">
-		
-		<form method="post">
+
+		<form method="post" class="validate-form">
 			{% csrf_token %}
 
 			{% if form.errors %}
-				<div class="alert alert-danger" role="alert">Invalid username and/or password</div>
+				<div class="alert alert-danger" role="alert">Invalid credentials.</div>
 			{% endif %}
 
 			{% for field in form %}
