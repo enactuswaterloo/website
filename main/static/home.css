@@ -65,7 +65,6 @@ a.home-button:hover, #section-projects a.home-button:hover {
 	text-transform: uppercase;
 	font-weight: 900;
 	color: white;
-	/*color: #FEC222;*/
 	display: inline-block;
 	padding-bottom: 25px;
 }
@@ -84,13 +83,9 @@ a.home-button:hover, #section-projects a.home-button:hover {
 
 #carousel-main .carousel-caption {
 	text-align: left;
+	width: 80%;
 	margin-bottom: 50px;
-}
-
-@media (max-width: 768px) { /* phones */
-	#carousel-main .item {
-		height: 250px;
-	}
+	margin-left: -50px;
 }
 
 #carousel-main .item img {
@@ -113,6 +108,46 @@ a.home-button:hover, #section-projects a.home-button:hover {
 	font-size: 2.5em;
 	font-weight: 600;
 }
+
+
+@media (max-width: 1024px) { /* tablets */
+	#carousel-main .item {
+		height: 500px;
+	}
+	#carousel-main .carousel-caption .carousel-caption-title {
+		font-size: 5rem;
+	}
+	#carousel-main .home-button {
+		font-size: 3rem;
+		margin-bottom: 0;
+	}
+	#carousel-main .carousel-title-rect {
+		padding: 0;
+		line-height: 7rem;
+	}
+}
+
+@media (max-width: 768px) { /* phones */
+	#carousel-main .item {
+		height: 250px;
+	}
+	#carousel-main .carousel-caption .carousel-caption-title {
+		font-size: 3rem;
+	}
+	#carousel-main .home-button {
+		font-size: 1.5rem;
+		margin-bottom: 0;
+	}
+	#carousel-main .carousel-title-rect {
+		padding: 0;
+		line-height: 3.5rem;
+	}
+	#carousel-main .carousel-caption {
+		margin-bottom: 0;
+	}
+
+}
+
 
 .item .frame {
 	width: 100%;

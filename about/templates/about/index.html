@@ -10,7 +10,6 @@
 {% block subpageContent %}
 	<div class="members">
 		<div class="container">
-			<div class="text-center"><h1>Our awesome team</h1></div>
 			<br>
 			<div class="row">
 				{% for person in people %}
@@ -52,7 +51,6 @@
 						<div class="clearfix visible-lg-block"></div>
 					{% endif %}
 				{% endfor %}
-			</div>
 		</div>
 	</div>
 
@@ -62,11 +60,11 @@ if (document.width >= 768) {
 	    var heights = $(".member").map(function() {
 	        return $(this).height();
 	    }).get(),
-	
+
 	    maxHeight = Math.max.apply(null, heights);
-	
+
 	    $(".member").height(maxHeight);
-	});	
+	});
 }
 </script>
 {% endblock %}

@@ -14,6 +14,8 @@ form.contact-form {
 }
 
 #contact-header {
+	width: 70%;
+	margin: 0 auto;
 	margin-top: 30px;
 	font-size:14pt;
 	text-align: center;
