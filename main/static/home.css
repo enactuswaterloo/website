@@ -125,6 +125,9 @@ a.home-button:hover, #section-projects a.home-button:hover {
 		padding: 0;
 		line-height: 7rem;
 	}
+	nav.navbar-custom .navbar-brand img {
+		margin-left: -15px;
+	}
 }
 
 @media (max-width: 768px) { /* phones */
@@ -143,6 +146,10 @@ a.home-button:hover, #section-projects a.home-button:hover {
 	#carousel-main .carousel-caption {
 		margin-bottom: 0;
 	}
+	nav.navbar-custom .navbar-brand img {
+		margin-left: 30px;
+	}
+
 }
 
 @media (max-width: 480px){

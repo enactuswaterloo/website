@@ -6,6 +6,7 @@
 #signup form {
 	margin: 0 auto;
 	padding-bottom: 80px;
+	padding-left: 25px;
 	margin-top: 20px;
 	width: 20%;
 
@@ -19,12 +20,13 @@ form div.form-group label {
 }
 
 form div.form-group input {
+	height: 20px;
 	padding: 10px;
 	margin: 0px;
 }
 
 .form-group {
 	display: block;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 	padding: 0px;
 }
