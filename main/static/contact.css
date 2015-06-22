@@ -1,9 +1,10 @@
 form.contact-form {
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	padding: 20px;
+	padding-bottom: 5px;
 	background-color: #E0E0E0;
 	border-radius: 10px;
 	box-shadow: 0px 0px 1px gray;
