@@ -55,14 +55,19 @@ a.home-button:hover, #section-projects a.home-button:hover {
 }
 
 #carousel-main .carousel-caption .carousel-caption-title {
-	font-size: 26pt;
+	font-size: 7rem;
 	color: #222;
 }
 
 #carousel-main .carousel-title-rect {
-	background-color: #FEC222;
+	/*background-color: #FEC222;*/
+	line-height: 9rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: white;
+	/*color: #FEC222;*/
 	display: inline-block;
-	padding: 5px 10px;
+	padding-bottom: 25px;
 }
 
 #carousel-main .carousel-subtitle-rect {
@@ -72,13 +77,14 @@ a.home-button:hover, #section-projects a.home-button:hover {
 	display: inline-block;
 	padding: 5px 10px;
 }
-.carousel-title-rect,.carousel-subtitle-rect {
+/*.carousel-title-rect,.carousel-subtitle-rect {
 	box-shadow: 0px 0px 5px #888;
 	text-shadow: none;
-}
+}*/
 
 #carousel-main .carousel-caption {
 	text-align: left;
+	margin-bottom: 50px;
 }
 
 @media (max-width: 768px) { /* phones */
@@ -96,6 +102,16 @@ a.home-button:hover, #section-projects a.home-button:hover {
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
+}
+
+#carousel-main .home-button {
+	border: 5px solid #FEC222;
+	border-radius: 10px;
+	color: #FEC222;
+	padding-left: 70px;
+	padding-right: 70px;
+	font-size: 2.5em;
+	font-weight: 600;
 }
 
 .item .frame {
@@ -162,7 +178,7 @@ section#section-whatis-enactus {
 
 	text-align: center;
 
-	border: 1px solid #bbb;
+	border: 3px solid #bbb;
 	transition: box-shadow 0.5s;
 	overflow: hidden;
 	position: relative;
@@ -170,7 +186,6 @@ section#section-whatis-enactus {
 
 #section-projects a {
 	text-decoration: none;
-
 	color: #555;
 }
 #section-projects .row {
@@ -214,18 +229,6 @@ section#section-whatis-enactus {
 	margin: 7px 10px;
 	max-height: 150px;
 	font-size: 12pt;
-}
-
-#section-meeting {
-	background-color: #6B0C70;
-	color: white;
-}
-
-#section-meeting .home-button {
-	/*color: #444;*/
-	color: white;
-	border: 2px solid white;
-	display: block;
 }
 
 #stat-1 {

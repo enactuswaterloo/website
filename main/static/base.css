@@ -55,7 +55,7 @@ a.join-button button {
 }
 
 footer {
-	padding: 10px 0px;
+	padding: 20px 0px;
 	background-color:#4c4c4c;
 	color:#ccc;
 }
@@ -101,7 +101,7 @@ section {
 }
 
 #copyrightMessage {
-	font-size: 14px;
+	font-size: 16px;
 	color: white;
 }
 

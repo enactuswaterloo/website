@@ -23,17 +23,18 @@
     <div class="carousel-inner" role="listbox">
       {% for coverpic in coverpics %}
         <div class="item {% if forloop.counter == 1 %}active{% endif %} text-center">
-          <a href="{{coverpic.url}}" style="height: 100%; display: block;">
             <img src="{{coverpic.image.url}}" alt="coverpic-{{forloop.counter}}">
             <div class="carousel-caption">
               <div class="carousel-caption-title">
                 <span class="carousel-title-rect">{{coverpic.title}}</span>
               </div>
-              <div class="carousel-caption-subtitle">
+              <!-- <div class="carousel-caption-subtitle">
                 <span class="carousel-subtitle-rect">{{coverpic.subtitle}}</span>
-              </div>
+              </div> -->
+              <a href="{{coverpic.url}}">
+                <span class="home-button">READ MORE</span>
+              </a>
             </div>
-          </a>
         </div>
       {% endfor %}
     </div>
@@ -88,7 +89,7 @@
       </div>
     {% endfor %}
     </div>
-    <a href="{% url 'projects' %}" class="home-button">See more</a>
+    <a href="{% url 'projects' %}" class="home-button">Projects Page</a>
   </div>
 </section>
 
