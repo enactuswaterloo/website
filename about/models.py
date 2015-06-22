@@ -41,13 +41,13 @@ class SignupForm(forms.Form):
     username = forms.CharField(label='Username', max_length=100, required=True)
     email = forms.EmailField(label='Email', max_length=100, required=True, initial='john_doe@email.com')
     password = forms.CharField(label='Password', max_length=100, required=True, widget=forms.PasswordInput)
-    first_name = forms.CharField(label='Preferred first name', max_length=100, required=True)
-    last_name = forms.CharField(label='Preferred last name', max_length=100, required=True)
+    first_name = forms.CharField(label='First Name', max_length=100, required=True)
+    last_name = forms.CharField(label='Last Name', max_length=100, required=True)
 
     position = forms.ChoiceField(label="Team", required=True, choices=(
             ("Communications Team", "Communications"),
-            ("Corporate relations", "Corporate relations"),
-            ("Webmasters", "Webmasters"),
+            ("Corporate relations", "Sponsorship"),
+            ("Webmasters", "Webmaster"),
             ("Finance team", "Finance"),
             ("Marketing team", "Marketing"),
             ("Iko Eco", "Iko Eco"),
