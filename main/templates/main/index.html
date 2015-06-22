@@ -66,31 +66,33 @@
 </section>
 
 <section id="section-projects">
-  <div class="container">
-    <h2>Our Projects</h2>
-    <div class="row">
-    {% for project in projects %}
-      <div class="col-sm-4">
-        <a href="{% url 'project_details' project.id %}">
-          <div class="project-card">
-            {% if project.image %}
-              <img src="{{project.image.url}}" alt="{{project.title}}" class="project-pic">
-            {% endif %}
-            <div class="project-text">
-              <div class="project-title">
-                {{project.title}}
-              </div>
-              <div class="project-short-desc">
-                {{project.shortDesc}}
+  <a name="projects">
+    <div class="container">
+      <h2>Our Projects</h2>
+      <div class="row">
+      {% for project in projects %}
+        <div class="col-sm-4">
+          <a href="{% url 'project_details' project.id %}">
+            <div class="project-card">
+              {% if project.image %}
+                <img src="{{project.image.url}}" alt="{{project.title}}" class="project-pic">
+              {% endif %}
+              <div class="project-text">
+                <div class="project-title">
+                  {{project.title}}
+                </div>
+                <div class="project-short-desc">
+                  {{project.shortDesc}}
+                </div>
               </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
+      {% endfor %}
       </div>
-    {% endfor %}
+      <!-- <a href="{% url 'projects' %}" class="home-button">Projects Page</a> -->
     </div>
-    <a href="{% url 'projects' %}" class="home-button">Projects Page</a>
-  </div>
+  </a>
 </section>
 
 <section id="section-join-us">
