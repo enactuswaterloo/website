@@ -1,7 +1,7 @@
 {% extends "subpage.html" %}
 {% load staticfiles %}
 
-{% block title %}Projects{% endblock %}
+{% block title %}Our Projects{% endblock %}
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'projects.css' %}" />
@@ -10,7 +10,7 @@
 {% block subpageContent %}
 	<div id="projects">
 		<div class="container">
-					
+
 			{% for project in projects %}
 				<a href="{% url 'project_details' project_id=project.id %}">
 					<div class="project" id="project-{{project.id}}">

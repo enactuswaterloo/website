@@ -1,18 +1,19 @@
 
 .home-button {
 	border-radius: 3px;
-	border: 2px solid #666;
+	border: 3px solid #333;
 
-	color: #666;
+	color: #333;
 	display: inline-block;
 
-	padding: 5px 10px;
+	padding: 10px 10px;
 	margin: 10px;
+	margin-bottom: 20px;
 	text-align: left;
 
 	text-decoration: none;
 
-	font-size: 14pt;
+	font-size: 2rem;
 
 	transition-property: color border-color box-shadow;
 	transition-duration: 0.25s;
@@ -54,14 +55,18 @@ a.home-button:hover, #section-projects a.home-button:hover {
 }
 
 #carousel-main .carousel-caption .carousel-caption-title {
-	font-size: 26pt;
+	font-size: 7rem;
 	color: #222;
 }
 
 #carousel-main .carousel-title-rect {
-	background-color: #FEC222;
+	/*background-color: #FEC222;*/
+	line-height: 9rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: white;
 	display: inline-block;
-	padding: 5px 10px;
+	padding-bottom: 25px;
 }
 
 #carousel-main .carousel-subtitle-rect {
@@ -71,19 +76,16 @@ a.home-button:hover, #section-projects a.home-button:hover {
 	display: inline-block;
 	padding: 5px 10px;
 }
-.carousel-title-rect,.carousel-subtitle-rect {
+/*.carousel-title-rect,.carousel-subtitle-rect {
 	box-shadow: 0px 0px 5px #888;
 	text-shadow: none;
-}
+}*/
 
 #carousel-main .carousel-caption {
 	text-align: left;
-}
-
-@media (max-width: 768px) { /* phones */
-	#carousel-main .item {
-		height: 250px;
-	}
+	width: 80%;
+	margin-bottom: 50px;
+	margin-left: -50px;
 }
 
 #carousel-main .item img {
@@ -97,6 +99,56 @@ a.home-button:hover, #section-projects a.home-button:hover {
 	transform: translateY(-50%);
 }
 
+#carousel-main .home-button {
+	border: 5px solid #FEC222;
+	border-radius: 10px;
+	color: #FEC222;
+	padding-left: 70px;
+	padding-right: 70px;
+	font-size: 2.5em;
+	font-weight: 600;
+}
+
+
+@media (max-width: 1024px) { /* tablets */
+	#carousel-main .item {
+		height: 500px;
+	}
+	#carousel-main .carousel-caption .carousel-caption-title {
+		font-size: 5rem;
+	}
+	#carousel-main .home-button {
+		font-size: 3rem;
+		margin-bottom: 0;
+	}
+	#carousel-main .carousel-title-rect {
+		padding: 0;
+		line-height: 7rem;
+	}
+}
+
+@media (max-width: 768px) { /* phones */
+	#carousel-main .item {
+		height: 250px;
+	}
+	#carousel-main .carousel-caption .carousel-caption-title {
+		font-size: 3rem;
+	}
+	#carousel-main .home-button {
+		font-size: 1.5rem;
+		margin-bottom: 0;
+	}
+	#carousel-main .carousel-title-rect {
+		padding: 0;
+		line-height: 3.5rem;
+	}
+	#carousel-main .carousel-caption {
+		margin-bottom: 0;
+	}
+
+}
+
+
 .item .frame {
 	width: 100%;
 	height: 100%;
@@ -104,17 +156,19 @@ a.home-button:hover, #section-projects a.home-button:hover {
 }
 
 section#section-whatis-enactus {
-	background-color: #FFEBB3;
+	background-color: #FEC222;
 }
 #section-whatis-enactus .section-content {
 	margin: 10px 0px;
 }
 
 #section-whatis-enactus .section-text {
-	margin: 20px;
-	line-height: 1.5;
-	font-size: 14pt;
-
+	margin: 0 auto;
+	line-height: 1.4;
+	font-size: 1.6rem;
+	width: 75%;
+	font-weight: 500;
+	text-align: center;
 }
 
 .section-text {
@@ -159,7 +213,7 @@ section#section-whatis-enactus {
 
 	text-align: center;
 
-	border: 1px solid #bbb;
+	border: 3px solid #bbb;
 	transition: box-shadow 0.5s;
 	overflow: hidden;
 	position: relative;
@@ -167,11 +221,10 @@ section#section-whatis-enactus {
 
 #section-projects a {
 	text-decoration: none;
-
 	color: #555;
 }
 #section-projects .row {
-	margin: 50px 10px;
+	margin: 25px 10px;
 }
 
 #section-projects .project-card:hover {
@@ -213,18 +266,6 @@ section#section-whatis-enactus {
 	font-size: 12pt;
 }
 
-#section-meeting {
-	background-color: #6B0C70;
-	color: white;
-}
-
-#section-meeting .home-button {
-	/*color: #444;*/
-	color: white;
-	border: 2px solid white;
-	display: block;
-}
-
 #stat-1 {
 	color: #3D1255;
 	margin-bottom: 40px;
@@ -258,9 +299,9 @@ section#section-whatis-enactus {
 #section-join-us {
 	/*background-color: #6B0C70;*/
 	background: linear-gradient(
-			rgba(0, 0, 0, 0.4), 
+			rgba(0, 0, 0, 0.4),
 			rgba(0, 0, 0, 0.4)
-		), url('/static/join_us_background.jpg') fixed center bottom;
+		), url('/static/teamcover.jpg') fixed center top;
 	color: white;
 	padding: 80px;
 }

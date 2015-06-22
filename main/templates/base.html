@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href='{% static "base.css" %}'>
 
+	<!-- Added favicon -->
+	<link rel="shortcut icon" href="/static/favicon.ico">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -31,12 +34,12 @@
 				</div>
 
 				<ul id="navbar" class="nav navbar-nav collapse navbar-collapse navbar-right">
-					<li><a href="{% url 'home' %}">Home</a></li>
-					<li><a href="{% url 'our_team' %}">Our Team</a></li>
-					<li><a href="{% url 'projects' %}">Projects</a></li>
-					<li><a href="https://medium.com/@EnactusUW">Blog</a></li>
-					<!--<li><a href="{% url 'sponsors' %}">Sponsorship</a></li>-->
-					<li><a href="{% url 'contact' %}">Contact us</a></li>
+					<!-- <li><a href="{% url 'home' %}">HOME</a></li> -->
+					<li><a href="{% url 'our_team' %}">OUR TEAM</a></li>
+					<li><a href="{% url 'projects' %}">PROJECTS</a></li>
+					<li><a target="_blank" href="https://medium.com/@EnactusUW">BLOG</a></li>
+					<!-- <li><a href="{% url 'sponsors' %}">SPONSORS</a></li> -->
+					<li><a href="{% url 'contact' %}">CONTACT US</a></li>
 					{% if user.is_authenticated %}
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{user.username}} <span class="caret"></span></a>
@@ -77,7 +80,7 @@
 
 	<footer>
 		<div class="container">
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-sm-6">
 					<h3>Explore</h3>
 					<nav>
@@ -96,13 +99,13 @@
 						<ul>
 							<li><a class="footerButton" href="http://www.facebook.com/EnactusWaterloo">Facebook</a></li>
 							<li><a class="footerButton" href="mailto:info@enactuswaterloo.ca">Email</a></li>
-							<li><a class="footerButton" href="https://twitter.com/enactuswaterloo">Twitter</a></li>
+							<li><a class="footerButton" href="https://twitter.com/enactusUW">Twitter</a></li>
 						</ul>
 					</nav>
 				</div>
 
-			</div>
-			<div class="text-center" id="copyrightMessage">Copyright &copy; 2015 Enactus Waterloo.</div>
+			</div> -->
+			<div class="text-center" id="copyrightMessage">Copyright &copy; Enactus Waterloo 2015.</div>
 		</div>
 	</footer>
 

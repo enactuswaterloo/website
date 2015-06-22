@@ -6,13 +6,13 @@ body {
 
 nav.navbar-custom {
 	background-color: white;
-	height: 100px;
+	height: 77px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
 
 nav.navbar-custom .navbar-nav {
-	margin-top: 15px;
+	margin-top: 10px;
 	padding-top: 10px;
 	padding-bottom: 5px;
 	background-color: white;
@@ -21,9 +21,13 @@ nav.navbar-custom .navbar-nav {
 nav.navbar-custom .navbar-nav li > a {
 	border-bottom: 2px solid white;
 	transition: border-bottom-color 0.15s;
+	color: #4c4c4c;
+	font-weight: 600;
+	font-size: 1.4rem;
 }
 
 nav.navbar-custom .navbar-nav li > a:hover {
+	color: #FEC222;
 	border-bottom-color: #FEC222;
 }
 
@@ -32,8 +36,8 @@ nav.navbar-custom .navbar-nav li > a:focus {
 }
 
 nav.navbar-custom .navbar-brand img {
-	height: 80px;
-	margin-left: -25px;
+	height: 44px;
+	margin-left: 120px;
 }
 
 div.navbar-header button {
@@ -54,7 +58,7 @@ a.join-button button {
 
 footer {
 	padding: 20px 0px;
-	background-color:#444;
+	background-color:#4c4c4c;
 	color:#ccc;
 }
 
@@ -79,29 +83,28 @@ a.footerButton:hover {
 
 section {
 	margin: 0px;
-	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	text-align: center;
 }
 
 .subpage-title-bar {
 	background-color: #FEC222;
 	color: #444;
-
+	text-align: center;
 	font-weight: 300;
 	min-height: 72px;
 }
 
 .subpage-title-bar h3 {
-	font-weight: 300;
+	font-weight: 500;
 
 	font-size: 24pt;
 }
 
 #copyrightMessage {
-	font-size: 12px;
-	text-transform: uppercase;
-	color: #888;
+	font-size: 16px;
+	color: white;
 }
 
 p {
@@ -115,4 +118,3 @@ p {
 .form-elements {
 	margin: 10px 0px;
 }
-
