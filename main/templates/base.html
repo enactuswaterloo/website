@@ -37,7 +37,7 @@
 					<!-- <li><a href="{% url 'home' %}">HOME</a></li> -->
 					<li><a href="{% url 'our_team' %}">OUR TEAM</a></li>
 					<li><a href="/#projects">PROJECTS</a></li>
-					<!-- <li><a href="/#sponsors">SPONSORS</a></li> -->
+					<li><a href="/#sponsors">SPONSORS</a></li>
 					<li><a href="{% url 'contact' %}">CONTACT US</a></li>
 					<li><a target="_blank" href="https://medium.com/@EnactusUW">BLOG</a></li>
 					{% if user.is_authenticated %}
@@ -108,23 +108,24 @@
 			<div class="text-center" id="copyrightMessage">Copyright &copy; Enactus Waterloo 2015.</div>
 		</div>
 	</footer>
-<script>
-	function hasHtml5Validation () {
-	  return typeof document.createElement('input').checkValidity === 'function';
-	}
+	<script>
+		function hasHtml5Validation () {
+			return typeof document.createElement('input').checkValidity === 'function';
+		}
 
-	if (hasHtml5Validation()) {
-	  $('.validate-form').submit(function (e) {
-	    if (!this.checkValidity()) {
-	      e.preventDefault();
-	      $(this).addClass('invalid');
-	      $('#status').html('invalid');
-	    } else {
-	      $(this).removeClass('invalid');
-	      $('#status').html('submitted');
-	    }
-	  });
-	}
-</script>
+		if (hasHtml5Validation()) {
+			$('.validate-form').submit(function (e) {
+		  	if (!this.checkValidity()) {
+		    	e.preventDefault();
+		    	$(this).addClass('invalid');
+		      $('#status').html('invalid');
+		    }
+				else {
+		    	$(this).removeClass('invalid');
+		    	$('#status').html('submitted');
+		    }
+		  });
+		}
+	</script>
 </body>
 </html>

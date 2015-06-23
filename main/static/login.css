@@ -13,6 +13,7 @@ form div.form-group label {
 	padding: 0px;
 	margin: 0px;
 	display: block;
+	padding-bottom: 5px;
 }
 
 form div.form-group input {

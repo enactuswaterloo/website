@@ -39,6 +39,7 @@ nav.navbar-custom .navbar-nav li > a:hover {
 nav.navbar-custom .navbar-nav li > a:focus {
 	border-bottom-color: #FEC222;
 }
+
 nav.navbar-custom .navbar-brand {
 	padding-top: 7px;
 }
