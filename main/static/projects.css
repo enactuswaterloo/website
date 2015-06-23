@@ -24,10 +24,11 @@
 }
 
 #project-view .project .project-content {
-	font-size: 12pt;
-	line-height: 1.5;
-	width: 65%;
 	margin: 0 auto;
+	font-size: 18px;
+	line-height: 1.6rem;
+	width: 65%;
+	font-weight: 600;
 }
 
 #projects .container {

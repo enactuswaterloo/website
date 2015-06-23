@@ -89,7 +89,7 @@
 
 	<footer>
 		<div class="container">
-			<!-- <div class="row">
+			<div class="row">
 				<div class="col-sm-6">
 					<h3>Explore</h3>
 					<nav>
@@ -101,7 +101,6 @@
 						</ul>
 					</nav>
 				</div>
-
 				<div class="col-sm-6">
 					<h3>Contact Us</h3>
 					<nav>
@@ -112,16 +111,15 @@
 						</ul>
 					</nav>
 				</div>
-
-			</div> -->
+			</div>
 			<div class="text-center" id="copyrightMessage">Copyright &copy; Enactus Waterloo 2015.</div>
 		</div>
 	</footer>
+
 	<script>
 		function hasHtml5Validation () {
 			return typeof document.createElement('input').checkValidity === 'function';
 		}
-
 		if (hasHtml5Validation()) {
 			$('.validate-form').submit(function (e) {
 		  	if (!this.checkValidity()) {

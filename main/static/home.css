@@ -215,7 +215,6 @@ section#section-whoweare {
 #section-projects .project-card:hover {
 	/*box-shadow: 0px 0px 10px 0px #999;*/
 	box-shadow: 0px 0px 10px 0px #FEC222;
-
 }
 
 .project-card {
@@ -256,7 +255,6 @@ section#section-whoweare {
 }
 
 /* Sponsors */
-
 #section-sponsors {
 	/*background-color: #FEC222;*/
 	/*background-image: url('/static/test.png');
@@ -275,6 +273,7 @@ section#section-whoweare {
 	margin-bottom: 40px;
 	background-color: #FEC222;
 }
+
 #section-sponsors .section-text {
 	margin: 0 auto;
 	line-height: 1.4;
@@ -288,9 +287,11 @@ section#section-whoweare {
 	margin: 40px 10px;
 	margin-top: 10px;
 }
+
 #section-sponsors .diamond {
 	/*background-color: white;*/
 }
+
 #section-sponsors .diamond.home-button {
 	background-color: #9fe9f9;
 	border: 1.5px solid black;
@@ -302,31 +303,40 @@ section#section-whoweare {
 	width: auto;
 	padding: 10px;
 }
+
 #section-sponsors .platinum {
 	/*background-color: white;*/
 }
+
 #section-sponsors .platinum.home-button {
 	background-color: #E5E4E2;
 	border: 1.5px solid black;
 	margin-bottom: 10px;
 }
+
 #section-sponsors .platinum img{
 	height: 80px;
 	width: auto;
 	padding: 10px;
 }
+
 #section-sponsors .gold {
+	margin-bottom: 20px;
 }
+
 #section-sponsors .gold.home-button {
 	background-color: #ffd700;
 	border: 1.5px solid black;
 	margin-bottom: 10px;
 }
+
 #section-sponsors .gold img{
 	height: 70px;
 	width: auto;
 	padding: 10px;
 }
+
+/* Contact Us */
 #section-buttons {
 	background: url("/static/section_buttons.jpg") no-repeat;
 	background-size: cover;
@@ -342,7 +352,7 @@ section#section-whoweare {
 	margin: 0px 10px;
 }
 
-#section-join-us {
+#section-contact-us {
 	/*background-color: #6B0C70;*/
 	background: linear-gradient(
 			rgba(0, 0, 0, 0.4),
@@ -352,7 +362,7 @@ section#section-whoweare {
 	padding: 80px;
 }
 
-#section-join-us .section-text {
+#section-contact-us .section-text {
 	font-size: 42pt;
 	font-weight: 300;
 	text-align: center;
@@ -360,29 +370,29 @@ section#section-whoweare {
 }
 
 @media (max-width: 768px) {
-	section#section-join-us .section-text {
+	section#section-contact-us .section-text {
 		font-size: 18pt;
 	}
 
-	section#section-join-us .home-button {
+	section#section-contact-us .home-button {
 		font-size: 12pt;
 		margin-left: 0px;
 		margin-right: 0px;
 		padding: 5px 10px;
 	}
-	section#section-join-us .home-button.home-button-lg {
+	section#section-contact-us .home-button.home-button-lg {
 		font-size: 14pt;
 		padding: 10px 15px;
 	}
 }
 
-#section-join-us .home-button {
+#section-contact-us .home-button {
 	padding: 10px 20px;
 	color: white;
 	border: 2px solid white;
 }
 
-#section-join-us a.home-button:hover {
+#section-contact-us a.home-button:hover {
 	background-color: white;
 	color: black;
 	text-decoration: none;
