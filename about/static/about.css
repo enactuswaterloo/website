@@ -42,17 +42,19 @@ div.member-info {
     padding: 10px;
     margin: 0px;
     font-size: 1.5rem;
-    height: 175px;
+    height: 190px;
 }
 
 div.member-name {
     color: #444;
     font-size: 1.7rem;
     font-weight: bolder;
+    text-align: center;
 }
-div.member-name .member-position {
-    font-weight: lighter;
+div.member-position {
+    font-weight: bold;
     color: #888;
+    text-align: center;
 }
 
 div.home-button {
@@ -77,12 +79,11 @@ div.member-link a:hover {
     text-decoration: none;
 }
 
-/*div.member-program {
-    font-style: italic;
-    margin: 5px 0px;
+div.member-program {
     color: #aaa;
     font-size: 11pt;
-}*/
+    text-align: center;
+}
 
 .member-bio {
     margin-top: 10px;
@@ -116,13 +117,13 @@ a.personal-link span.overlay:hover {
 
 @media (max-width: 991px) {
   div.member-info {
-    height: 140px;
+    height: 150px;
   }
 }
 
 @media (max-width: 768px){
   div.member-info {
-    height: 105px;
+    height: 120px;
   }
   div.member-info {
     font-size: 1.3rem;
@@ -132,11 +133,10 @@ a.personal-link span.overlay:hover {
   div.member-info {
     font-size: 1.2rem;
   }
+  .member-bio {
+    line-height: 1.3rem;
+  }
   div.member-link a{
     font-size: 1.2rem;
-  }
-  div.member-link{
-    margin-top: 3px;
-    margin-bottom: 3px;
   }
 }
