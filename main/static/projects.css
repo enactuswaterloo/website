@@ -26,6 +26,8 @@
 #project-view .project .project-content {
 	font-size: 12pt;
 	line-height: 1.5;
+	width: 65%;
+	margin: 0 auto;
 }
 
 #projects .container {
