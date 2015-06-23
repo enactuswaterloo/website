@@ -10,12 +10,12 @@ class ProfileForm(forms.Form):
 
     public = forms.BooleanField(initial=False, label="Display profile?", required=False)
 
-    program = forms.CharField(max_length=150, label="Program", required=False)
-    year = forms.CharField(max_length=100, label="Expected Graduation Year", required=False)
+    program = forms.CharField(max_length=150, label="Program", required=True)
+    year = forms.CharField(max_length=100, label="Expected Graduation Year", required=True)
     picture = forms.ImageField(required=False)
 
     link = forms.URLField(max_length=150, label="Personal link", required=False)
-    link_type = forms.ChoiceField(label="Link type", required=False, choices=(
+    link_type = forms.ChoiceField(label="Link type", required=True, choices=(
             ("Facebook", "Facebook"),
             ("Twitter", "Twitter"),
             ("Github", "Github"),
@@ -34,7 +34,7 @@ class ProfileForm(forms.Form):
             ("Project Cricket", "Project Cricket"),
             ("Project Spider", "Project Spider")
         ))
-    bio = forms.CharField(widget=forms.Textarea, required=False, max_length=200)
+    bio = forms.CharField(widget=forms.Textarea, required=True, max_length=200)
 
 
 class SignupForm(forms.Form):
