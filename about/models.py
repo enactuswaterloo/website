@@ -72,7 +72,7 @@ class Person(models.Model):
     year = models.CharField(max_length=100)
 
     position = models.CharField(max_length=100, default="Member")
-    bio = models.TextField(blank=True, max_length=400) # Max lengths are unenforced for TextFields; that's intentional.
+    bio = models.TextField(blank=True, max_length=200) # Max lengths are unenforced for TextFields; that's intentional.
 
     def __str__(self):
     	return "%s %s" % (self.user.first_name, self.user.last_name)
