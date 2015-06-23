@@ -22,6 +22,11 @@ nav.navbar-custom .navbar-toggle {
 	margin-top: 10px;
 }
 
+nav.navbar-custom .dropdown:hover .dropdown-menu {
+	display: block;
+	margin-top: 0;
+}
+
 nav.navbar-custom .navbar-nav li > a {
 	padding-top: 10px;
 	border-bottom: 2px solid white;

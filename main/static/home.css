@@ -159,6 +159,11 @@ a.home-button:hover, #section-projects a.home-button:hover {
 section#section-whoweare {
 	background-color: #FEC222;
 }
+
+#section-sponsors a {
+	text-decoration: none;
+}
+
 #section-whoeweare .section-content {
 	margin: 10px 0px;
 }
@@ -256,6 +261,7 @@ section#section-whoweare {
 	/*background-color: #FEC222;*/
 	/*background-image: url('/static/test.png');
 	background-repeat: no-repeat;*/
+	padding-bottom: 0;
 }
 
 #section-sponsors a {
