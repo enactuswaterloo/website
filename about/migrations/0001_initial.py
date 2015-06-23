@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('program', models.CharField(max_length=100)),
                 ('year', models.CharField(max_length=100)),
                 ('position', models.CharField(default=b'Member', max_length=100)),
-                ('bio', models.TextField(max_length=200, blank=True)),
+                ('bio', models.TextField(max_length=140, blank=True)),
             ],
             options={
             },

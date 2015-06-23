@@ -34,7 +34,7 @@ class ProfileForm(forms.Form):
             ("Project Cricket", "Project Cricket"),
             ("Project Spider", "Project Spider")
         ))
-    bio = forms.CharField(widget=forms.Textarea, required=True, max_length=200)
+    bio = forms.CharField(widget=forms.Textarea, required=False, max_length=200)
 
 
 class SignupForm(forms.Form):
@@ -72,7 +72,7 @@ class Person(models.Model):
     year = models.CharField(max_length=100)
 
     position = models.CharField(max_length=100, default="Member")
-    bio = models.TextField(blank=True, max_length=200) # Max lengths are unenforced for TextFields; that's intentional.
+    bio = models.TextField(blank=True, max_length=140) # Max lengths are unenforced for TextFields; that's intentional.
 
     def __str__(self):
     	return "%s %s" % (self.user.first_name, self.user.last_name)
