@@ -131,7 +131,6 @@ p {
 	margin: 10px 0px;
 }
 
-
 /* .invalid class prevents CSS from automatically applying */
 .invalid input:required:invalid {
   background: #BE4C54;
