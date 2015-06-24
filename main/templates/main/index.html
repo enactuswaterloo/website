@@ -122,24 +122,24 @@
 
 <!--Contact Us-->
 <section id="section-contact-us">
-  <a name="contact">
+  <a name="contactus">
   <div class="container">
     <h1 style="color: #FEC222">Contact Us</h1>
     <div class="section-text">
       <p>Want to get in touch? We'd love to chat! Simply fill out the form below, or e-mail us at <a href="mailto:enactuswaterloo@gmail.com" target="_blank"><span id="email">enactuswaterloo@gmail.com</span></a></p>
     </div>
     <div class="row social-media">
-      <a class="home-button" href="https://www.facebook.com/EnactusWaterloo"><i class="fa fa-facebook-square"></i>Facebook</a>
-      <a class="home-button" href="https://twitter.com/EnactusUW"><i class="fa fa-twitter-square"></i>Twitter</a>
-      <a class="home-button" href="https://instagram.com/enactuswaterloo"><i class="fa fa-instagram"></i>Instagram</a>
-      <a class="home-button" href="https://medium.com/@EnactusUW"><i class="fa fa-medium"></i>Medium</a>
+      <a class="home-button" href="https://www.facebook.com/EnactusWaterloo" target="=_blank"><i class="fa fa-facebook-square" ></i>Facebook</a>
+      <a class="home-button" href="https://twitter.com/EnactusUW" target="=_blank"><i class="fa fa-twitter-square"></i>Twitter</a>
+      <a class="home-button" href="https://instagram.com/enactuswaterloo" target="=_blank"><i class="fa fa-instagram"></i>Instagram</a>
+      <a class="home-button" href="https://medium.com/@EnactusUW" target="=_blank"><i class="fa fa-medium"></i>Medium</a>
     </div>
     <div class="row">
       <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
         <form role="search" class="contact-form validate-form" method="post" action="{% url 'contact' %}">
           {% csrf_token %}
           <div class="form-group personalInfo">
-            <input type="text" class="form-control pull-left .invalid" name="name" placeholder="Name" autofocus="" required>
+            <input type="text" class="form-control pull-left .invalid" name="name" placeholder="Name" required>
             <input type="email" class="form-control pull-right" name="email" placeholder="Email" required>
           </div>
           <div class="form-group">
