@@ -51,23 +51,24 @@
 
 <!--Who we are-->
 <section id="section-whoweare">
+  <a name="whoweare">
   <div class="container">
-    <h2>Who We Are</h2>
+    <h1>Who We Are</h1>
     <div class="section-text">
       <p>Enactus Waterloo is a student-led organisation dedicated to improving the quality of life and standard of living. We solve real-world problems by implementing projects which achieve the triple bottom line: people, planet, and profit.</p>
 
       <p>Every year our team travels to the National Competition, where we compete against 60 teams from across Canada and showcase our projects to the country’s top executives. </p>
     </div>
-
   </div>
   <a class="home-button" href="{% url 'our_team' %}">Our awesome team!</a>
+  </a>
 </section>
 
 <!--Projects-->
 <section id="section-projects">
   <a name="projects">
     <div class="container">
-      <h2>Our Projects</h2>
+      <h1>Our Projects</h1>
       <div class="row">
       {% for project in projects %}
         <div class="col-sm-4">
@@ -89,7 +90,6 @@
         </div>
       {% endfor %}
       </div>
-      <!-- <a href="{% url 'projects' %}" class="home-button">Projects Page</a> -->
     </div>
   </a>
 </section>
@@ -98,23 +98,21 @@
 <section id="section-sponsors">
   <a name="sponsors">
     <div class="container">
-      <h2>Our Sponsors</h2>
+      <h1>Our Sponsors</h1>
       <div class="section-text">
         <p>Our projects would not be possible without the generous support of our sponsors.</br>
-        Please view our sponsorship package below for details on sponsoring us.</p>
-        <a class="home-button" href="/static/package.pdf"><i class="fa fa-file-pdf-o"></i>Package</a>
+        For details on sponsoring us, please view our <a href="/static/package.pdf"><span id="package">sponsorship package.</span></a></p>
       </div>
-      <span class="home-button diamond"><i class="fa fa-diamond"></i>Diamond Sponsors ($3,000+)</span>
+      <span class="home-button diamond"><i class="fa fa-diamond"></i>Diamond Sponsors ( >$3,000)</span>
       <div class="row diamond">
-        <img src="/static/mef.jpg">
         <img src="/static/engsoc.jpg">
       </div>
-      <span class="home-button platinum">Platinum Sponsors ($1,500-$2,999)</span>
+      <span class="home-button platinum">Platinum Sponsors ( >$1,500)</span>
       <div class="row platinum">
         <img src="/static/shell.png">
         <img src="/static/mef.jpg">
       </div>
-      <span class="home-button gold">Gold Sponsors ($500-$1,499)</span>
+      <span class="home-button gold">Gold Sponsors ( >$500)</span>
       <div class="row gold">
         <img src="/static/engsoc.jpg">
       </div>
@@ -124,15 +122,40 @@
 
 <!--Contact Us-->
 <section id="section-contact-us">
+  <a name="contact">
   <div class="container">
+    <h1 style="color: #FEC222">Contact Us</h1>
     <div class="section-text">
-      Get Connected!
+      <p>Want to get in touch? We'd love to chat! Simply fill out the form below, or e-mail us at <a href="mailto:enactuswaterloo@gmail.com" target="_blank"><span id="email">enactuswaterloo@gmail.com</span></a></p>
     </div>
-    <br>
-    <a class="home-button" href="https://www.facebook.com/EnactusWaterloo"><i class="fa fa-facebook-square"></i>Facebook</a>
-    <a class="home-button" href="https://twitter.com/enactusUW"><i class="fa fa-twitter-square"></i>Twitter</a>
-    <a class="home-button" href="https://instagram.com/enactuswaterloo"><i class="fa fa-instagram"></i>Instagram</a>
+    <div class="row social-media">
+      <a class="home-button" href="https://www.facebook.com/EnactusWaterloo"><i class="fa fa-facebook-square"></i>Facebook</a>
+      <a class="home-button" href="https://twitter.com/EnactusUW"><i class="fa fa-twitter-square"></i>Twitter</a>
+      <a class="home-button" href="https://instagram.com/enactuswaterloo"><i class="fa fa-instagram"></i>Instagram</a>
+      <a class="home-button" href="https://medium.com/@EnactusUW"><i class="fa fa-medium"></i>Medium</a>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+        <form role="search" class="contact-form validate-form" method="post" action="{% url 'contact' %}">
+          {% csrf_token %}
+          <div class="form-group personalInfo">
+            <input type="text" class="form-control pull-left .invalid" name="name" placeholder="Name" autofocus="" required>
+            <input type="email" class="form-control pull-right" name="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" placeholder="Subject" required/>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" placeholder="Message" rows="6" required></textarea>
+          </div>
+          <div class="form-elements">
+            <button type="submit" class="btn btn-default contact-button">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
+  </a>
 </section>
 
 {% endblock %}

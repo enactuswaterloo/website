@@ -1,3 +1,16 @@
+#project-view .project {
+	padding: 30px 0px;
+}
+
+#project-view .project .project-content {
+	font-size: 18px;
+	line-height: 1.5;
+	font-weight: 450;
+	text-align: left;
+	width: 65%;
+	margin: 0 auto;
+}
+
 #projects .project {
 	margin-top: 40px;
 	margin-bottom: 50px;
@@ -13,24 +26,6 @@
 	font-style: italic;
 	margin-bottom: 15px;
 }
-
-#projects {
-	background-color: white;
-
-}
-
-#project-view .project {
-	padding: 40px 0px;
-}
-
-#project-view .project .project-content {
-	margin: 0 auto;
-	font-size: 18px;
-	line-height: 1.6rem;
-	width: 65%;
-	font-weight: 600;
-}
-
 #projects .container {
 	position: relative;
 }

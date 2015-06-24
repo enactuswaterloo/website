@@ -55,7 +55,6 @@ a.home-button:hover, #section-projects a.home-button:hover {
 }
 
 #carousel-main .carousel-title-rect {
-	/*background-color: #FEC222;*/
 	line-height: 9rem;
 	text-transform: uppercase;
 	font-weight: 900;
@@ -92,6 +91,259 @@ a.home-button:hover, #section-projects a.home-button:hover {
 	font-weight: 600;
 }
 
+.item .frame {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+section#section-whoweare {
+	background-color: #FEC222;
+}
+
+#section-whoweare a {
+	text-decoration: none;
+	color: #333
+}
+
+#section-whoeweare .section-content {
+	margin: 10px 0px;
+}
+
+#section-whoweare .section-text {
+	margin: 0 auto;
+	line-height: 1.4;
+	font-size: 2rem;
+	width: 85%;
+	font-weight: 500;
+	text-align: center;
+}
+
+.section-text {
+	font-size: 14pt;
+	text-align: left;
+}
+.section-text p {
+	margin: 15px 0px;
+}
+
+/* Projects */
+#section-projects {
+	background: #333;
+}
+#section-projects .project-card {
+	padding:0px;
+	margin:0px;
+	height: 400px;
+	text-align: center;
+	border: 3px solid white;
+	transition: box-shadow 0.5s;
+	overflow: hidden;
+	position: relative;
+}
+
+#section-projects a {
+	text-decoration: none;
+	color: white;
+	color: #FEC222;
+}
+#section-projects .row {
+	margin: 40px 0px;
+}
+
+#section-projects .project-card:hover {
+	box-shadow: 0px 0px 10px 0px #FEC222;
+}
+
+
+.project-card img.project-pic {
+	height: 300px;
+	min-width: 100%;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 0px;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	border-bottom: 3px solid white;
+}
+.project-card .project-text {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 90px;
+	padding-top: 10px;
+}
+
+.project-card .project-text .project-title {
+	font-size: 20pt;
+	font-weight: 300;
+
+}
+
+.project-card .project-text .project-short-desc {
+	margin: 0px 10px;
+	max-height: 150px;
+	font-size: 12pt;
+	color: white;
+}
+
+/* Sponsors */
+#section-sponsors {
+	padding-bottom: 0;
+}
+
+#section-sponsors a {
+	text-decoration: none;
+	color: #333;
+}
+
+#section-sponsors .section-text {
+	margin: 0 auto;
+	line-height: 1.4;
+	font-size: 2rem;
+	width: 85%;
+	font-weight: 500;
+	text-align: center;
+}
+
+#section-sponsors .row {
+	margin: 20px 10px;
+	margin-top: 10px;
+}
+
+#section-sponsors #package {
+	color: #FEC222;
+	font-weight: 900;
+}
+
+#section-sponsors .home-button {
+	border: 1.5px solid black;
+	font-size: 2rem;
+	margin: 10px;
+	width: 320px;
+	text-align: center;
+}
+
+#section-sponsors .diamond.home-button {
+	background-color: #9fe9f9;
+}
+
+#section-sponsors .diamond img {
+	height: 100px;
+	width: auto;
+	max-width: 100%;
+	padding: 10px;
+}
+
+#section-sponsors .platinum.home-button {
+	background-color: #E5E4E2;
+}
+
+#section-sponsors .platinum img{
+	height: 80px;
+	width: auto;
+	padding: 10px;
+}
+
+#section-sponsors .gold.home-button {
+	background-color: #ffd700;
+}
+
+#section-sponsors .gold img{
+	height: 70px;
+	width: auto;
+	padding: 10px;
+}
+
+/* Contact Us */
+#section-contact-us {
+	background: linear-gradient(
+			rgba(0, 0, 0, 0.4),
+			rgba(0, 0, 0, 0.4)
+		), url('/static/teamphoto.jpg') fixed center top;
+	padding-bottom: 40px;
+}
+
+#section-contact-us a {
+	text-decoration: none;
+	color: white;
+}
+
+#section-contact-us .section-text {
+	margin: 0 auto;
+	line-height: 1.4;
+	font-size: 2rem;
+	width: 50%;
+	font-weight: 500;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#section-contact-us #email {
+	color: #FEC222;
+	font-weight: 900;
+}
+
+#section-contact-us .social-media {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#section-contact-us .home-button {
+	width: 125px;
+	height: 45px;
+	font-size: 1.5rem;
+	padding: 10px 10px;
+	color: white;
+	border: 2px solid white;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#section-contact-us a.home-button:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+}
+
+form.contact-form {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	padding-bottom: 5px;
+	background-color: #E0E0E0;
+	border-radius: 10px;
+	box-shadow: 0px 0px 1px gray;
+}
+
+.personalInfo input {
+	width: 48%;
+	display: inline;
+	margin-bottom: 10px;
+}
+
+form div.form-elements button.contact-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alert-danger {
+	width: 45%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alert-success {
+	width: 45%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 @media (max-width: 1024px) { /* tablets */
 	#carousel-main .item {
@@ -132,6 +384,14 @@ a.home-button:hover, #section-projects a.home-button:hover {
 	nav.navbar-custom .navbar-brand img {
 		margin-left: 30px;
 	}
+	form.contact-form {
+		width: 90%;
+	}
+	#section-contact-us .section-text {
+		width: 90%;
+		font-size: 1.6rem;
+	}
+
 
 }
 
@@ -143,257 +403,16 @@ a.home-button:hover, #section-projects a.home-button:hover {
 		font-size: 1.5rem;
 	}
 	#carousel-main .home-button {
-		font-size: 0.8rem;
+		font-size: 1.2rem;
+		padding-left: 20px;
+		padding-right: 20px;
+		border: 3px solid #FEC222;
 	}
 	#carousel-main .carousel-title-rect {
 		line-height: 2rem;
 	}
-}
-
-.item .frame {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
-
-section#section-whoweare {
-	background-color: #FEC222;
-}
-
-#section-sponsors a {
-	text-decoration: none;
-}
-
-#section-whoeweare .section-content {
-	margin: 10px 0px;
-}
-
-#section-whoweare .section-text {
-	margin: 0 auto;
-	line-height: 1.4;
-	font-size: 2rem;
-	width: 75%;
-	font-weight: 500;
-	text-align: center;
-}
-
-.section-text {
-	font-size: 14pt;
-	text-align: left;
-}
-.section-text p {
-	margin: 15px 0px;
-}
-
-#section-projects {
-	background: #4c4c4c;
-}
-#section-projects .project-card {
-	padding:0px;
-	margin:0px;
-	height: 400px;
-
-	text-align: center;
-
-	/*border: 3px solid #bbb;*/
-	border: 3px solid white;
-	transition: box-shadow 0.5s;
-	overflow: hidden;
-	position: relative;
-}
-
-#section-projects a {
-	text-decoration: none;
-	/*color: #333;*/
-	/*color: white;*/
-	color: #FEC222;
-}
-#section-projects .row {
-	margin: 40px 10px;
-}
-
-#section-projects .project-card:hover {
-	/*box-shadow: 0px 0px 10px 0px #999;*/
-	box-shadow: 0px 0px 10px 0px #FEC222;
-}
-
-.project-card {
-	margin: 5px;
-}
-
-.project-card img.project-pic {
-	height: 300px;
-	min-width: 100%;
-	text-align: center;
-
-	position: absolute;
-	left: 50%;
-	top: 0px;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-	/*box-shadow: 0px 0px 5px 0px #444;*/
-	box-shadow: 0px 0px 5px 0px white;
-
-}
-.project-card .project-text {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	height: 90px;
-}
-
-.project-card .project-text .project-title {
-	font-size: 20pt;
-	font-weight: 300;
-}
-
-.project-card .project-text .project-short-desc {
-	margin: 7px 10px;
-	max-height: 150px;
-	font-size: 12pt;
-}
-
-/* Sponsors */
-#section-sponsors {
-	/*background-color: #FEC222;*/
-	/*background-image: url('/static/test.png');
-	background-repeat: no-repeat;*/
-	padding-bottom: 0;
-}
-
-#section-sponsors a {
-	text-decoration: none;
-	color: #333;
-	/*color:  #FEC222;*/
-}
-
-#section-sponsors .home-button {
-	margin-top: 0;
-	margin-bottom: 40px;
-	background-color: #FEC222;
-}
-
-#section-sponsors .section-text {
-	margin: 0 auto;
-	line-height: 1.4;
-	font-size: 2rem;
-	width: 75%;
-	font-weight: 500;
-	text-align: center;
-}
-
-#section-sponsors .row {
-	margin: 40px 10px;
-	margin-top: 10px;
-}
-
-#section-sponsors .diamond {
-	/*background-color: white;*/
-}
-
-#section-sponsors .diamond.home-button {
-	background-color: #9fe9f9;
-	border: 1.5px solid black;
-	margin-bottom: 10px;
-}
-
-#section-sponsors .diamond img {
-	height: 100px;
-	width: auto;
-	padding: 10px;
-}
-
-#section-sponsors .platinum {
-	/*background-color: white;*/
-}
-
-#section-sponsors .platinum.home-button {
-	background-color: #E5E4E2;
-	border: 1.5px solid black;
-	margin-bottom: 10px;
-}
-
-#section-sponsors .platinum img{
-	height: 80px;
-	width: auto;
-	padding: 10px;
-}
-
-#section-sponsors .gold {
-	margin-bottom: 20px;
-}
-
-#section-sponsors .gold.home-button {
-	background-color: #ffd700;
-	border: 1.5px solid black;
-	margin-bottom: 10px;
-}
-
-#section-sponsors .gold img{
-	height: 70px;
-	width: auto;
-	padding: 10px;
-}
-
-/* Contact Us */
-#section-buttons {
-	background: url("/static/section_buttons.jpg") no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-}
-
-#section-buttons .home-button {
-	font-size: 12pt;
-	padding:10px 20px;
-	text-transform: uppercase;
-	font-weight: 300;
-	border-radius: 5px;
-	margin: 0px 10px;
-}
-
-#section-contact-us {
-	/*background-color: #6B0C70;*/
-	background: linear-gradient(
-			rgba(0, 0, 0, 0.4),
-			rgba(0, 0, 0, 0.4)
-		), url('/static/teamcover.jpg') fixed center top;
-	color: white;
-	padding: 80px;
-}
-
-#section-contact-us .section-text {
-	font-size: 42pt;
-	font-weight: 300;
-	text-align: center;
-	margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-	section#section-contact-us .section-text {
-		font-size: 18pt;
+	#section-sponsors .home-button {
+		font-size: 1.6rem;
+		width: 260px;
 	}
-
-	section#section-contact-us .home-button {
-		font-size: 12pt;
-		margin-left: 0px;
-		margin-right: 0px;
-		padding: 5px 10px;
-	}
-	section#section-contact-us .home-button.home-button-lg {
-		font-size: 14pt;
-		padding: 10px 15px;
-	}
-}
-
-#section-contact-us .home-button {
-	padding: 10px 20px;
-	color: white;
-	border: 2px solid white;
-}
-
-#section-contact-us a.home-button:hover {
-	background-color: white;
-	color: black;
-	text-decoration: none;
 }
