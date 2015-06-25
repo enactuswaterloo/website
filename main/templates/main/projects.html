@@ -12,7 +12,7 @@
 		<div class="container">
 
 			{% for project in projects %}
-				<a href="{% url 'project_details' project_id=project.id %}">
+				<a href="{% url 'project_details' project_slug=project.slug %}">
 					<div class="project" id="project-{{project.id}}">
 						<h1>{{project.title}}</h1>
 						<div class="project-subtitle">{{ project.shortDesc }}</div>
