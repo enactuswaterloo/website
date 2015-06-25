@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% load bootstrap3 %}
 
-{% block title %}Profile{% endblock %}
+{% block title %}Complete Your Profile{% endblock %}
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'member.css' %}">
@@ -11,25 +11,21 @@
 {% block subpageContent %}
 
 <section>
-	<div class="container text-left">
+	<div class="container text-left" id="widthSize">
 		{% if error %}
 			<div class="alert alert-danger">
 				<strong>Error:</strong> Invalid input
 			</div>
 		{% endif %}
-
 		<div id="profileForm">
-			
-			<form method="post" enctype="multipart/form-data">
+			<form method="post" enctype="multipart/form-data" class="validate-form">
 				{% csrf_token %}
-
 				{% bootstrap_form profileForm %}
-
-				<input type="submit" class="btn btn-default" value="Submit" />
+				<input type="submit" class="btn btn-default" value="Submit"/>
 			</form>
 		</div>
 	</div>
 
 </section>
-	
+
 {% endblock %}

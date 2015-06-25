@@ -1,7 +1,7 @@
 {% extends "subpage.html" %}
 {% load staticfiles %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Log In{% endblock %}
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'login.css' %}" />
@@ -15,19 +15,19 @@
 			{% csrf_token %}
 
 			{% if form.errors %}
-				<div class="alert alert-danger" role="alert">Invalid username and/or password</div>
+				<div class="alert alert-danger" role="alert">Invalid credentials.</div>
 			{% endif %}
 
 			<div class="form-group">
 				<label for="inputEmail">Username</label>
-				<input type="text" class="form-control" id="inputEmail" name="username" placeholder="Username">
+				<input type="text" class="form-control" id="inputEmail" name="username">
 			</div>
 			<div class="form-group">
 				<label for="inputPassword">Password</label>
-				<input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
+				<input type="password" class="form-control" id="inputPassword" name="password">
 			</div>
 
-			<button type="submit" class="btn btn-default">Sign in</button>
+			<button type="submit" class="btn btn-default">Log In</button>
 		</form>
 	</div>
 </div>

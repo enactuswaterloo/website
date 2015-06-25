@@ -24,19 +24,22 @@
 							</div>
 							<div class="member-info">
 								<div class="member-name">
-									{{person.user.first_name}}&nbsp;{{person.user.last_name}}<span class="member-position">, {{person.position}}</span>
+									{{person.user.first_name}}&nbsp;{{person.user.last_name}}
 								</div>
-								<!--<div class="member-program">
+								<div class="member-position">
+									{{person.position}}
+								</div>
+								<div class="member-program">
 									{{person.program}}, {{person.year}}
-								</div>-->
+								</div>
 								<div class="member-bio">
 									{{person.bio}}
 								</div>
-								<div class="member-link">
-									{% if person.link %}
-										<a href="{{person.link}}">{{person.link_type}}</a>
-									{% endif %}
-								</div>
+							</div>
+							<div class="member-link">
+								{% if person.link %}
+									<a href="{{person.link}}">{{person.link_type}}</a>
+								{% endif %}
 							</div>
 							<span class="overlay"></span>
 						</div>
@@ -54,17 +57,17 @@
 		</div>
 	</div>
 
-<script>
-if (document.width >= 768) {
-	$( document ).ready(function() {
-	    var heights = $(".member").map(function() {
-	        return $(this).height();
-	    }).get(),
-
-	    maxHeight = Math.max.apply(null, heights);
-
-	    $(".member").height(maxHeight);
-	});
-}
-</script>
+<!-- // <script>
+// if (document.width >= 768) {
+// 	$( document ).ready(function() {
+// 	    var heights = $(".member").map(function() {
+// 	        return $(this).height();
+// 	    }).get(),
+//
+// 	    maxHeight = Math.max.apply(null, heights);
+//
+// 	    $(".member").height(maxHeight);
+// 	});
+// }
+// </script> -->
 {% endblock %}
