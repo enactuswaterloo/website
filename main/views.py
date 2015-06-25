@@ -19,7 +19,13 @@ def projects(request):
 
     return render(request, "main/projects.html", {"projects": projects})
 
-def project_details(request, project_id):
+def project_details(request, project_slug):
+    project = get_object_or_404(Project, slug=project_slug)
+
+    return render(request, "main/project_details.html", {"project": project})
+
+# To not break existing links
+def project_details_old(request, project_id):
     project = get_object_or_404(Project, id=project_id)
 
     return render(request, "main/project_details.html", {"project": project})

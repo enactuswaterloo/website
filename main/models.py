@@ -13,6 +13,7 @@ class Coverpic(models.Model):
     return self.title
 
 class Project(models.Model):
+  slug = models.CharField(max_length=200, unique=True)
   title = models.CharField(max_length=200)
   description = RichTextField()
   shortDesc = models.CharField(max_length=200, default=None, null=True)
