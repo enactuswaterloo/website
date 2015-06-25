@@ -21,7 +21,8 @@ class Migration(migrations.Migration):
                 ('program', models.CharField(default=b'Accounting and Financial Management', max_length=150)),
                 ('year', models.CharField(default=b'2019', max_length=100)),
                 ('position', models.CharField(default=b'Member', max_length=100)),
-                ('bio', models.TextField(max_length=140, blank=True)),
+                ('bio', models.TextField(max_length=400, blank=True)),
+
             ],
             options={
             },

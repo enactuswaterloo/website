@@ -17,10 +17,10 @@ urlpatterns = patterns('',
     url(r'^$', index, name="home"),
     url(r'^team/$', our_team, name="our_team"),
 
-    # url(r'^projects/$', projects, name="projects"),
+    url(r'^projects/$', projects, name="projects"),
     url(r'^projects/(?P<project_id>[0-9]+)/$', project_details, name="project_details"),
     url(r'^sponsors/$', sponsors, name="sponsors"),
-    # url(r'^contact/$', contact, name="contact"),
+    url(r'^contact/$', contact, name="contact"),
 
 
     # url(r'^blog/$', blog_index, name="blog_index"),
