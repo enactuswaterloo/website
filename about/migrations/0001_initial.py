@@ -22,7 +22,6 @@ class Migration(migrations.Migration):
                 ('year', models.CharField(default=b'2019', max_length=100)),
                 ('position', models.CharField(default=b'Member', max_length=100)),
                 ('bio', models.TextField(max_length=400, blank=True)),
-
             ],
             options={
             },

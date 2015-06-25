@@ -12,21 +12,17 @@
 
 <div id ="signup">
 	<div class="container">
-
 		<form method="post" class="contact-form validate-form">
 			{% csrf_token %}
-
 			{% if form.errors %}
 				<div class="alert alert-danger" role="alert">Invalid credentials.</div>
 			{% endif %}
-
 			{% for field in form %}
 				<div class="form-group">
 					{{field.label_tag}}
 					{{field}}
 				</div>
 			{% endfor %}
-
 			<button type="submit" class="btn btn-default">Sign Up</button>
 		</form>
 	</div>

@@ -1,4 +1,4 @@
-
+/* Home button */
 .home-button {
 	border-radius: 3px;
 	border: 3px solid #333;
@@ -21,14 +21,15 @@
 .home-button i.fa {
 	margin-right: 5px;
 }
+
 a.home-button:hover, #section-projects a.home-button:hover {
 	color: black;
 	border-color: black;
 	box-shadow: 0px 0px 5px 0px #444;
-
 	text-decoration: none;
 }
 
+/* Cover Picture */
 #section-coverpics {
 	margin: 0px;
 	padding: 0px;
@@ -74,7 +75,6 @@ a.home-button:hover, #section-projects a.home-button:hover {
 #carousel-main .item img {
 	width: 100%;
 	height: auto;
-
 	position: relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -121,10 +121,6 @@ section#section-whoweare {
 	text-align: center;
 }
 
-.section-text {
-	font-size: 14pt;
-	text-align: left;
-}
 .section-text p {
 	margin: 15px 0px;
 }
@@ -181,7 +177,6 @@ section#section-whoweare {
 .project-card .project-text .project-title {
 	font-size: 20pt;
 	font-weight: 300;
-
 }
 
 .project-card .project-text .project-short-desc {

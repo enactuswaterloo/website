@@ -1,6 +1,4 @@
-
 body {
-	/*background-color: #EFEFEF;*/
 	background-color: white;
 }
 
@@ -14,7 +12,6 @@ nav.navbar-custom {
 nav.navbar-custom .navbar-nav {
 	margin-top: 0px;
 	padding-top: 10px;
-	/*padding-bottom: 5px;*/
 	background-color: white;
 }
 
@@ -40,7 +37,6 @@ nav.navbar-custom .navbar-nav li > a:hover {
 	color: #FEC222;
 	border-bottom-color: #FEC222;
 }
-
 nav.navbar-custom .navbar-nav li > a:focus {
 	border-bottom-color: #FEC222;
 }
@@ -55,17 +51,6 @@ nav.navbar-custom .navbar-brand img {
 div.navbar-header button {
 	margin-top: 35px;
 	border: 1px solid;
-}
-
-a.join-button {
-	text-decoration: none;
-}
-
-a.join-button button {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #FEC222;
 }
 
 footer {
@@ -84,7 +69,6 @@ a.footerButton {
 	text-decoration: none;
 	color: #E6E6E6;
 }
-
 a.footerButton:hover {
 	color: #ffff00;
 }
@@ -110,17 +94,12 @@ section {
 
 .subpage-title-bar h3 {
 	font-weight: 500;
-
 	font-size: 24pt;
 }
 
 #copyrightMessage {
 	font-size: 16px;
 	color: white;
-}
-
-p {
-	margin-bottom: 0px;
 }
 
 .dropdown-menu .form-group {

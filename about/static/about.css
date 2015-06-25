@@ -126,6 +126,7 @@ a.personal-link span.overlay:hover {
     font-size: 1.3rem;
   }
 }
+
 @media (max-width: 410px){
   div.member-info {
     font-size: 1.2rem;
