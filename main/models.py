@@ -7,7 +7,6 @@ from ckeditor.fields import RichTextField
 class Coverpic(models.Model):
   url = models.CharField(max_length=200, blank=True)
   title = models.CharField(max_length=200)
-  subtitle = models.CharField(max_length=200, default=None, null=True)
   image = models.ImageField(upload_to='coverpics/', null=True ,default=None)
 
   def __str__(self):

@@ -1,24 +1,31 @@
-
 body {
-	/*background-color: #EFEFEF;*/
 	background-color: white;
 }
 
 nav.navbar-custom {
 	background-color: white;
-	height: 77px;
+	height: 60px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
 
 nav.navbar-custom .navbar-nav {
-	margin-top: 10px;
+	margin-top: 0px;
 	padding-top: 10px;
-	padding-bottom: 5px;
 	background-color: white;
 }
 
+nav.navbar-custom .navbar-toggle {
+	margin-top: 10px;
+}
+
+nav.navbar-custom .dropdown:hover .dropdown-menu {
+	display: block;
+	margin-top: 0;
+}
+
 nav.navbar-custom .navbar-nav li > a {
+	padding-top: 10px;
 	border-bottom: 2px solid white;
 	transition: border-bottom-color 0.15s;
 	color: #4c4c4c;
@@ -30,14 +37,15 @@ nav.navbar-custom .navbar-nav li > a:hover {
 	color: #FEC222;
 	border-bottom-color: #FEC222;
 }
-
 nav.navbar-custom .navbar-nav li > a:focus {
 	border-bottom-color: #FEC222;
 }
 
+nav.navbar-custom .navbar-brand {
+	padding-top: 7px;
+}
 nav.navbar-custom .navbar-brand img {
 	height: 44px;
-	margin-left: 120px;
 }
 
 div.navbar-header button {
@@ -45,20 +53,9 @@ div.navbar-header button {
 	border: 1px solid;
 }
 
-a.join-button {
-	text-decoration: none;
-}
-
-a.join-button button {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #FEC222;
-}
-
 footer {
 	padding: 20px 0px;
-	background-color:#4c4c4c;
+	background-color:#333;
 	color:#ccc;
 }
 
@@ -72,7 +69,6 @@ a.footerButton {
 	text-decoration: none;
 	color: #E6E6E6;
 }
-
 a.footerButton:hover {
 	color: #ffff00;
 }
@@ -98,7 +94,6 @@ section {
 
 .subpage-title-bar h3 {
 	font-weight: 500;
-
 	font-size: 24pt;
 }
 
@@ -107,14 +102,20 @@ section {
 	color: white;
 }
 
-p {
-	margin-bottom: 0px;
-}
-
 .dropdown-menu .form-group {
 	margin: 3px 0px;
 }
 
 .form-elements {
 	margin: 10px 0px;
+}
+
+/* .invalid class prevents CSS from automatically applying */
+.invalid input:required:invalid {
+  background: #BE4C54;
+}
+
+/* Mark valid inputs during .invalid state */
+.invalid input:required:valid {
+  background: #17D654 ;
 }
