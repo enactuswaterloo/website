@@ -362,8 +362,8 @@ form div.form-elements button.contact-button {
 		padding: 0;
 		line-height: 7rem;
 	}
-	nav.navbar-custom .navbar-brand img {
-		margin-left: -15px;
+	nav.navbar-custom .navbar-brand {
+		margin-left: -30px;
 	}
 }
 

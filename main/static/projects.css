@@ -3,12 +3,16 @@
 }
 
 #project-view .project .project-content {
-	font-size: 18px;
-	line-height: 1.5;
+	font-size: 1.8rem;
+	line-height: 2.2rem;
 	font-weight: 450;
 	text-align: left;
-	width: 65%;
+	width: 70%;
 	margin: 0 auto;
+}
+
+#project-view .project .project-content p {
+	width: 100%;
 }
 
 #projects .project {
@@ -53,4 +57,10 @@
 #projectsNav .nav li.active {
 	background-color: transparent;
 	border-left: 2px solid #FEC222;
+}
+
+@media (max-width: 768px){
+	#project-view .project .project-content {
+		width: 85%;
+	}
 }
