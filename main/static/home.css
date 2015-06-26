@@ -1,7 +1,7 @@
 .anchor{
   display: block;
   height: 60px; /*same height as header*/
-  /*margin-top: -60px; /*same height as header*/*/
+  margin-top: -60px; /*same height as header*/
   visibility: hidden;
 }
 
@@ -149,9 +149,13 @@ section#section-whoweare {
 
 #section-projects a {
 	text-decoration: none;
-	color: white;
 	color: #FEC222;
 }
+
+#section-projects h1 {
+	color: #FEC222;
+}
+
 #section-projects .row {
 	margin: 40px 0px;
 }
@@ -268,6 +272,7 @@ section#section-whoweare {
 			rgba(0, 0, 0, 0.4)
 		), url('/static/teamphoto.jpg') fixed center top;
 	padding-bottom: 40px;
+	color: white;
 }
 
 #section-contact-us a {

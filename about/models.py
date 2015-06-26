@@ -9,7 +9,7 @@ class ProfileForm(forms.Form):
     last_name = forms.CharField(label='Last Name', max_length=100, required=True)
     program = forms.CharField(max_length=150, label="Program", required=True)
     year = forms.CharField(max_length=100, label="Expected Graduation Year", required=True)
-    picture = forms.ImageField(label="Upload Picture (Suggested 1:1 Height:Width Ratio)", required=False)
+    picture = forms.ImageField(label="Upload Picture (Suggested 1:1 height to width ratio)", required=False)
 
     link = forms.URLField(max_length=150, label="Personal link", required=False)
     link_type = forms.ChoiceField(label="Link type", required=True, choices=(
@@ -22,10 +22,14 @@ class ProfileForm(forms.Form):
 
     position = forms.ChoiceField(label="Team", required=True, choices=(
             ("Communications", "Communications"),
+            ("Finance", "Finance"),
+            ("Fundraising", "Fundraising"),
+            ("Graphic Designer", "Graphic Designer"),
+            ("Human Resources", "Human Resources"),
+            ("Marketing", "Marketing"),
+            ("Social Media", "Social Media"),
             ("Sponsorship", "Sponsorship"),
             ("Webmaster", "Webmaster"),
-            ("Finance", "Finance"),
-            ("Marketing", "Marketing"),
             ("Iko Eco", "Iko Eco"),
             ("Project Cricket", "Project Cricket"),
             ("Project Spider", "Project Spider")
@@ -42,10 +46,14 @@ class SignupForm(forms.Form):
 
     position = forms.ChoiceField(label="Team", required=True, choices=(
             ("Communications", "Communications"),
+            ("Finance", "Finance"),
+            ("Fundraising", "Fundraising"),
+            ("Graphic Designer", "Graphic Designer"),
+            ("Human Resources", "Human Resources"),
+            ("Marketing", "Marketing"),
+            ("Social Media", "Social Media"),
             ("Sponsorship", "Sponsorship"),
             ("Webmaster", "Webmaster"),
-            ("Finance", "Finance"),
-            ("Marketing", "Marketing"),
             ("Iko Eco", "Iko Eco"),
             ("Project Cricket", "Project Cricket"),
             ("Project Spider", "Project Spider")
