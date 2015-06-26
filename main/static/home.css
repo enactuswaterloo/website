@@ -1,3 +1,10 @@
+.anchor{
+  display: block;
+  height: 60px; /*same height as header*/
+  /*margin-top: -60px; /*same height as header*/*/
+  visibility: hidden;
+}
+
 /* Home button */
 .home-button {
 	border-radius: 3px;
@@ -362,9 +369,6 @@ form div.form-elements button.contact-button {
 		padding: 0;
 		line-height: 7rem;
 	}
-	nav.navbar-custom .navbar-brand {
-		margin-left: -30px;
-	}
 }
 
 @media (max-width: 768px) { /* phones */
@@ -382,9 +386,6 @@ form div.form-elements button.contact-button {
 	}
 	#carousel-main .carousel-caption {
 		margin-bottom: 0;
-	}
-	nav.navbar-custom .navbar-brand img {
-		margin-left: 30px;
 	}
 	form.contact-form {
 		width: 90%;
