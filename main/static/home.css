@@ -1,3 +1,10 @@
+.anchor{
+  display: block;
+  height: 60px; /*same height as header*/
+  margin-top: -60px; /*same height as header*/
+  visibility: hidden;
+}
+
 /* Home button */
 .home-button {
 	border-radius: 3px;
@@ -41,10 +48,17 @@ a.home-button:hover, #section-projects a.home-button:hover {
 
 #carousel-main .item {
 	width: 100%;
-	height: 650px;
+	height: 850px;
 	text-align: center;
 	overflow: hidden;
 }
+
+/*#carousel-main .item {
+	width: 100%;
+	height: 650px;
+	text-align: center;
+	overflow: hidden;
+}*/
 
 #carousel-main .carousel-control {
 	color: #222;
@@ -52,12 +66,12 @@ a.home-button:hover, #section-projects a.home-button:hover {
 }
 
 #carousel-main .carousel-caption .carousel-caption-title {
-	font-size: 7rem;
+	font-size: 12rem;
 	color: #222;
 }
 
 #carousel-main .carousel-title-rect {
-	line-height: 9rem;
+	line-height: 12rem;
 	text-transform: uppercase;
 	font-weight: 900;
 	color: white;
@@ -142,9 +156,13 @@ section#section-whoweare {
 
 #section-projects a {
 	text-decoration: none;
-	color: white;
 	color: #FEC222;
 }
+
+#section-projects h1 {
+	color: #FEC222;
+}
+
 #section-projects .row {
 	margin: 40px 0px;
 }
@@ -261,6 +279,7 @@ section#section-whoweare {
 			rgba(0, 0, 0, 0.4)
 		), url('/static/teamphoto.jpg') fixed center top;
 	padding-bottom: 40px;
+	color: white;
 }
 
 #section-contact-us a {
@@ -347,12 +366,44 @@ form div.form-elements button.contact-button {
 	margin-right: auto;
 }
 
-@media (max-width: 1024px) { /* tablets */
+@media (max-width: 1600px) {
+  #carousel-main .item {
+    height: 750px;
+  }
+  #carousel-main .carousel-caption .carousel-caption-title {
+    font-size: 10rem;
+  }
+  #carousel-main .carousel-title-rect {
+    padding: 0;
+    line-height: 10.5rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  #carousel-main .item {
+    height: 660px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #carousel-main .item {
+    height: 560px;
+  }
+  #carousel-main .carousel-caption .carousel-caption-title {
+		font-size: 7rem;
+	}
+  #carousel-main .carousel-title-rect {
+    padding: 0;
+    line-height: 7.5rem;
+  }
+}
+
+@media (max-width: 992px) { /* tablets */
 	#carousel-main .item {
-		height: 450px;
+		height: 480px;
 	}
 	#carousel-main .carousel-caption .carousel-caption-title {
-		font-size: 5rem;
+		font-size: 5.3rem;
 	}
 	#carousel-main .home-button {
 		font-size: 3rem;
@@ -360,31 +411,25 @@ form div.form-elements button.contact-button {
 	}
 	#carousel-main .carousel-title-rect {
 		padding: 0;
-		line-height: 7rem;
-	}
-	nav.navbar-custom .navbar-brand img {
-		margin-left: -15px;
+		line-height: 6rem;
 	}
 }
 
 @media (max-width: 768px) { /* phones */
 	#carousel-main .item {
-		height: 280px;
+		height: 340px;
 	}
 	#carousel-main .carousel-caption .carousel-caption-title {
-		font-size: 3rem;
+		font-size: 3.8rem;
 	}
 	#carousel-main .home-button {
 		font-size: 1.5rem;
 	}
 	#carousel-main .carousel-title-rect {
-		line-height: 3.5rem;
+		line-height: 4.4rem;
 	}
 	#carousel-main .carousel-caption {
 		margin-bottom: 0;
-	}
-	nav.navbar-custom .navbar-brand img {
-		margin-left: 30px;
 	}
 	form.contact-form {
 		width: 90%;
@@ -397,10 +442,10 @@ form div.form-elements button.contact-button {
 
 @media (max-width: 480px){
 	#carousel-main .item {
-		height: 170px;
+		height: 200px;
 	}
 	#carousel-main .carousel-caption .carousel-caption-title {
-		font-size: 1.5rem;
+		font-size: 2.0rem;
 	}
 	#carousel-main .home-button {
 		font-size: 1.2rem;
@@ -409,10 +454,22 @@ form div.form-elements button.contact-button {
 		border: 3px solid #FEC222;
 	}
 	#carousel-main .carousel-title-rect {
-		line-height: 2rem;
+		line-height: 2.4rem;
 	}
 	#section-sponsors .home-button {
 		font-size: 1.6rem;
 		width: 260px;
 	}
+}
+
+@media (max-width: 320px){
+  #carousel-main .item {
+		height: 160px;
+	}
+  #carousel-main .carousel-caption .carousel-caption-title {
+		font-size: 1.5rem;
+	}
+  #carousel-main .carousel-title-rect {
+    line-height: 2rem;
+  }
 }

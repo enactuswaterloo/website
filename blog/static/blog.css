@@ -67,6 +67,6 @@ article .article-social-media-buttons {
 	/* Background image is set in html */
 	background-attachment: fixed;
 	background-position: center;
-	min-height: 40px;
+	min-height: 60px;
 	width: 100%;
 }

@@ -1,5 +1,18 @@
+header {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	z-index: 1;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
 body {
+	padding-top: 60px;
 	background-color: white;
+}
+
+nav .container {
+	width: 100%;
 }
 
 nav.navbar-custom {
@@ -7,6 +20,8 @@ nav.navbar-custom {
 	height: 60px;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
+	padding-left: 15px;
+	padding-right: 5px;
 }
 
 nav.navbar-custom .navbar-nav {
@@ -89,12 +104,13 @@ section {
 	color: #444;
 	text-align: center;
 	font-weight: 300;
-	min-height: 72px;
+	height: 50px;
 }
 
 .subpage-title-bar h3 {
+	margin-top: 10px;
 	font-weight: 500;
-	font-size: 24pt;
+	font-size: 2.6rem;
 }
 
 #copyrightMessage {
