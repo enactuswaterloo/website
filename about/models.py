@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 class ProfileForm(forms.Form):
     first_name = forms.CharField(label='First Name', max_length=100, required=True)
     last_name = forms.CharField(label='Last Name', max_length=100, required=True)
+    public = forms.BooleanField(initial=False, label="Display profile?", required=False)
     program = forms.CharField(max_length=150, label="Program", required=True)
     year = forms.CharField(max_length=100, label="Expected Graduation Year", required=True)
     picture = forms.ImageField(label="Upload Picture (Suggested 1:1 height to width ratio)", required=False)
