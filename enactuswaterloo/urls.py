@@ -36,7 +36,7 @@ urlpatterns = patterns('',
     url(r'^profile/password$', 'django.contrib.auth.views.password_change', {'post_change_redirect' : '/profile/password/successful', 'template_name': 'about/password_change.html'}),
     url(r'^profile/password/successful$', 'django.contrib.auth.views.password_change_done', {'template_name': 'about/password_change.html'}),
 
-    url(r'^apply/$', RedirectView.as_view(url="https://enactuswaterloo.typeform.com/to/CuA1NV")),
+    url(r'^apply/$', RedirectView.as_view(url="https://enactuswaterloo.typeform.com/to/ZyLdDV")),
     # url(r'^survey/$', RedirectView.as_view(url="http://goo.gl/forms/mesV11nJuQ")),
     url(r'^profile/$', RedirectView.as_view(url="https://goo.gl/YlXAYc")),
     url(r'^cricketmeeting/$', RedirectView.as_view(url="https://plus.google.com/hangouts/_/gu6xvzw4qzxjtljtmwwl2fgnvia")),
