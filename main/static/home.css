@@ -272,6 +272,16 @@ section#section-whoweare {
 	padding: 10px;
 }
 
+#section-sponsors .silver.home-button {
+	background-color: #c0c0c0;
+}
+
+#section-sponsors .silver img{
+	height: 60px;
+	width: auto;
+	padding: 10px;
+}
+
 /* Contact Us */
 #section-contact-us {
 	background: linear-gradient(
